@@ -11,8 +11,8 @@ kernelspec:
   language: python
   name: python3
 ---
-Pythonやさしい100問
-=================
+100の試練
+========
 
 ## 001
 自分の名前を表示しましょう
