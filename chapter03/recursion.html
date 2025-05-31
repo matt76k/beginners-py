@@ -194,7 +194,6 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">3. 関数</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="func.html">3.1. 関数</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">3.2. 再帰関数</a></li>
-
 </ul>
 </details></li>
 </ul>
@@ -393,21 +392,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.2. 再帰関数</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3.2.1. 階乗を計算する</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.2.2. 数値の各桁の和を求める</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3.2.3. リストの要素の合計を求める</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3.2.4. 文字列を逆順にする</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3.2.5. べき乗を計算する</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.2.6. 最大公約数を求める</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.2.7. 回文かどうかを判定する</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2.8. 2進数変換を行う</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3.3. リストの要素の合計を求める</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3.3.1. 文字列を逆順にする</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3.3.2. べき乗を計算する</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.3.3. 最大公約数を求める</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.3.4. 回文かどうかを判定する</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.3.5. 2進数変換を行う</a></li>
-</ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -627,9 +620,8 @@ document.write(`
 </div>
 </details>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="id4">
-<h1><span class="section-number">3.3. </span>リストの要素の合計を求める<a class="headerlink" href="#id4" title="Link to this heading">#</a></h1>
+<section id="id4">
+<h2><span class="section-number">3.2.3. </span>リストの要素の合計を求める<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <p>リストの全要素の合計を再帰的に計算する関数<code class="docutils literal notranslate"><span class="pre">list_sum</span></code>を作りましょう。</p>
 <details>
 <summary> 回答例 </summary>
@@ -643,8 +635,9 @@ document.write(`
 </pre></div>
 </div>
 </details>
+</section>
 <section id="id5">
-<h2><span class="section-number">3.3.1. </span>文字列を逆順にする<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.2.4. </span>文字列を逆順にする<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <p>文字列を逆順にして返す再帰関数<code class="docutils literal notranslate"><span class="pre">reverse_string</span></code>を作りましょう。</p>
 <details>
 <summary> 回答例 </summary>
@@ -660,7 +653,7 @@ document.write(`
 </details>
 </section>
 <section id="id6">
-<h2><span class="section-number">3.3.2. </span>べき乗を計算する<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.2.5. </span>べき乗を計算する<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">x</span></code> の <code class="docutils literal notranslate"><span class="pre">n</span></code> 乗を再帰的に計算する関数<code class="docutils literal notranslate"><span class="pre">power</span></code>を作りましょう。</p>
 <details>
 <summary> 回答例 </summary>
@@ -677,7 +670,7 @@ document.write(`
 </details>
 </section>
 <section id="id7">
-<h2><span class="section-number">3.3.3. </span>最大公約数を求める<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.2.6. </span>最大公約数を求める<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <p>ユークリッドの互除法を使って、2つの数の最大公約数を求める再帰関数<code class="docutils literal notranslate"><span class="pre">gcd</span></code>を作りましょう。</p>
 <details>
 <summary> 回答例 </summary>
@@ -694,7 +687,7 @@ document.write(`
 </details>
 </section>
 <section id="id8">
-<h2><span class="section-number">3.3.4. </span>回文かどうかを判定する<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.2.7. </span>回文かどうかを判定する<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <p>文字列が回文（前から読んでも後ろから読んでも同じ）かどうかを判定する再帰関数<code class="docutils literal notranslate"><span class="pre">is_palindrome</span></code>を作りましょう。</p>
 <details>
 <summary> 回答例 </summary>
@@ -713,7 +706,7 @@ document.write(`
 </details>
 </section>
 <section id="id9">
-<h2><span class="section-number">3.3.5. </span>2進数変換を行う<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.2.8. </span>2進数変換を行う<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
 <p>10進数を2進数の文字列に変換する再帰関数<code class="docutils literal notranslate"><span class="pre">to_binary</span></code>を作成してください。</p>
 <details>
 <summary> 回答例 </summary>
@@ -786,21 +779,15 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.2. 再帰関数</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3.2.1. 階乗を計算する</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.2.2. 数値の各桁の和を求める</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3.2.3. リストの要素の合計を求める</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3.2.4. 文字列を逆順にする</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3.2.5. べき乗を計算する</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.2.6. 最大公約数を求める</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.2.7. 回文かどうかを判定する</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2.8. 2進数変換を行う</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3.3. リストの要素の合計を求める</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3.3.1. 文字列を逆順にする</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3.3.2. べき乗を計算する</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.3.3. 最大公約数を求める</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.3.4. 回文かどうかを判定する</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.3.5. 2進数変換を行う</a></li>
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
