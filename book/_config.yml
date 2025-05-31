@@ -12,7 +12,7 @@ execute:
 
 launch_buttons:
   notebook_interface: jupyterlab
-  colab_url: https://colab.research.google.com
+  colab_url: ""
 
 repository:
   url: https://github.com/matt76k/beginners-py
