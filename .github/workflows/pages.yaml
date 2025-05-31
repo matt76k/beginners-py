@@ -1,0 +1,45 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'book/**'
+  workflow_dispatch:
+    
+jobs:
+  build_and_release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Japanese fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-ipafont fonts-ipaexfont      
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        env:
+          RYE_INSTALL_OPTION: "--yes"
+          RYE_TOOLCHAIN_VERSION: "3.11"
+        run: |
+          curl -sSf https://rye.astral.sh/get | bash
+          source "$HOME/.rye/env"
+          rye sync
+      
+      - name: Build Book
+        run: |
+          source "$HOME/.rye/env"
+          cd book
+          rye run jupyter book build .
+
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./book/_build/html

@@ -1,0 +1,14 @@
+format: jb-book
+root: intro
+options:
+  numbered: True
+chapters:
+- file: chapter01/intro
+  sections:
+  - file: chapter01/data.md
+  - file: chapter01/flow.md
+- file: chapter02/intro
+- file: chapter03/intro
+  sections:
+  - file: chapter03/func.md
+  - file: chapter03/recursion.md
