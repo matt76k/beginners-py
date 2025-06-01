@@ -1,6 +1,6 @@
-title: 異世界転生！Python魔法を極めて無双した件 〜チートスキルゼロ！データの深淵を覗き、数値の混沌を操り、隠された真実を解き明かす存在へ〜
+title: Pythonを極めて無双した件
 author: 鳳凰院 龍聖
-logo: logo.png
+logo: cover.png
 copyright: "2025, 鳳凰院 龍聖"
 
 only_build_toc_files: true
@@ -24,7 +24,7 @@ latex:
     targetname: book.tex
 
 html:
-  favicon: logo.png
+  favicon: cover.png
   extra_css: 
     - https://fonts.googleapis.com/css2?family=BIZ+UDGothic
 
@@ -35,7 +35,7 @@ sphinx:
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     language: ja
     epub_basename: "BeginnersPy"
-    epub_cover: ["logo.png", ""]
+    epub_cover: ["cover.png", ""]
     # imgmath_image_format: 'svg'
   extra_extensions:
     - sphinx_proof
