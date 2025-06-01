@@ -72,8 +72,7 @@ print(add(1, 2))
 ## 引き算をする
 2つの数値を受け取って、1つ目の数値から2つ目の数値を引いた結果を返す関数`subtract`を作りましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 def subtract(a, b):
@@ -83,13 +82,12 @@ def subtract(a, b):
 print(subtract(10, 3))
 ```
 
-</details>
+````
 
 ## 挨拶をする
 名前を受け取って「こんにちは、〇〇さん！」という挨拶文を返す関数`greet`を作りましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 def greet(name):
@@ -99,13 +97,12 @@ def greet(name):
 print(greet("Python"))
 ```
 
-</details>
+````
 
 ## 面積を計算する
 長方形の縦の長さと横の長さを受け取って、面積を計算して返す関数`area`を作りましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 def area(length, width):
@@ -115,13 +112,12 @@ def area(length, width):
 print(area(5, 3))
 ```
 
-</details>
+````
 
 ## 最大値を求める
 数値のリストを受け取って、リストの中で最も大きい数値を返す関数`max_value`を作りましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 def max_value(numbers):
@@ -134,13 +130,12 @@ def max_value(numbers):
 print(max_value([8, 5, 10, 3]))
 ```
 
-</details>
+````
 
 ## 偶数か奇数かを判定する
 数値を受け取って、その数が偶数なら「True」、奇数なら「False」を返す関数`is_even`を作りましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 def is_even(number):
@@ -150,4 +145,4 @@ print(even_or_odd(4))
 print(even_or_odd(7))
 ```
 
-</details>
+````

@@ -29,14 +29,13 @@ z = x + y * 2
 print(z)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 `x`に5を、`y`に10を代入しています。
 そのあと、`y`を2倍した結果と`x`を足した結果を`z`に代入しています。
 最後に`z`の値（25）を出力しています。
 
-</details>
+````
 
 ## 02
 
@@ -47,15 +46,14 @@ print(a // b)
 print(a % b)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、整数の除算と余りを求めています。
 
 `a`に10を、`b`に3を代入しています。
 そのあと、`a`を`b`で割った商を`//`で、`a`を`b`で割った余りを`%`で求めて表示しています。
 
-</details>
+````
 
 ## 03
 
@@ -65,13 +63,12 @@ age = 18
 print(f"私は{age}歳で、{name}を学んでいます。")
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 `name`に"Python"を、`age`に18を代入しています。
 そのあと、**f文字列**を使って変数の値を文字列に埋め込んで出力しています。
 
-</details>
+```
 
 ## 04
 
@@ -81,15 +78,14 @@ print(numbers[0])
 print(numbers[-1])
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの最初の要素と最後の要素を表示しています。
 
 `numbers`に[10, 5, 8, 3, 7]というリストを代入しています。
 そのあと、`numbers`の最初の要素を`numbers[0]`で、最後の要素を`numbers[-1]`で表示しています。
 
-</details>
+````
 
 ## 05
 
@@ -99,8 +95,7 @@ numbers[2] = 99
 print(numbers)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの特定の位置の要素を変更して表示しています。
 
@@ -108,7 +103,7 @@ print(numbers)
 そのあと、`numbers`の3番目の要素（インデックス2）を99に変更しています。
 最後に`numbers`の値を出力しています。
 
-</details>
+````
 
 ## 06
 
@@ -118,15 +113,14 @@ print(len(numbers))
 print(sum(numbers))
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの要素数と合計を表示しています。
 
 `numbers`に[1, 2, 3, 4, 5]というリストを代入しています。
 そのあと、`numbers`の要素数を`len()`で、合計を`sum()`で求めて表示しています。
 
-</details>
+````
 
 ## 07
 
@@ -136,15 +130,14 @@ print(min(numbers))
 print(max(numbers))
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの最小値と最大値を表示しています。
 
 `numbers`に[5, 2, 8, 1, 9]というリストを代入しています。
 そのあと、`numbers`の最小値を`min()`で、最大値を`max()`で求めて表示しています。
 
-</details>
+````
 
 ## 08
 
@@ -154,8 +147,7 @@ print(3 in numbers)
 print(2 in numbers)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストに特定の値が含まれているかを確認しています。
 
@@ -163,7 +155,7 @@ print(2 in numbers)
 そのあと、`3`が`numbers`に含まれているかを`in`で、`2`が`numbers`に含まれているかを`in`で確認しています。
 最後に、それぞれの結果を出力しています。
 
-</details>
+````
 
 ## 09
 
@@ -178,8 +170,7 @@ else:
 print(message)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 `temperature`に25を代入しています。
 そのあと`temperature`の値によって条件分岐しています。
@@ -187,7 +178,7 @@ print(message)
 それ以外の場合は「寒いです」を変数`message`に代入しています。
 最後に`message`の値を出力しています。
 
-</details>
+````
 
 ## 10
 
@@ -204,8 +195,7 @@ else:
 print(grade)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、点数に応じて成績を表示しています。
 
@@ -214,7 +204,7 @@ print(grade)
 `score`が90以上の場合は「A」、80以上90未満の場合は「B」、70以上80未満の場合は「C」、それ以外の場合は「D」を変数`grade`に代入しています。
 最後に`grade`の値を出力しています。
 
-</details>
+````
 
 ## 11
 
@@ -225,8 +215,7 @@ print(x > 10 and y < 5)
 print(x > 20 or y < 5)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、論理演算子`and`と`or`を使った条件式の評価をしています。
 
@@ -234,7 +223,7 @@ print(x > 20 or y < 5)
 そのあと、`x`が10より大きいかつ`y`が5より小さいかを`and`で、`x`が20より大きいか`y`が5より小さいかを`or`で評価しています。
 最後に、それぞれの結果を出力しています。
 
-</details>
+````
 
 ## 12
 
@@ -244,15 +233,14 @@ print(numbers[2:5])
 print(numbers[5:])
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの3番目から5番目の要素と、5番目以降の要素を表示しています。
 
 `numbers`に[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]というリストを代入しています。
 そのあと、`numbers`の3番目から5番目の要素を`numbers[2:5]`で、5番目以降の要素を`numbers[5:]`で表示しています。
 
-</details>
+````
 
 ## 13
 
@@ -262,8 +250,7 @@ print(data[1:4])
 print(data[::2])
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストのスライス記法で部分リストと飛び飛びの要素を取得して表示しています。
 
@@ -271,7 +258,7 @@ print(data[::2])
 そのあと、`data`の1番目から4番目の要素を`data[1:4]`で、
 2つ飛びで要素を`data[::2]`で取得して表示しています。
 
-</details>
+````
 
 ## 14
 
@@ -282,8 +269,7 @@ print(multiplied)
 print(len(multiplied))
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストを3回繰り返した新しいリストを作成し、その内容と長さを表示しています。
 
@@ -291,7 +277,7 @@ print(len(multiplied))
 `multiplied`に`original`を3回繰り返したリストを代入しています。
 そのあと、`multiplied`の値とその長さを出力しています。
 
-</details>
+````
 
 ## 15
 
@@ -303,14 +289,13 @@ for num in numbers:
 print(total)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 `numbers`に[2, 4, 6, 8]というリストを、`total`に0を代入しています。
 そのあと、`numbers`の要素を順番に取り出して、それぞれを`total`に足しています。
 最後に`total`の値を出力しています。
 
-</details>
+````
 
 ## 16
 
@@ -322,8 +307,7 @@ for i in range(1, 11):
 print(count)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、1から10までの中で3の倍数の個数を数えています。
 
@@ -332,7 +316,7 @@ print(count)
 `i`が3の倍数の場合は`count`に1を足しています。
 最後に`count`の値を出力しています。
 
-</details>
+````
 
 ## 17
 
@@ -345,8 +329,7 @@ for char in text:
 print(count)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、文字列の中に'p'が何個あるかを数えて表示しています。
 
@@ -356,7 +339,7 @@ print(count)
 `char`が'p'の場合は`count`に1を足しています。
 最後に`count`の値を出力しています。
 
-</details>
+````
 
 ## 18
 
@@ -370,8 +353,7 @@ for char in text:
 print(count)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、文字列の中の母音の個数を数えています。
 
@@ -381,7 +363,7 @@ print(count)
 `char`が`vowels`に含まれている場合は`count`に1を足しています。
 最後に`count`の値を出力しています。
 
-</details>
+````
 
 ## 19
 
@@ -394,8 +376,7 @@ for num in data:
 print(count)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの中から3以上7以下の数の個数を数えて表示しています。
 
@@ -405,7 +386,7 @@ print(count)
 `num`が3以上7以下の場合は`count`に1を足しています。
 最後に`count`の値を出力しています。
 
-</details>
+````
 
 ## 20
 
@@ -418,8 +399,7 @@ for num in numbers:
 print(count)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの中から8より大きい数の個数を数えて表示しています。
 
@@ -429,7 +409,7 @@ print(count)
 `num`が8より大きい場合は`count`に1を足しています。
 最後に`count`の値を出力しています。
 
-</details>
+````
 
 ## 21
 
@@ -440,8 +420,7 @@ for i in range(5):
 print(result)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、0から4までの数値を文字列に変換して連結して表示しています。
 
@@ -450,7 +429,7 @@ print(result)
 `result`に`i`を文字列に変換して連結しています。
 最後に`result`の値を出力しています。
 
-</details>
+````
 
 ## 22
 
@@ -461,8 +440,7 @@ for i in range(1, 6):
 print(total)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、1から5までの数の2乗の合計を求めて表示しています。
 
@@ -471,7 +449,7 @@ print(total)
 `total`に`i`の2乗を足しています。
 最後に`total`の値を出力しています。
 
-</details>
+````
 
 ## 23
 
@@ -484,8 +462,7 @@ for num in numbers:
 print(even_numbers)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの中から偶数だけを取り出して新しいリストを作成し、表示しています。
 
@@ -495,7 +472,7 @@ print(even_numbers)
 `num`が偶数の場合は`even_numbers`に`num`を追加しています。
 最後に`even_numbers`の値を出力しています。
 
-</details>
+````
 
 ## 24
 
@@ -507,8 +484,7 @@ for num in numbers:
 print(doubled)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの各要素を2倍にした新しいリストを作成し、表示しています。
 
@@ -518,7 +494,7 @@ print(doubled)
 `num`を2倍にして`doubled`に追加しています。
 最後に`doubled`の値を出力しています。
 
-</details>
+````
 
 ## 25
 
@@ -531,8 +507,7 @@ for num in numbers:
 print(max_num)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの中から最大値を見つけて表示しています。
 
@@ -542,7 +517,7 @@ print(max_num)
 `num`が`max_num`より大きい場合は`max_num`に`num`を代入しています。
 最後に`max_num`の値を出力しています。
 
-</details>
+````
 
 ## 26
 
@@ -555,8 +530,7 @@ for i in range(exponent):
 print(result)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、2の4乗を計算して表示しています。
 
@@ -566,7 +540,7 @@ print(result)
 `result`に`base`を掛けています。
 最後に`result`の値を出力しています。
 
-</details>
+````
 
 ## 27
 
@@ -578,8 +552,7 @@ for num in numbers:
 print(product)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの全要素の積を計算して表示しています。
 
@@ -589,7 +562,7 @@ print(product)
 `product`に`product`に`num`を掛けています。
 最後に`product`の値を出力しています。
 
-</details>
+````
 
 ## 28
 
@@ -602,8 +575,7 @@ for word in words:
 print(longest)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの中から最も長い文字列を見つけて表示しています。
 
@@ -613,7 +585,7 @@ print(longest)
 `word`の長さが`longest`の長さより長い場合は`longest`に`word`を代入しています。
 最後に`longest`の値を出力しています。
 
-</details>
+````
 
 ## 29
 
@@ -626,8 +598,7 @@ for num in numbers:
 print(unique)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの重複を除いた要素だけを新しいリストに追加して表示しています。
 
@@ -637,7 +608,7 @@ print(unique)
 `num`が`unique`に含まれていない場合は`unique`に`num`を追加しています。
 最後に`unique`の値を出力しています。
 
-</details>
+````
 
 ## 30
 
@@ -652,8 +623,7 @@ for i in range(len(numbers)):
 print(index)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの中から特定の値を検索し、そのインデックスを見つけて表示しています。
 
@@ -664,7 +634,7 @@ print(index)
 `numbers[i]`が`target`と等しい場合は`index`に`i`を代入してループを抜けています。
 最後に`index`の値を出力しています。
 
-</details>
+````
 
 ## 31
 
@@ -674,8 +644,7 @@ result = [x * 2 for x in data if x % 2 == 1]
 print(result)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの中から奇数だけを取り出して2倍にした新しいリストを作成し、表示しています。
 
@@ -684,7 +653,7 @@ print(result)
 `x`が奇数の場合は`result`に`x`を2倍した値を追加しています。
 最後に`result`の値を出力しています。
 
-</details>
+````
 
 ## 32
 
@@ -694,8 +663,7 @@ for i in range(3):
         print(f"{i}-{j}")
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、二重ループで、外側の`i`が0,1,2、内側の`j`が0,1を取り、それぞれの組み合わせを表示しています。
 
@@ -705,7 +673,7 @@ for i in range(3):
 
 内側のループが先に処理されているのを確認しましょう。
 
-</details>
+````
 
 ## 33
 
@@ -715,8 +683,7 @@ for row in matrix:
     print(row[1])
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、2次元リストの各行の2番目の要素（インデックス1）を表示しています。
 
@@ -724,7 +691,7 @@ for row in matrix:
 そのあと、`matrix`の要素を順番に取り出して、`row`に代入しています。
 `row`の2番目の要素を表示しています。
 
-</details>
+````
 
 ## 34
 
@@ -736,8 +703,7 @@ for row in matrix:
     print()
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、2次元リストの全要素を行ごとに表示しています。
 
@@ -746,7 +712,7 @@ for row in matrix:
 `row`の要素を順番に取り出して、`element`に代入しています。
 `element`を表示しています。
 
-</details>
+````
 
 ## 35
 
@@ -758,8 +724,7 @@ for row in matrix:
 print(column_sum)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、2次元リストの最初の列（0番目のインデックス）の合計を計算して表示しています。
 
@@ -769,7 +734,7 @@ print(column_sum)
 `column_sum`に`row`の最初の要素を足しています。
 最後に`column_sum`の値を出力しています。
 
-</details>
+````
 
 ## 36
 
@@ -779,8 +744,7 @@ for i, word in enumerate(words):
     print(f"{i}: {word}")
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの要素とインデックスを表示しています。
 
@@ -790,7 +754,7 @@ for i, word in enumerate(words):
 
 `enumerate()`でインデックスと値を同時に取得しています。
 
-</details>
+````
 
 ## 37
 
@@ -807,8 +771,7 @@ print(sum_odd)
 print(sum_even)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの中から奇数の合計と偶数の合計を別々に計算して表示しています。
 
@@ -818,7 +781,7 @@ print(sum_even)
 そのあと、`numbers`の要素を順番に取り出して、`num`に代入しています。
 `num`が偶数の場合は`sum_even`に`num`を足しています。
 
-</details>
+````
 
 ## 38
 
@@ -835,8 +798,7 @@ print(above_90)
 print(below_80)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、点数リストを90点以上と80点未満に分けて表示しています。
 
@@ -846,7 +808,7 @@ print(below_80)
 `grade`が90以上の場合は`above_90`に、80未満の場合は`below_80`に追加しています。
 最後に両方のリストの値を出力しています。
 
-</details>
+````
 
 ## 39
 
@@ -860,8 +822,7 @@ for char in text.lower():
 print(consonants)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、文字列の中から母音以外の文字（子音）だけを取り出して表示しています。
 
@@ -872,7 +833,7 @@ print(consonants)
 `char`が`vowels`に含まれていない場合は`consonants`に`char`を追加しています。
 最後に`consonants`の値を出力しています。
 
-</details>
+````
 
 ## 40
 
@@ -884,8 +845,7 @@ for i in range(len(numbers)):
 print(total)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの各要素に(インデックス+1)を掛けて合計して表示しています。
 
@@ -895,7 +855,7 @@ print(total)
 `total`に`numbers[i]`に`(i + 1)`を掛けた値を足しています。
 最後に`total`の値を出力しています。
 
-</details>
+````
 
 ## 41
 
@@ -908,8 +868,7 @@ for i in range(len(numbers) - 1):
 print(differences)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの隣り合う要素の差を計算した新しいリストを作成して表示しています。
 
@@ -920,7 +879,7 @@ print(differences)
 `differences`に`diff`を追加しています。
 最後に`differences`の値を出力しています。
 
-</details>
+````
 
 ## 42
 
@@ -934,8 +893,7 @@ for i in range(len(numbers)):
 print(pairs)
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 このプログラムは、リストの中から2つの数の和が10になるペアを見つけて表示しています。
 
@@ -946,4 +904,4 @@ print(pairs)
 `numbers[i]`と`numbers[j]`の和が10になる場合は`pairs`に`(numbers[i], numbers[j])`を追加しています。
 最後に`pairs`の値を出力しています。
 
-</details>
+````

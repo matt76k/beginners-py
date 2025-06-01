@@ -19,7 +19,7 @@ kernelspec:
 
 まず、関数から関数を呼べることを確認します。
 
-```{code-cell}
+```python
 def neko():
     print('ネコ')
 
@@ -36,7 +36,7 @@ main()
 
 では、mainから`neko`だけを呼び出して、同じ出力を得るにはどうしたらよいでしょうか。
 
-```{code-cell}
+```python
 def main():
     neko() # mainからは`neko`だけを呼び出す
 
@@ -45,7 +45,7 @@ main()
 
 解答の1つを示します。
 
-```{code-cell}
+```python
 def neko():
     print('ネコ')
     print('ネコ')
@@ -62,7 +62,7 @@ main()
 
 次に、1つの関数で同じような出力をする関数を作ります。
 
-```{code-cell}
+```python
 def neko_or_koneko(b):
     if b == 0:
         print('コネコ')
@@ -80,7 +80,7 @@ neko_or_koneko(0)
 これを`for`文で書くとどうなるでしょうか？
 前のコードを見て、与えてる引数の値がカウントダウンされていることに気づきましたか？
 
-```{code-cell}
+```python
 for i in range(2, -1, -1):
     neko_or_koneko(i)
 ```
@@ -94,7 +94,7 @@ for i in range(2, -1, -1):
 そのためには、`neko_or_koneko`の中で`neko_or_koneko`を呼び出すようにします。
 このように、関数の中で自分自身を呼び出すことを再帰呼び出しといい、そのような関数を**再帰関数**といいます。
 
-```{code-cell}
+```python
 def neko_or_koneko(b):
     if b == 0:
         print('コネコ')
@@ -118,9 +118,17 @@ def func(n):
 
 データ構造やアルゴリズムによっては、再帰関数が最も自然な表現方法になります。
 
-たとえば、[フィボナッチ数列](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0)です。
+たとえば、フィボナッチ数列は以下のような再帰的な定義になっています。
 
-```{code-cell}
+$$
+F_0 = 0 \\
+F_1 = 1 \\
+F_n = F_{n-1} + F_{n-2}
+$$
+
+これをプログラムで書くと以下のようになるでしょう。
+
+```python
 def fib(n):
     if n == 0:
         return 0
@@ -139,8 +147,7 @@ print(fib_list)
 $n! = n \times (n-1) \times (n-2) \times \cdots \times 1$
 を計算する再帰関数`factorial`を作りましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 def factorial(n):
@@ -152,15 +159,14 @@ def factorial(n):
 print(factorial(5))
 ```
 
-</details>
+````
 
 ## 数値の各桁の和を求める
 
 整数の各桁の数字を足し合わせる再帰関数`digit_sum`を作りましょう。
 例えば、$123 \rightarrow 1+2+3 = 6$ となります。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 def digit_sum(n):
@@ -173,14 +179,13 @@ print(digit_sum(123))
 print(digit_sum(9876))
 ```
 
-</details>
+````
 
 ## リストの要素の合計を求める
 
 リストの全要素の合計を再帰的に計算する関数`list_sum`を作りましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 def list_sum(lst):
@@ -192,14 +197,13 @@ def list_sum(lst):
 print(list_sum([1, 2, 3, 4, 5]))
 ```
 
-</details>
+````
 
 ## 文字列を逆順にする
 
 文字列を逆順にして返す再帰関数`reverse_string`を作りましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 def reverse_string(s):
@@ -211,13 +215,12 @@ def reverse_string(s):
 print(reverse_string("Python"))
 ```
 
-</details>
+````
 
 ## べき乗を計算する
 `x` の `n` 乗を再帰的に計算する関数`power`を作りましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 def power(x, n):
@@ -230,13 +233,12 @@ print(power(2, 5))
 print(power(3, 4))
 ```
 
-</details>
+````
 
 ## 最大公約数を求める
 ユークリッドの互除法を使って、2つの数の最大公約数を求める再帰関数`gcd`を作りましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 def gcd(a, b):
@@ -249,14 +251,13 @@ print(gcd(48, 18))
 print(gcd(100, 25))
 ```
 
-</details>
+````
 
 ## 回文かどうかを判定する
 
 文字列が回文（前から読んでも後ろから読んでも同じ）かどうかを判定する再帰関数`is_palindrome`を作りましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 def is_palindrome(s):
@@ -271,14 +272,13 @@ print(is_palindrome("hello"))
 print(is_palindrome("きんにくぼでぃでぼくにんき"))
 ```
 
-</details>
+````
 
 ## 2進数変換を行う
 
 10進数を2進数の文字列に変換する再帰関数`to_binary`を作成してください。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 def to_binary(n):
@@ -292,4 +292,4 @@ print(to_binary(10))  # "1010"が表示される
 print(to_binary(7))   # "111"が表示される
 ```
 
-</details>
+````
