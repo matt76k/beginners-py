@@ -53,14 +53,13 @@ print("Hello, World!")
 
 では、「check it out」と表示するプログラムを書いてみましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 print("check it out")
 ```
+````
 
-</details>
 
 このように、データを表示するには、`print`を使います。
 printはpythonが用意している命令です。
@@ -143,8 +142,7 @@ print(a)
 それでは、1と2にそれぞれ`a`と`b`という名前の変数をつけましょう。
 次に、その`a`と`b`を足した値を`c`という名前の変数につけましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 a = 1
@@ -153,12 +151,11 @@ c = a + b
 print(c)
 ```
 
-</details>
+````
 
 では、Pythonという文字列に`a`という名前、Programmingという文字列に`b`という名前をつけて足して結果を表示してみましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 a = "Python"
@@ -167,22 +164,21 @@ c = a + b
 print(c)
 ```
 
-</details>
+````
 
 このように同じ演算子`+`を使ってもデータの型によって結果が異なります。
 これはPythonが自動的にデータの型を判断してくれて、いい感じに処理してくれています。
 
 では、Pythonに`a`という名前の変数をつけて、その型を確認してみましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 a = "Python"
 print(type(a))
 ```
 
-</details>
+````
 
 `type`は、値の型を確認する関数でしたね。
 このように、変数の型を確認することもできます。
@@ -221,8 +217,7 @@ print(a)
 
 では、この空リストに5、６、７という値を順番に追加してみましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 a = []
@@ -232,7 +227,7 @@ a.append(7)
 print(a)
 ```
 
-</details>
+````
 
 リストの要素にアクセスするには、インデックスを使います。
 例えば、リストの最初の要素にアクセスするには、`a[0]`とします。
@@ -248,15 +243,14 @@ print(a[0])
 
 では、リストの3番目にアクセスしてみましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 a = [5, 6, 7]
 print(a[2])
 ```
 
-</details>
+````
 
 リストの要素を変更するにも、インデックスを使います。
 
@@ -270,8 +264,7 @@ print(a)
 
 では、1から5までの値を持つリストを作成し、1番目の要素と3番目の要素を入れ替えてみましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 a = [1, 2, 3, 4, 5]
@@ -292,4 +285,4 @@ a[0], a[2] = a[2], a[0]
 print(a)
 ```
 
-</details>
+````

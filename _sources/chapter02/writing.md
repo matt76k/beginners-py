@@ -17,46 +17,42 @@ kernelspec:
 ## 001
 自分の名前を表示しましょう
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 print("鳳凰院 龍聖")
 ```
-</details>
+````
 
 ## 002
 自分の名前と星座を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 print("鳳凰院 龍聖")
 print("蟹座")
 ```
-</details>
+````
 
 ## 003
 変数 `x = 10` と `y = 20` の和を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 x = 10
 y = 20
 print(x + y)
 ```
-</details>
+````
 
 ## 004
 `price`と`tax`という変数にそれぞれ値を代入し、消費税込みの価格を計算して表示しましょう。
 
 計算式は `価格 * (1 + 税率 / 100)` です。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 price = 1200
@@ -64,14 +60,13 @@ tax = 10
 print(int(price * (1 + tax / 100)))
 ```
 
-</details>
+````
 
 ## 005
 2つの変数 `a` と `b` の値を交換するプログラムを書きましょう。
 例えば `a=5, b=10` なら `a=10, b=5` とします。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 a = 5
@@ -81,13 +76,12 @@ a, b = b, a
 print(f"交換後: a={a}, b={b}")
 ```
 
-</details>
+````
 
 ## 006
 変数 `num = 7` が奇数か偶数かを判定して表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 num = 7
@@ -96,13 +90,12 @@ if num % 2 == 0:
 else:
     print("奇数")
 ```
-</details>
+````
 
 ## 007
 `score`という変数に整数値を代入し、その値が60以上なら合格、そうでない場合は不合格と表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 score = 60
@@ -111,13 +104,12 @@ if score >= 60:
 else:
     print("不合格")
 ```
-</details>
+````
 
 ## 008
 `num`という変数に整数値を代入し、その数が正数、負数、ゼロのどれかを判定して表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 num = -5
@@ -128,13 +120,12 @@ elif num < 0:
 else:
     print("ゼロ")
 ```
-</details>
+````
 
 ## 009
 変数 `age`に整数値を代入し、その値が20歳未満なら「未成年」、20歳以上65歳未満なら「成人」、65歳以上なら「高齢者」と表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 age = 18
@@ -145,13 +136,12 @@ elif age < 65:
 else:
     print("高齢者")
 ```
-</details>
+````
 
 ## 010
 3つの数値 `a = 5`, `b = 3`, `c = 8` の中で最大値を見つけて表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 a = 5
@@ -164,14 +154,13 @@ if c > max_value:
     max_value = c
 print(max_value)
 ```
-</details>
+````
 
 ## 011
 `score`という変数に整数値を代入し、不可、可、良、優、秀という評価を表示しましょう。
 不可は60点未満、可は60点から69点、良は70点から79点、優は80点から89点、秀は90点から100点とします。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 score = 80
@@ -187,13 +176,12 @@ else:
     print("秀")
 ```
 
-</details>
+````
 
 ## 012
 変数`num`に整数値を代入し、3の倍数ならFizz、5の倍数ならBuzz、3の倍数かつ5の倍数ならFizzBuzzと表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 num = 15
@@ -207,14 +195,13 @@ else:
     print(num)
 ```
 
-</details>
+````
 
 ## 013
 `year`という変数に整数値を代入し、その年がうるう年かどうかを表示しましょう。
 うるう年は、4で割り切れる年ですが、100で割り切れる年はうるう年ではありません。ただし、400で割り切れる年はうるう年です。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 year = 2024
@@ -223,13 +210,12 @@ if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
 else:
     print("平年")
 ``` 
-</details>
+````
 
 ## 014
 変数 `temperature = 25` に対して、30度以上なら「暑い」、20度以上30度未満なら「快適」、20度未満なら「寒い」と表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 temperature = 25
@@ -240,50 +226,46 @@ elif temperature >= 20:
 else:
     print("寒い")
 ```
-</details>
+````
 
 ## 015
 1から5までの数を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 for i in range(1, 6):
     print(i)
 ```
-</details>
+````
 
 ## 016
 1から10までの整数を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 for i in range(1, 11):
     print(i)
 ```
 
-</details>
+````
 
 ## 017
 5回「Hello」と表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 for i in range(5):
     print("Hello")
 ```
-</details>
+````
 
 ## 018
 `num`という変数に整数値を代入し、その数だけ`#`を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 num = 5
@@ -295,13 +277,12 @@ for i in range(num):
 ```python
 print("#" * num)
 ```
-</details>
+````
 
 ## 019
 1から10までの数の合計を計算して表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 total = 0
@@ -309,13 +290,12 @@ for i in range(1, 11):
     total += i
 print(total)
 ```
-</details>
+````
 
 ## 020
 1から20までの整数のうち、偶数のみを表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 for i in range(1, 21):
@@ -323,13 +303,12 @@ for i in range(1, 21):
         print(i)
 ```
 
-</details>
+````
 
 ## 021
 1から20までの整数のうち、奇数のみを表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 for i in range(1, 21):
@@ -337,13 +316,12 @@ for i in range(1, 21):
         print(i)
 ```
 
-</details>
+````
 
 ## 022
 1から20までの整数で、3の倍数の時だけその数を表示するプログラムを書きましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 for i in range(1, 21):
@@ -351,39 +329,36 @@ for i in range(1, 21):
         print(i)
 ```
 
-</details>
+````
 
 ## 023
 1から30までの数で、5の倍数のみを表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 for i in range(1, 31):
     if i % 5 == 0:
         print(i)
 ```
-</details>
+````
 
 ## 024
 1から15までの数で、3の倍数でも5の倍数でもない数を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 for i in range(1, 16):
     if i % 3 != 0 and i % 5 != 0:
         print(i)
 ```
-</details>
+````
 
 ## 025
 1から100までの数で、7の倍数の個数を数えて表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 count = 0
@@ -392,7 +367,7 @@ for i in range(1, 101):
         count += 1
 print(count)
 ```
-</details>
+````
 
 ## 026
 `kuku`という変数に整数値（1から9のいずれか）を代入し、その値の段の九九表を表示しましょう。
@@ -409,8 +384,7 @@ print(count)
 3 * 9 = 27
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 kuku = 3
@@ -418,13 +392,12 @@ for i in range(9):
     print(f"{kuku} * {i + 1} = {kuku * (i + 1)}")
 ```
 
-</details>
+````
 
 ## 027
 `num`という変数に整数値を代入し、1からその値までの合計値を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 num = 10
@@ -434,13 +407,12 @@ for i in range(num):
 print(sum)
 ```
 
-</details>
+````
 
 ## 028
 1から20までの数で、平方数（1, 4, 9, 16...）を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 for i in range(1, 21):
@@ -449,14 +421,13 @@ for i in range(1, 21):
             print(i)
             break
 ```
-</details>
+````
 
 ## 029
 `num`という変数に整数値を代入し、その値の階乗を計算して表示しましょう。
 例えば5の階乗は `5 * 4 * 3 * 2 * 1 = 120` です。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 num = 5
@@ -467,13 +438,12 @@ if num > 0:
 print(factorial)
 ```
 
-</details>
+````
 
 ## 030
 `base = 3, exponent = 4` のとき、$3^4$ を計算して表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 base = 3
@@ -484,20 +454,19 @@ for _ in range(exponent):
 print(result)
 ```
 
-</details>
+````
 
 ## 031
 1から50までの数で、6または8で割り切れる数を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 for i in range(1, 51):
     if i % 6 == 0 or i % 8 == 0:
         print(i)
 ```
-</details>
+````
 
 ## 032
 底辺の長さを`base`という変数に代入し、三角形を表示しましょう。
@@ -510,8 +479,7 @@ for i in range(1, 51):
 ^^^
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 base = 3
@@ -519,7 +487,7 @@ for i in range(base):
     print("^" * (i + 1))
 ```
 
-</details>
+````
 
 ## 033
 `height`という変数に整数値を代入し、その高さのピラミッド（二等辺三角形）を表示しましょう。
@@ -532,8 +500,7 @@ for i in range(base):
 *****
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 height = 3
@@ -543,7 +510,7 @@ for i in range(height):
     print(spaces + stars)
 ```
 
-</details>
+````
 
 ## 034
 5×5の数字の正方形を表示しましょう。各位置に行番号×列番号の値を表示してください。
@@ -556,8 +523,7 @@ for i in range(height):
 5 10 15 20 25
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 for i in range(1, 6):
@@ -565,14 +531,13 @@ for i in range(1, 6):
         print(i * j, end=" ")
     print()
 ```
-</details>
+````
 
 ## 035
 1から20までの数で、完全数を見つけて表示しましょう。
 完全数とは、自分自身を除く約数の和が自分自身と等しい数です。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 for num in range(1, 21):
@@ -583,13 +548,12 @@ for num in range(1, 21):
     if divisor_sum == num:
         print(num)
 ```
-</details>
+````
 
 ## 036
 リスト `numbers = [1, 2, 3, 4, 5]` の最初の要素と最後の要素を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 2, 3, 4, 5]
@@ -597,13 +561,12 @@ print(f"最初の要素: {numbers[0]}")
 print(f"最後の要素: {numbers[-1]}")
 ```
 
-</details>
+````
 
 ## 037
 リスト `numbers = [1, 2, 3, 4, 5]` のすべての要素を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 2, 3, 4, 5]
@@ -611,26 +574,24 @@ for num in numbers:
     print(num)
 ```
 
-</details>
+````
 
 ## 038
 リスト `numbers = [1, 2, 3, 4, 5]` の要素数を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 2, 3, 4, 5]
 print(len(numbers))
 ```
 
-</details>
+````
 
 ## 039
 リスト `numbers = [10, 25, 3, 17, 8]` の中で15より大きい要素を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [10, 25, 3, 17, 8]
@@ -638,13 +599,12 @@ for num in numbers:
     if num > 15:
         print(num)
 ```
-</details>
+````
 
 ## 040
 リスト `numbers = [1, 2, 3, 4, 5]` の各要素にそのインデックス番号を付けて表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 2, 3, 4, 5]
@@ -652,13 +612,12 @@ for i, num in enumerate(numbers):
     print(f"インデックス{i}: {num}")
 ```
 
-</details>
+````
 
 ## 041
 リスト `numbers = [2, 4, 6, 8, 10]` のすべての要素の合計を計算して表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [2, 4, 6, 8, 10]
@@ -667,13 +626,12 @@ for num in numbers:
     total += num
 print(total)
 ```
-</details>
+````
 
 ## 042
 `numbers = [5, 2, 8, 1, 9]` というリストの最大値を、ループで見つけて表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [5, 2, 8, 1, 9]
@@ -684,13 +642,12 @@ for num in numbers:
 print(max_num)
 ```
 
-</details>
+````
 
 ## 043
 `numbers = [5, 2, 8, 1, 9]` というリストの最小値を、ループで見つけて表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [5, 2, 8, 1, 9]
@@ -701,13 +658,12 @@ for num in numbers:
 print(min_num)
 ```
 
-</details>
+````
 
 ## 044
 リスト `numbers = [3, 7, 2, 9, 1]` の中で5より小さい要素の個数を数えましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [3, 7, 2, 9, 1]
@@ -717,14 +673,13 @@ for num in numbers:
         count += 1
 print(count)
 ```
-</details>
+````
 
 ## 045
 `numbers = [10, 20, 30, 40, 50]` というリストがあります。
 変数`target`に値を代入し、その値がこのリストに含まれているかどうかを判定し、含まれていればそのインデックスを、含まれていなければ-1を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [10, 20, 30, 40, 50]
@@ -737,13 +692,12 @@ for i in range(len(numbers)):
 print(result)
 ```
 
-</details>
+````
 
 ## 046
 リスト `grades = [85, 92, 78, 96, 73]` の中で80点以上の成績の個数を数えましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 grades = [85, 92, 78, 96, 73]
@@ -753,14 +707,13 @@ for grade in grades:
         count += 1
 print(count)
 ```
-</details>
+````
 
 ## 047
 `numbers = [-2, 0, 5, -8, 10]` があります。
 正の数だけを合計した値を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [-2, 0, 5, -8, 10]
@@ -771,13 +724,12 @@ for num in numbers:
 print(sum_positives)
 ```
 
-</details>
+````
 
 ## 048
 リスト `numbers = [12, 7, 23, 8, 15]` の平均値を計算して表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [12, 7, 23, 8, 15]
@@ -787,13 +739,12 @@ for num in numbers:
 average = total / len(numbers)
 print(average)
 ```
-</details>
+````
 
 ## 049
 `numbers = [1, 2, 3, 4, 5]` の要素を逆順にした新しいリスト `reversed_numbers` を作成して表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 2, 3, 4, 5]
@@ -803,13 +754,12 @@ for i in numbers:
 print(reversed_numbers)
 ```
 
-</details>
+````
 
 ## 050
 `numbers = [1, 2, 3, 4, 5]` の各要素を2倍にした新しいリスト `doubled_numbers` を作成しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 2, 3, 4, 5]
@@ -819,14 +769,13 @@ for num in numbers:
 print(doubled_numbers)
 ```
 
-</details>
+````
 
 ## 051
 `numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]` があります。
 奇数だけを取り出した新しいリストを作成しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -837,13 +786,12 @@ for num in numbers:
 print(odd_numbers)
 ```
 
-</details>
+````
 
 ## 052
 リスト `scores = [75, 82, 90, 67, 85]` の中で80点以上の点数だけを新しいリストに入れて表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 scores = [75, 82, 90, 67, 85]
@@ -853,14 +801,13 @@ for score in scores:
         high_scores.append(score)
 print(high_scores)
 ```
-</details>
+````
 
 ## 053
 リスト `[8, 3, 1, 5, 6]` の各要素に、そのインデックス番号を加えた新しいリストを作成しましょう。
 例えば、`[8, 3, 1, 5, 6]` というリストがあった場合、`[8, 4, 3, 8, 10]` という新しいリストを作成しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 original = [8, 3, 1, 5, 6]
@@ -870,13 +817,12 @@ for i, n in enumerate(original):
 print(result)
 ```
 
-</details>
+````
 
 ## 054
 `numbers = [1, 2, 2, 3, 4, 4, 5]` というリストから重複する値を取り除いた新しいリストを作成して表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 2, 2, 3, 4, 4, 5]
@@ -887,13 +833,12 @@ for i in numbers:
 print(unique_numbers)
 ```
 
-</details>
+````
 
 ## 055
 リスト `a = [1, 2, 3]` と `b = [4, 5, 6]` を連結して、`[1, 2, 3, 4, 5, 6]` という新しいリストを作成して表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 a = [1, 2, 3]
@@ -903,13 +848,12 @@ for i in b:
 print(a)
 ```
 
-</details>
+````
 
 ## 056
 リスト `numbers = [10, 5, 8, 3, 7]` の中で、隣接する要素の差が2以下のペアを見つけて表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [10, 5, 8, 3, 7]
@@ -918,7 +862,7 @@ for i in range(len(numbers) - 1):
     if diff <= 2:
         print(f"{numbers[i]} と {numbers[i + 1]}")
 ```
-</details>
+````
 
 ## 057
 九九の表（1の段から9の段まで）をすべて表示しましょう。
@@ -937,8 +881,7 @@ for i in range(len(numbers) - 1):
 9:    9  18  27  36  45  54  63  72  81
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 print("   ", end="")
@@ -953,13 +896,12 @@ for i in range(1, 10):
     print()
 ```
 
-</details>
+````
 
 ## 058
 リスト `numbers = [4, 7, 2, 9, 1]` の中で最大値と最小値の差を計算して表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [4, 7, 2, 9, 1]
@@ -972,7 +914,7 @@ for num in numbers:
         min_num = num
 print(max_num - min_num)
 ```
-</details>
+````
 
 ## 059
 1から6までの整数値をランダムに生成し、その値を表示するには以下のプログラムを実行します。
@@ -984,8 +926,7 @@ print(random.randint(1, 6))
 
 1から6までの整数値をランダムに10回生成し、その平均値を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 import random
@@ -995,7 +936,7 @@ for i in range(10):
 print(sum / 10)
 ```
 
-</details>
+````
 
 ## 060
 1から10までの整数値を3つランダムに生成し、その値を表示しましょう。
@@ -1005,21 +946,19 @@ print(sum / 10)
 [4, 5, 1]
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 import random
 slots = [random.randint(1, 10) for _ in range(3)]
 print(slots)
 ```
-</details>
+````
 
 ## 061
 1から10までの整数値を3つランダムに生成し、すべての値が同じなら「当たり」と表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 import random
@@ -1027,15 +966,14 @@ slots = [random.randint(1, 10) for _ in range(3)]
 if slots[0] == slots[1] == slots[2]:
     print("当たり")
 ```
-</details>
+````
 
 ## 062
 1から10までの整数値を3つランダムに生成し、
 すべての値が同じになるまで繰り返し、同じになったら繰り返した回数とその値を表示しましょう。
 ただし、繰り返す回数は10000回です。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 import random
@@ -1046,13 +984,12 @@ for i in range(10000):
         break
 ```
 
-</details>
+````
 
 ## 063
 0から9までの数字がランダムな順序で入ったリストを作成しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 import random
@@ -1061,14 +998,13 @@ random.shuffle(numbers)
 print(numbers)
 ```
 
-</details>
+````
 
 ## 064
 `num`という変数に整数値を代入し、その数が素数かどうかを判定して表示しましょう。
 （素数：1とその数自身以外に約数を持たない正の整数）
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 num = 13
@@ -1088,14 +1024,13 @@ else:
     print(f"{num}は素数ではありません")
 ```
 
-</details>
+````
 
 ## 065
 フィボナッチ数列の最初の10項を表示するプログラムを作成しましょう。
 フィボナッチ数列は、`F(0)=0`, `F(1)=1`, `F(n)=F(n-1)+F(n-2)`で定義されます。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 a, b = 0, 1
@@ -1104,7 +1039,7 @@ for _ in range(10):
     a, b = b, a + b
 ```
 
-</details>
+````
 
 ## 066
 `base2`というリストに0か1の値が入っています。
@@ -1118,8 +1053,7 @@ $$
 1011_2 = 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0 = 11_{10}
 $$
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 base2 = [1, 0, 1, 1]
@@ -1130,15 +1064,14 @@ for i in range(len(base2)):
 print(base10)
 ```
 
-</details>
+````
 
 ## 067
 `base10`という変数に10進数の値を代入し、それを2進数を表すリストに変換して表示しましょう。
 
 例えば、`base10 = 11`なら、`[1, 0, 1, 1]`を表示します。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 base10 = 11
@@ -1150,28 +1083,26 @@ base2.reverse()
 print(base2)
 ```
 
-</details>
+````
 
 ## 068
 1から100までの整数のうち、偶数のみを要素とするリストを作成しましょう。
 リスト内包表記を使うと一行で書けます。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 even_numbers = [i for i in range(1, 101) if i % 2 == 0]
 print(even_numbers)
 ```
 
-</details>
+````
 
 ## 069
 `numbers = [1, 2, 3, 4, 5]` の各要素を2倍にした新しいリスト `doubled_numbers` を作成しましょう。
 リスト内包表記を使って書いてみましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 2, 3, 4, 5]
@@ -1179,14 +1110,13 @@ doubled_numbers = [num * 2 for num in numbers]
 print(doubled_numbers)
 ```
 
-</details>
+````
 
 ## 070
 `numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]` があります。
 奇数だけを取り出した新しいリストをリスト内包表記で作成しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -1194,14 +1124,13 @@ odd_numbers = [num for num in numbers if num % 2 != 0]
 print(odd_numbers)
 ```
 
-</details>
+````
 
 ## 071
 `a = [1, 2, 3, 4]` と `b = [3, 4, 5, 6]` という2つのリストがあります。
 これらの積集合（intersection）を求めて表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 a = [1, 2, 3, 4]
@@ -1215,14 +1144,13 @@ for i in a:
 print(intersection)
 ```
 
-</details>
+````
 
 ## 072
 `a = [1, 2, 3, 4]` と `b = [3, 4, 5, 6]` という2つのリストがあります。
 これらの和集合（union）を求めて表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 a = [1, 2, 3, 4]
@@ -1240,14 +1168,13 @@ for i in b:
 print(union)
 ```
 
-</details>
+````
 
 ## 073
 リスト `numbers = [3, 1, 4]` があります。
 インデックス`0`の要素とインデックス`1`の要素を交換して `[1, 3, 4]` となるようにし、表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [3, 1, 4]
@@ -1256,13 +1183,12 @@ numbers[0], numbers[1] = numbers[1], numbers[0]
 print(f"交換後: {numbers}")
 ```
 
-</details>
+````
 
 ## 074
 `n`という変数に整数値を代入し、`n x n` の単位行列（対角成分が1で、他は0）を2次元リストで作成しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 n = 5
@@ -1274,14 +1200,13 @@ for row in identity_matrix:
     print(row)
 ```
 
-</details>
+````
 
 ## 075
 `matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]` という2次元リスト（行列）があります。
 この行列のすべての要素を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -1291,14 +1216,13 @@ for row in matrix:
     print()
 ```
 
-</details>
+````
 
 ## 076
 `matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]` という2次元リスト（行列）があります。
 この行列の対角成分（左上から右下への要素）を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -1306,7 +1230,7 @@ for i in range(len(matrix)):
     print(matrix[i][i])
 ```
 
-</details>
+````
 
 ## 077
 `a`というリストに[1, 2, 3, 4, 5]が入っています。
@@ -1322,8 +1246,7 @@ for i in range(len(matrix)):
 [1, 2, 3, 4, 5]
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 a = [1, 2, 3, 4, 5]
@@ -1332,14 +1255,13 @@ for i in range(len(a)):
     print(a)
 ```
 
-</details>
+````
 
 ## 078
 リスト `my_list = [1, 2, 3, 4, 5]` があります。
 `mylist2 = mylist` という代入をして、mylist2の先頭の値を`99`にして、`mylist`を表示してみましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 my_list = [1, 2, 3, 4, 5]
@@ -1350,7 +1272,7 @@ print(my_list)
 
 このように、リストを代入すると、同じリストを参照していることになります。
 
-</details>
+````
 
 ## 079
 リスト `my_list = [1, 2, 3, 4, 5]` があります。
@@ -1358,8 +1280,7 @@ print(my_list)
 `my_list`と`copied_list`を表示してみましょう。
 コピーには`copy()`メソッドを使いましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 my_list = [1, 2, 3, 4, 5]
@@ -1371,14 +1292,13 @@ print(f"元のリスト: {my_list}")
 print(f"コピーしたリスト: {copied_list}")
 ```
 
-</details>
+````
 
 ## 080
 `numbers`という変数にリストを代入し、このリストが昇順（小さい順）にソートされているかどうかを判定する真偽値を表示しましょう。
 例えば、 `[1, 10, 5, 8, 2, 9]` を代入した場合、`False`が表示されます。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 10, 5, 8, 2, 9]
@@ -1390,14 +1310,13 @@ for i in range(len(numbers) - 1):
 print(is_sorted)
 ```
 
-</details>
+````
 
 ## 081
 リスト `numbers = [5, 2, 8, 1, 9]` があります。
 このリストから**最小値を見つけ**、その値と**リストの最初の要素を交換**するプログラムを書きましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [5, 2, 8, 1, 9]
@@ -1414,14 +1333,13 @@ numbers[0], numbers[min_idx] = numbers[min_idx], numbers[0]
 print(numbers)
 ```
 
-</details>
+````
 
 ## 082
 リスト `numbers = [3, 5, 1, 2, 4]` があります。
 隣り合う要素を比較し、もし左が右より大きければ交換するという処理を、リストの先頭から末尾まで一度だけ行い、その結果を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [3, 5, 1, 2, 4]
@@ -1431,15 +1349,14 @@ for i in range(len(numbers) - 1):
 print(numbers)
 ```
 
-</details>
+````
 
 ## 083
 リスト `numbers = [3, 5, 1, 2, 4]` があります。
 隣り合う要素を比較し、もし右が左より大きければ交換するという処理を、リストの先頭から末尾まで一度だけ行い、その結果を表示しましょう。
 
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [3, 5, 1, 2, 4]
@@ -1450,14 +1367,13 @@ for i in range(len(numbers) - 1):
 print(numbers)
 ```
 
-</details>
+````
 
 ## 084
 `sorted_list = [1, 3, 5, 7]` と `new_value = 4` があります。
 `sorted_list` のソートされた順序を保ったまま `new_value` を挿入し、結果を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 sorted_list = [1, 3, 5, 7]
@@ -1475,15 +1391,14 @@ if not inserted:
 print(sorted_list)
 ```
 
-</details>
+````
 
 ## 085
 リスト `numbers = [5, 2, 8, 1, 9]` があります。
 リストを2つに分割して、各部分で最小値を見つけ、それらを表示しましょう。
 分割位置は中央(`len(numbers) // 2`)とします。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [5, 2, 8, 1, 9]
@@ -1505,7 +1420,7 @@ print(f"左半分の最小値: {left_min}")
 print(f"右半分の最小値: {right_min}")
 ```
 
-</details>
+````
 
 ## 086
 リスト `numbers = [4, 2, 2, 8, 3, 3, 1]` があります。
@@ -1520,8 +1435,7 @@ print(f"右半分の最小値: {right_min}")
 1: 1回
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [4, 2, 2, 8, 3, 3, 1]
@@ -1537,14 +1451,13 @@ for num, count in counts.items():
     print(f"{num}: {count}回")
 ```
 
-</details>
+````
 
 ## 087
 リスト `matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]` があります。
 この行列を転置（行と列を入れ替え）して表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -1561,7 +1474,7 @@ for row in transposed:
     print(row)
 ```
 
-</details>
+````
 
 ## 088
 リスト `numbers = [1, 2, 3, 2, 4, 3, 5]` があります。
@@ -1572,8 +1485,7 @@ for row in transposed:
 重複: 値2, インデックス1と3
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 2, 3, 2, 4, 3, 5]
@@ -1589,14 +1501,13 @@ for i in range(len(numbers)):
         break
 ```
 
-</details>
+````
 
 ## 089
 リスト `numbers = [5, 3, 8, 4, 2, 7, 1, 6]` があります。
 このリストから、偶数が前半、奇数が後半になるように並び替えて表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [5, 3, 8, 4, 2, 7, 1, 6]
@@ -1613,7 +1524,7 @@ result = evens + odds
 print(result)
 ```
 
-</details>
+````
 
 ## 090
 リスト `numbers = [1, 2, 3, 4, 5]` があります。
@@ -1635,8 +1546,7 @@ print(result)
 合計は、$2 + 3 + 4 + 5 + 6 + 8 + 10 + 12 + 15 + 20 = 85$ になります。
 
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 2, 3, 4, 5]
@@ -1651,14 +1561,13 @@ for i in range(len(numbers)):
 print(f"合計: {total}")
 ```
 
-</details>
+````
 
 ## 091
 リスト `numbers = [2, 7, 11, 15]` と `target = 9` があります。
 2つの数の和が`target`になる組み合わせのインデックスを見つけて表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [2, 7, 11, 15]
@@ -1678,14 +1587,13 @@ if not found:
     print("組み合わせが見つかりませんでした")
 ```
 
-</details>
+````
 
 ## 092
 リスト `numbers = [1, 2, 3, 4]` があります。
 このリストから3つの要素を選ぶすべての組み合わせを生成しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 2, 3, 4]
@@ -1700,14 +1608,13 @@ for combo in combinations:
     print(combo)
 ```
 
-</details>
+````
 
 ## 093
 リスト `numbers = [3, 8, 1, 6, 2]` があります。
 このリストの中で2番目に大きい値を見つけて表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [3, 8, 1, 6, 2]
@@ -1723,14 +1630,13 @@ for num in numbers:
 
 print(second_max)
 ```
-</details>
+````
 
 ## 094
 リスト `numbers = [1, 4, 2, 8, 5, 7]` があります。
 隣接する要素の差の絶対値が最小となるペアを見つけて表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [1, 4, 2, 8, 5, 7]
@@ -1746,7 +1652,7 @@ for i in range(len(numbers)):
 
 print(f"最小差のペア: {best_pair[0]}と{best_pair[1]}, 差: {min_diff}")
 ```
-</details>
+````
 
 ## 095
 リスト `numbers = [12, 7, 23, 8, 15, 9]` があります。
@@ -1762,8 +1668,7 @@ print(f"最小差のペア: {best_pair[0]}と{best_pair[1]}, 差: {min_diff}")
 9は4番目に大きい
 ```
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [12, 7, 23, 8, 15, 9]
@@ -1774,14 +1679,13 @@ for num in numbers:
             rank += 1
     print(f"{num}は{rank}番目に大きい")
 ```
-</details>
+````
 
 ## 096
 リスト `matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]` があります。
 この行列の各行の合計と各列の合計を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -1802,14 +1706,13 @@ for j in range(len(matrix[0])):
         col_sum += matrix[i][j]
     print(f"列{j+1}: {col_sum}")
 ```
-</details>
+````
 
 ## 097
 リスト `numbers = [5, 3, 8, 3, 1, 8, 5]` があります。
 最も頻繁に出現する数値とその出現回数を表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [5, 3, 8, 3, 1, 8, 5]
@@ -1830,14 +1733,13 @@ for num, count in counts.items():
 
 print(f"最頻出の数値: {most_frequent}, 出現回数: {max_count}")
 ```
-</details>
+````
 
 ## 098
 リスト `numbers = [5, 12, 3, 8, 15]` があります。
 このリストの中で10以上の数値だけを集めて新しいリストを作り、表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 numbers = [5, 12, 3, 8, 15]
@@ -1847,14 +1749,13 @@ for num in numbers:
         big_numbers.append(num)
 print(big_numbers)
 ```
-</details>
+````
 
 ## 099
 リスト `prices = [100, 250, 80, 300, 150]` があります。
 全ての価格に消費税10%を加えた新しいリストを作って表示しましょう。
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 prices = [100, 250, 80, 300, 150]
@@ -1864,7 +1765,7 @@ for price in prices:
     tax_included.append(new_price)
 print(tax_included)
 ```
-</details>
+````
 
 ## 100
 クラスの点数管理をしましょう。
@@ -1875,8 +1776,7 @@ print(tax_included)
 2. 80点以上の学生の名前を表示
 3. 全体の平均点を計算して表示
 
-<details>
-<summary> 回答例 </summary>
+````{dropdown} 解答例
 
 ```python
 students = [["田中", 85], ["佐藤", 92], ["鈴木", 78]]
@@ -1907,4 +1807,4 @@ average = total / count
 print(f"平均点: {average:.1f}点")
 ```
 
-</details>
+````

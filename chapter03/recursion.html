@@ -372,9 +372,7 @@ document.write(`
 <p>再帰関数は初心者にとっては難しい概念ですが、
 ステップバイステップで理解すれば、それほど難しくはありません。</p>
 <p>まず、関数から関数を呼べることを確認します。</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">neko</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">neko</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ネコ&#39;</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">koneko</span><span class="p">():</span>
@@ -388,35 +386,15 @@ document.write(`
 <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ネコ
-ネコ
-コネコ
-</pre></div>
-</div>
-</div>
-</div>
 <p>では、mainから<code class="docutils literal notranslate"><span class="pre">neko</span></code>だけを呼び出して、同じ出力を得るにはどうしたらよいでしょうか。</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
     <span class="n">neko</span><span class="p">()</span> <span class="c1"># mainからは`neko`だけを呼び出す</span>
 
 <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ネコ
-</pre></div>
-</div>
-</div>
-</div>
 <p>解答の1つを示します。</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">neko</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">neko</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ネコ&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ネコ&#39;</span><span class="p">)</span>
     <span class="n">koneko</span><span class="p">()</span>
@@ -427,21 +405,10 @@ document.write(`
 <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ネコ
-ネコ
-コネコ
-</pre></div>
-</div>
-</div>
-</div>
 <p>これは1つの例であり、他にも様々な方法が考えつくでしょう。
 ここで学びたいのは、関数から関数を呼べるということです。</p>
 <p>次に、1つの関数で同じような出力をする関数を作ります。</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">neko_or_koneko</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">neko_or_koneko</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;コネコ&#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -452,33 +419,13 @@ document.write(`
 <span class="n">neko_or_koneko</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ネコ
-ネコ
-コネコ
-</pre></div>
-</div>
-</div>
-</div>
 <p>この関数は、0を渡したら'コネコ'を、0以外は'ネコ'を表示します。
 このように与える引数で関数の動作を変えることができます。</p>
 <p>これを<code class="docutils literal notranslate"><span class="pre">for</span></code>文で書くとどうなるでしょうか？
 前のコードを見て、与えてる引数の値がカウントダウンされていることに気づきましたか？</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
     <span class="n">neko_or_koneko</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ネコ
-ネコ
-コネコ
-</pre></div>
-</div>
-</div>
 </div>
 <p>前のプログラムがスッキリしましたね。
 0が終わりを意味しているわけです。
@@ -487,9 +434,7 @@ document.write(`
 <p>さらに<code class="docutils literal notranslate"><span class="pre">for</span></code>文まで無くしてみましょう。
 そのためには、<code class="docutils literal notranslate"><span class="pre">neko_or_koneko</span></code>の中で<code class="docutils literal notranslate"><span class="pre">neko_or_koneko</span></code>を呼び出すようにします。
 このように、関数の中で自分自身を呼び出すことを再帰呼び出しといい、そのような関数を<strong>再帰関数</strong>といいます。</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">neko_or_koneko</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">neko_or_koneko</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;コネコ&#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -498,15 +443,6 @@ document.write(`
 
 <span class="n">neko_or_koneko</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ネコ
-ネコ
-コネコ
-</pre></div>
-</div>
-</div>
 </div>
 <p>再帰関数の基本的な構造は、以下の通りです。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -518,10 +454,15 @@ document.write(`
 </pre></div>
 </div>
 <p>データ構造やアルゴリズムによっては、再帰関数が最も自然な表現方法になります。</p>
-<p>たとえば、<a class="reference external" href="https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0">フィボナッチ数列</a>です。</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<p>たとえば、フィボナッチ数列は以下のような再帰的な定義になっています。</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+F_0 = 0 \\
+F_1 = 1 \\
+F_n = F_{n-1} + F_{n-2}
+\end{split}\]</div>
+<p>これをプログラムで書くと以下のようになるでしょう。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -533,20 +474,14 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">fib_list</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-</pre></div>
-</div>
-</div>
-</div>
 <p>では、再帰関数に慣れるために、以下の問題をやってみましょう。</p>
 <section id="id2">
 <h2><span class="section-number">3.2.1. </span>階乗を計算する<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p><span class="math notranslate nohighlight">\(n! = n \times (n-1) \times (n-2) \times \cdots \times 1\)</span>
 を計算する再帰関数<code class="docutils literal notranslate"><span class="pre">factorial</span></code>を作りましょう。</p>
-<details>
-<summary> 回答例 </summary>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
@@ -556,14 +491,15 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
 </div>
-</details>
-</section>
+</div>
+</details></section>
 <section id="id3">
 <h2><span class="section-number">3.2.2. </span>数値の各桁の和を求める<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>整数の各桁の数字を足し合わせる再帰関数<code class="docutils literal notranslate"><span class="pre">digit_sum</span></code>を作りましょう。
 例えば、<span class="math notranslate nohighlight">\(123 \rightarrow 1+2+3 = 6\)</span> となります。</p>
-<details>
-<summary> 回答例 </summary>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">digit_sum</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">n</span>
@@ -574,13 +510,14 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">digit_sum</span><span class="p">(</span><span class="mi">9876</span><span class="p">))</span>
 </pre></div>
 </div>
-</details>
-</section>
+</div>
+</details></section>
 <section id="id4">
 <h2><span class="section-number">3.2.3. </span>リストの要素の合計を求める<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <p>リストの全要素の合計を再帰的に計算する関数<code class="docutils literal notranslate"><span class="pre">list_sum</span></code>を作りましょう。</p>
-<details>
-<summary> 回答例 </summary>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">list_sum</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
@@ -590,13 +527,14 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">list_sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
 </pre></div>
 </div>
-</details>
-</section>
+</div>
+</details></section>
 <section id="id5">
 <h2><span class="section-number">3.2.4. </span>文字列を逆順にする<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <p>文字列を逆順にして返す再帰関数<code class="docutils literal notranslate"><span class="pre">reverse_string</span></code>を作りましょう。</p>
-<details>
-<summary> 回答例 </summary>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">reverse_string</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">s</span>
@@ -606,13 +544,14 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">reverse_string</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
-</details>
-</section>
+</div>
+</details></section>
 <section id="id6">
 <h2><span class="section-number">3.2.5. </span>べき乗を計算する<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">x</span></code> の <code class="docutils literal notranslate"><span class="pre">n</span></code> 乗を再帰的に計算する関数<code class="docutils literal notranslate"><span class="pre">power</span></code>を作りましょう。</p>
-<details>
-<summary> 回答例 </summary>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
@@ -623,13 +562,14 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">power</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 </pre></div>
 </div>
-</details>
-</section>
+</div>
+</details></section>
 <section id="id7">
 <h2><span class="section-number">3.2.6. </span>最大公約数を求める<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <p>ユークリッドの互除法を使って、2つの数の最大公約数を求める再帰関数<code class="docutils literal notranslate"><span class="pre">gcd</span></code>を作りましょう。</p>
-<details>
-<summary> 回答例 </summary>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">a</span>
@@ -640,13 +580,14 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">gcd</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span>
 </pre></div>
 </div>
-</details>
-</section>
+</div>
+</details></section>
 <section id="id8">
 <h2><span class="section-number">3.2.7. </span>回文かどうかを判定する<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <p>文字列が回文（前から読んでも後ろから読んでも同じ）かどうかを判定する再帰関数<code class="docutils literal notranslate"><span class="pre">is_palindrome</span></code>を作りましょう。</p>
-<details>
-<summary> 回答例 </summary>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">is_palindrome</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
@@ -659,13 +600,14 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">is_palindrome</span><span class="p">(</span><span class="s2">&quot;きんにくぼでぃでぼくにんき&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
-</details>
-</section>
+</div>
+</details></section>
 <section id="id9">
 <h2><span class="section-number">3.2.8. </span>2進数変換を行う<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
 <p>10進数を2進数の文字列に変換する再帰関数<code class="docutils literal notranslate"><span class="pre">to_binary</span></code>を作成してください。</p>
-<details>
-<summary> 回答例 </summary>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">to_binary</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">&quot;0&quot;</span>
@@ -676,6 +618,7 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">to_binary</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>  <span class="c1"># &quot;1010&quot;が表示される</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">to_binary</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>   <span class="c1"># &quot;111&quot;が表示される</span>
 </pre></div>
+</div>
 </div>
 </details></section>
 </section>
