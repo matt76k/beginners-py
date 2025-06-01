@@ -8,6 +8,9 @@ chapters:
   - file: chapter01/data.md
   - file: chapter01/flow.md
 - file: chapter02/intro
+  sections:
+  - file: chapter02/writing.md
+  - file: chapter02/reading.md
 - file: chapter03/intro
   sections:
   - file: chapter03/func.md
