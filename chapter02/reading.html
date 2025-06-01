@@ -1,0 +1,1334 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ja" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2.2. 42の錬 &#8212; 異世界転生！Python魔法を極めて無双した件 〜チートスキルゼロ！データの深淵を覗き、数値の混沌を操り、隠された真実を解き明かす存在へ〜</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=1cf7f4d9"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=91613774"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter02/reading';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../_static/logo.png"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="3. 関数" href="../chapter03/intro.html" />
+    <link rel="prev" title="2.1. 100の鍛" href="writing.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ja"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="異世界転生！Python魔法を極めて無双した件 〜チートスキルゼロ！データの深淵を覗き、数値の混沌を操り、隠された真実を解き明かす存在へ〜 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="異世界転生！Python魔法を極めて無双した件 〜チートスキルゼロ！データの深淵を覗き、数値の混沌を操り、隠された真実を解き明かす存在へ〜 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">検索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    まえがき
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/intro.html">1. プログラミングの基本</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/data.html">1.1. データ（値）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/flow.html">1.2. 制御</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">2. 演習問題</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="writing.html">2.1. 100の鍛</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2. 42の錬</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/intro.html">3. 関数</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/func.html">3.1. 関数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/recursion.html">3.2. 再帰関数</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="このページをダウンロード">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapter02/reading.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="ソースファイルをダウンロード"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="PDFに印刷"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全画面モード"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>42の錬</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> 目次 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.2.1. 01</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.2.2. 02</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2.3. 03</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.2.4. 04</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.2.5. 05</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.2.6. 06</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2.2.7. 07</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.2.8. 08</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.2.9. 09</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.2.10. 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">2.2.11. 11</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.2.12. 12</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">2.2.13. 13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2.2.14. 14</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2.2.15. 15</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">2.2.16. 16</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">2.2.17. 17</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">2.2.18. 18</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">2.2.19. 19</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">2.2.20. 20</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">2.2.21. 21</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">2.2.22. 22</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">2.2.23. 23</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">2.2.24. 24</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">2.2.25. 25</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">2.2.26. 26</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">2.2.27. 27</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">2.2.28. 28</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">2.2.29. 29</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">2.2.30. 30</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">2.2.31. 31</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">2.2.32. 32</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">2.2.33. 33</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">2.2.34. 34</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">2.2.35. 35</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">2.2.36. 36</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">2.2.37. 37</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">2.2.38. 38</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">2.2.39. 39</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">2.2.40. 40</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">2.2.41. 41</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">2.2.42. 42</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><span class="section-number">2.2. </span>42の錬<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>以下の問題について</p>
+<ul class="simple">
+<li><p>プログラムが何をしてるか</p></li>
+<li><p>出力は何になるか</p></li>
+</ul>
+<p>を考えましょう。</p>
+<section id="id2">
+<h2><span class="section-number">2.2.1. </span>01<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code>に5を、<code class="docutils literal notranslate"><span class="pre">y</span></code>に10を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">y</span></code>を2倍した結果と<code class="docutils literal notranslate"><span class="pre">x</span></code>を足した結果を<code class="docutils literal notranslate"><span class="pre">z</span></code>に代入しています。
+最後に<code class="docutils literal notranslate"><span class="pre">z</span></code>の値（25）を出力しています。</p>
+</details>
+</section>
+<section id="id3">
+<h2><span class="section-number">2.2.2. </span>02<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、整数の除算と余りを求めています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">a</span></code>に10を、<code class="docutils literal notranslate"><span class="pre">b</span></code>に3を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">a</span></code>を<code class="docutils literal notranslate"><span class="pre">b</span></code>で割った商を<code class="docutils literal notranslate"><span class="pre">//</span></code>で、<code class="docutils literal notranslate"><span class="pre">a</span></code>を<code class="docutils literal notranslate"><span class="pre">b</span></code>で割った余りを<code class="docutils literal notranslate"><span class="pre">%</span></code>で求めて表示しています。</p>
+</details>
+</section>
+<section id="id4">
+<h2><span class="section-number">2.2.3. </span>03<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;私は</span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">歳で、</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">を学んでいます。&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p><code class="docutils literal notranslate"><span class="pre">name</span></code>に&quot;Python&quot;を、<code class="docutils literal notranslate"><span class="pre">age</span></code>に18を代入しています。
+そのあと、<strong>f文字列</strong>を使って変数の値を文字列に埋め込んで出力しています。</p>
+</details>
+</section>
+<section id="id5">
+<h2><span class="section-number">2.2.4. </span>04<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの最初の要素と最後の要素を表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[10, 5, 8, 3, 7]というリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の最初の要素を<code class="docutils literal notranslate"><span class="pre">numbers[0]</span></code>で、最後の要素を<code class="docutils literal notranslate"><span class="pre">numbers[-1]</span></code>で表示しています。</p>
+</details>
+</section>
+<section id="id6">
+<h2><span class="section-number">2.2.5. </span>05<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+<span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">99</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの特定の位置の要素を変更して表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[10, 20, 30, 40, 50]というリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の3番目の要素（インデックス2）を99に変更しています。
+最後に<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id7">
+<h2><span class="section-number">2.2.6. </span>06<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの要素数と合計を表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[1, 2, 3, 4, 5]というリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の要素数を<code class="docutils literal notranslate"><span class="pre">len()</span></code>で、合計を<code class="docutils literal notranslate"><span class="pre">sum()</span></code>で求めて表示しています。</p>
+</details>
+</section>
+<section id="id8">
+<h2><span class="section-number">2.2.7. </span>07<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの最小値と最大値を表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[5, 2, 8, 1, 9]というリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の最小値を<code class="docutils literal notranslate"><span class="pre">min()</span></code>で、最大値を<code class="docutils literal notranslate"><span class="pre">max()</span></code>で求めて表示しています。</p>
+</details>
+</section>
+<section id="id9">
+<h2><span class="section-number">2.2.8. </span>08<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストに特定の値が含まれているかを確認しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[3, 1, 4, 1, 5]というリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">3</span></code>が<code class="docutils literal notranslate"><span class="pre">numbers</span></code>に含まれているかを<code class="docutils literal notranslate"><span class="pre">in</span></code>で、<code class="docutils literal notranslate"><span class="pre">2</span></code>が<code class="docutils literal notranslate"><span class="pre">numbers</span></code>に含まれているかを<code class="docutils literal notranslate"><span class="pre">in</span></code>で確認しています。
+最後に、それぞれの結果を出力しています。</p>
+</details>
+</section>
+<section id="id10">
+<h2><span class="section-number">2.2.9. </span>09<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">temperature</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">:</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;暑いです&quot;</span>
+<span class="k">elif</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;快適です&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;寒いです&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p><code class="docutils literal notranslate"><span class="pre">temperature</span></code>に25を代入しています。
+そのあと<code class="docutils literal notranslate"><span class="pre">temperature</span></code>の値によって条件分岐しています。
+<code class="docutils literal notranslate"><span class="pre">temperature</span></code>が30より大きい場合は「暑いです」、20より大きい場合は「快適です」、
+それ以外の場合は「寒いです」を変数<code class="docutils literal notranslate"><span class="pre">message</span></code>に代入しています。
+最後に<code class="docutils literal notranslate"><span class="pre">message</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id11">
+<h2><span class="section-number">2.2.10. </span>10<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">score</span> <span class="o">=</span> <span class="mi">85</span>
+<span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span>
+<span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="s2">&quot;B&quot;</span>
+<span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="s2">&quot;C&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="s2">&quot;D&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、点数に応じて成績を表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">score</span></code>に85を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">score</span></code>の値によって条件分岐しています。
+<code class="docutils literal notranslate"><span class="pre">score</span></code>が90以上の場合は「A」、80以上90未満の場合は「B」、70以上80未満の場合は「C」、それ以外の場合は「D」を変数<code class="docutils literal notranslate"><span class="pre">grade</span></code>に代入しています。
+最後に<code class="docutils literal notranslate"><span class="pre">grade</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id12">
+<h2><span class="section-number">2.2.11. </span>11<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">20</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、論理演算子<code class="docutils literal notranslate"><span class="pre">and</span></code>と<code class="docutils literal notranslate"><span class="pre">or</span></code>を使った条件式の評価をしています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code>に15を、<code class="docutils literal notranslate"><span class="pre">y</span></code>に4を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">x</span></code>が10より大きいかつ<code class="docutils literal notranslate"><span class="pre">y</span></code>が5より小さいかを<code class="docutils literal notranslate"><span class="pre">and</span></code>で、<code class="docutils literal notranslate"><span class="pre">x</span></code>が20より大きいか<code class="docutils literal notranslate"><span class="pre">y</span></code>が5より小さいかを<code class="docutils literal notranslate"><span class="pre">or</span></code>で評価しています。
+最後に、それぞれの結果を出力しています。</p>
+</details>
+</section>
+<section id="id13">
+<h2><span class="section-number">2.2.12. </span>12<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">:])</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの3番目から5番目の要素と、5番目以降の要素を表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]というリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の3番目から5番目の要素を<code class="docutils literal notranslate"><span class="pre">numbers[2:5]</span></code>で、5番目以降の要素を<code class="docutils literal notranslate"><span class="pre">numbers[5:]</span></code>で表示しています。</p>
+</details>
+</section>
+<section id="id14">
+<h2><span class="section-number">2.2.13. </span>13<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストのスライス記法で部分リストと飛び飛びの要素を取得して表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">data</span></code>に[10, 20, 30, 40, 50]というリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">data</span></code>の1番目から4番目の要素を<code class="docutils literal notranslate"><span class="pre">data[1:4]</span></code>で、
+2つ飛びで要素を<code class="docutils literal notranslate"><span class="pre">data[::2]</span></code>で取得して表示しています。</p>
+</details>
+</section>
+<section id="id15">
+<h2><span class="section-number">2.2.14. </span>14<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">original</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">multiplied</span> <span class="o">=</span> <span class="n">original</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">multiplied</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">multiplied</span><span class="p">))</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストを3回繰り返した新しいリストを作成し、その内容と長さを表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">original</span></code>に[1, 2, 3]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">multiplied</span></code>に<code class="docutils literal notranslate"><span class="pre">original</span></code>を3回繰り返したリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">multiplied</span></code>の値とその長さを出力しています。</p>
+</details>
+</section>
+<section id="id16">
+<h2><span class="section-number">2.2.15. </span>15<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">num</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[2, 4, 6, 8]というリストを、<code class="docutils literal notranslate"><span class="pre">total</span></code>に0を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の要素を順番に取り出して、それぞれを<code class="docutils literal notranslate"><span class="pre">total</span></code>に足しています。
+最後に<code class="docutils literal notranslate"><span class="pre">total</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id17">
+<h2><span class="section-number">2.2.16. </span>16<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、1から10までの中で3の倍数の個数を数えています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">count</span></code>に0を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">i</span></code>に1から10までの数を順番に代入しています。
+<code class="docutils literal notranslate"><span class="pre">i</span></code>が3の倍数の場合は<code class="docutils literal notranslate"><span class="pre">count</span></code>に1を足しています。
+最後に<code class="docutils literal notranslate"><span class="pre">count</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id18">
+<h2><span class="section-number">2.2.17. </span>17<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;apple&quot;</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;p&#39;</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、文字列の中に'p'が何個あるかを数えて表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">text</span></code>に&quot;apple&quot;という文字列を代入しています。
+<code class="docutils literal notranslate"><span class="pre">count</span></code>に0を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">text</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">char</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">char</span></code>が'p'の場合は<code class="docutils literal notranslate"><span class="pre">count</span></code>に1を足しています。
+最後に<code class="docutils literal notranslate"><span class="pre">count</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id19">
+<h2><span class="section-number">2.2.18. </span>18<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;programming&quot;</span>
+<span class="n">vowels</span> <span class="o">=</span> <span class="s2">&quot;aeiou&quot;</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">vowels</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、文字列の中の母音の個数を数えています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">text</span></code>に&quot;programming&quot;という文字列を、<code class="docutils literal notranslate"><span class="pre">vowels</span></code>に&quot;aeiou&quot;という文字列を代入しています。
+<code class="docutils literal notranslate"><span class="pre">count</span></code>に0を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">text</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">char</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">char</span></code>が<code class="docutils literal notranslate"><span class="pre">vowels</span></code>に含まれている場合は<code class="docutils literal notranslate"><span class="pre">count</span></code>に1を足しています。
+最後に<code class="docutils literal notranslate"><span class="pre">count</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id20">
+<h2><span class="section-number">2.2.19. </span>19<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="k">if</span> <span class="mi">3</span> <span class="o">&lt;=</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">7</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの中から3以上7以下の数の個数を数えて表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">data</span></code>に[1, 5, 3, 9, 2, 8]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">count</span></code>に0を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">data</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">num</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">num</span></code>が3以上7以下の場合は<code class="docutils literal notranslate"><span class="pre">count</span></code>に1を足しています。
+最後に<code class="docutils literal notranslate"><span class="pre">count</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id21">
+<h2><span class="section-number">2.2.20. </span>20<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの中から8より大きい数の個数を数えて表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[10, 5, 15, 3, 12]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">count</span></code>に0を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">num</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">num</span></code>が8より大きい場合は<code class="docutils literal notranslate"><span class="pre">count</span></code>に1を足しています。
+最後に<code class="docutils literal notranslate"><span class="pre">count</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id22">
+<h2><span class="section-number">2.2.21. </span>21<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、0から4までの数値を文字列に変換して連結して表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">result</span></code>に空の文字列を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">i</span></code>に0,1,2,3,4を順番に代入しています。
+<code class="docutils literal notranslate"><span class="pre">result</span></code>に<code class="docutils literal notranslate"><span class="pre">i</span></code>を文字列に変換して連結しています。
+最後に<code class="docutils literal notranslate"><span class="pre">result</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id23">
+<h2><span class="section-number">2.2.22. </span>22<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、1から5までの数の2乗の合計を求めて表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">total</span></code>に0を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">i</span></code>に1,2,3,4,5を順番に代入しています。
+<code class="docutils literal notranslate"><span class="pre">total</span></code>に<code class="docutils literal notranslate"><span class="pre">i</span></code>の2乗を足しています。
+最後に<code class="docutils literal notranslate"><span class="pre">total</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id24">
+<h2><span class="section-number">2.2.23. </span>23<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">even_numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">even_numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">even_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの中から偶数だけを取り出して新しいリストを作成し、表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[1, 2, 3, 4, 5]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">even_numbers</span></code>に空のリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">num</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">num</span></code>が偶数の場合は<code class="docutils literal notranslate"><span class="pre">even_numbers</span></code>に<code class="docutils literal notranslate"><span class="pre">num</span></code>を追加しています。
+最後に<code class="docutils literal notranslate"><span class="pre">even_numbers</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id25">
+<h2><span class="section-number">2.2.24. </span>24<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">doubled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="n">doubled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">doubled</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの各要素を2倍にした新しいリストを作成し、表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[1, 2, 3]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">doubled</span></code>に空のリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">num</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">num</span></code>を2倍にして<code class="docutils literal notranslate"><span class="pre">doubled</span></code>に追加しています。
+最後に<code class="docutils literal notranslate"><span class="pre">doubled</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id26">
+<h2><span class="section-number">2.2.25. </span>25<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">max_num</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="n">max_num</span><span class="p">:</span>
+        <span class="n">max_num</span> <span class="o">=</span> <span class="n">num</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">max_num</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの中から最大値を見つけて表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[5, 2, 8, 1, 9]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">max_num</span></code>に<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の最初の要素を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">num</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">num</span></code>が<code class="docutils literal notranslate"><span class="pre">max_num</span></code>より大きい場合は<code class="docutils literal notranslate"><span class="pre">max_num</span></code>に<code class="docutils literal notranslate"><span class="pre">num</span></code>を代入しています。
+最後に<code class="docutils literal notranslate"><span class="pre">max_num</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id27">
+<h2><span class="section-number">2.2.26. </span>26<a class="headerlink" href="#id27" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">base</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">exponent</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">exponent</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">*=</span> <span class="n">base</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、2の4乗を計算して表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">base</span></code>に2を、<code class="docutils literal notranslate"><span class="pre">exponent</span></code>に4を代入しています。
+<code class="docutils literal notranslate"><span class="pre">result</span></code>に1を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">i</span></code>に0,1,2,3を順番に代入しています。
+<code class="docutils literal notranslate"><span class="pre">result</span></code>に<code class="docutils literal notranslate"><span class="pre">base</span></code>を掛けています。
+最後に<code class="docutils literal notranslate"><span class="pre">result</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id28">
+<h2><span class="section-number">2.2.27. </span>27<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">product</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="n">product</span> <span class="o">*=</span> <span class="n">num</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの全要素の積を計算して表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[2, 4, 6, 8, 10]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">product</span></code>に1を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">num</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">product</span></code>に<code class="docutils literal notranslate"><span class="pre">product</span></code>に<code class="docutils literal notranslate"><span class="pre">num</span></code>を掛けています。
+最後に<code class="docutils literal notranslate"><span class="pre">product</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id29">
+<h2><span class="section-number">2.2.28. </span>28<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;elephant&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;tiger&quot;</span><span class="p">]</span>
+<span class="n">longest</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">longest</span><span class="p">):</span>
+        <span class="n">longest</span> <span class="o">=</span> <span class="n">word</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">longest</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの中から最も長い文字列を見つけて表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">words</span></code>に[&quot;cat&quot;, &quot;elephant&quot;, &quot;dog&quot;, &quot;tiger&quot;]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">longest</span></code>に<code class="docutils literal notranslate"><span class="pre">words</span></code>の最初の要素を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">words</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">word</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">word</span></code>の長さが<code class="docutils literal notranslate"><span class="pre">longest</span></code>の長さより長い場合は<code class="docutils literal notranslate"><span class="pre">longest</span></code>に<code class="docutils literal notranslate"><span class="pre">word</span></code>を代入しています。
+最後に<code class="docutils literal notranslate"><span class="pre">longest</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id30">
+<h2><span class="section-number">2.2.29. </span>29<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">unique</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">unique</span><span class="p">:</span>
+        <span class="n">unique</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">unique</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの重複を除いた要素だけを新しいリストに追加して表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[1, 2, 2, 3, 3, 3, 4]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">unique</span></code>に空のリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">num</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">num</span></code>が<code class="docutils literal notranslate"><span class="pre">unique</span></code>に含まれていない場合は<code class="docutils literal notranslate"><span class="pre">unique</span></code>に<code class="docutils literal notranslate"><span class="pre">num</span></code>を追加しています。
+最後に<code class="docutils literal notranslate"><span class="pre">unique</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id31">
+<h2><span class="section-number">2.2.30. </span>30<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">55</span><span class="p">]</span>
+<span class="n">target</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">break</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの中から特定の値を検索し、そのインデックスを見つけて表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[15, 25, 35, 45, 55]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">target</span></code>に35を代入しています。
+<code class="docutils literal notranslate"><span class="pre">index</span></code>に-1を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">i</span></code>に0,1,2,3,4を順番に代入しています。
+<code class="docutils literal notranslate"><span class="pre">numbers[i]</span></code>が<code class="docutils literal notranslate"><span class="pre">target</span></code>と等しい場合は<code class="docutils literal notranslate"><span class="pre">index</span></code>に<code class="docutils literal notranslate"><span class="pre">i</span></code>を代入してループを抜けています。
+最後に<code class="docutils literal notranslate"><span class="pre">index</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id32">
+<h2><span class="section-number">2.2.31. </span>31<a class="headerlink" href="#id32" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの中から奇数だけを取り出して2倍にした新しいリストを作成し、表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">data</span></code>に[1, 2, 3, 4, 5]というリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">data</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">x</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">x</span></code>が奇数の場合は<code class="docutils literal notranslate"><span class="pre">result</span></code>に<code class="docutils literal notranslate"><span class="pre">x</span></code>を2倍した値を追加しています。
+最後に<code class="docutils literal notranslate"><span class="pre">result</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id33">
+<h2><span class="section-number">2.2.32. </span>32<a class="headerlink" href="#id33" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、二重ループで、外側の<code class="docutils literal notranslate"><span class="pre">i</span></code>が0,1,2、内側の<code class="docutils literal notranslate"><span class="pre">j</span></code>が0,1を取り、それぞれの組み合わせを表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">i</span></code>に0,1,2を順番に代入しています。
+<code class="docutils literal notranslate"><span class="pre">j</span></code>に0,1を順番に代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">i</span></code>と<code class="docutils literal notranslate"><span class="pre">j</span></code>を表示しています。</p>
+<p>内側のループが先に処理されているのを確認しましょう。</p>
+</details>
+</section>
+<section id="id34">
+<h2><span class="section-number">2.2.33. </span>33<a class="headerlink" href="#id34" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、2次元リストの各行の2番目の要素（インデックス1）を表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">matrix</span></code>に[[1, 2], [3, 4], [5, 6]]という2次元リストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">matrix</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">row</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">row</span></code>の2番目の要素を表示しています。</p>
+</details>
+</section>
+<section id="id35">
+<h2><span class="section-number">2.2.34. </span>34<a class="headerlink" href="#id35" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、2次元リストの全要素を行ごとに表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">matrix</span></code>に[[1, 2, 3], [4, 5, 6]]という2次元リストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">matrix</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">row</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">row</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">element</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">element</span></code>を表示しています。</p>
+</details>
+</section>
+<section id="id36">
+<h2><span class="section-number">2.2.35. </span>35<a class="headerlink" href="#id36" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">]]</span>
+<span class="n">column_sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">:</span>
+    <span class="n">column_sum</span> <span class="o">+=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">column_sum</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、2次元リストの最初の列（0番目のインデックス）の合計を計算して表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">matrix</span></code>に[[2, 4], [6, 8], [10, 12]]という2次元リストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">column_sum</span></code>に0を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">matrix</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">row</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">column_sum</span></code>に<code class="docutils literal notranslate"><span class="pre">row</span></code>の最初の要素を足しています。
+最後に<code class="docutils literal notranslate"><span class="pre">column_sum</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id37">
+<h2><span class="section-number">2.2.36. </span>36<a class="headerlink" href="#id37" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの要素とインデックスを表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">words</span></code>に[&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]というリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">words</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">word</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">i</span></code>と<code class="docutils literal notranslate"><span class="pre">word</span></code>を表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">enumerate()</span></code>でインデックスと値を同時に取得しています。</p>
+</details>
+</section>
+<section id="id38">
+<h2><span class="section-number">2.2.37. </span>37<a class="headerlink" href="#id38" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">sum_odd</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sum_even</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sum_even</span> <span class="o">+=</span> <span class="n">num</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sum_odd</span> <span class="o">+=</span> <span class="n">num</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_odd</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_even</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの中から奇数の合計と偶数の合計を別々に計算して表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[1, 2, 3, 4, 5]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">sum_odd</span></code>に0を代入しています。
+<code class="docutils literal notranslate"><span class="pre">sum_even</span></code>に0を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">numbers</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">num</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">num</span></code>が偶数の場合は<code class="docutils literal notranslate"><span class="pre">sum_even</span></code>に<code class="docutils literal notranslate"><span class="pre">num</span></code>を足しています。</p>
+</details>
+</section>
+<section id="id39">
+<h2><span class="section-number">2.2.38. </span>38<a class="headerlink" href="#id39" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">88</span><span class="p">]</span>
+<span class="n">above_90</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">below_80</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">grade</span> <span class="ow">in</span> <span class="n">grades</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+        <span class="n">above_90</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">grade</span> <span class="o">&lt;</span> <span class="mi">80</span><span class="p">:</span>
+        <span class="n">below_80</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">above_90</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">below_80</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、点数リストを90点以上と80点未満に分けて表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">grades</span></code>に[85, 92, 78, 96, 88]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">above_90</span></code>と<code class="docutils literal notranslate"><span class="pre">below_80</span></code>に空のリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">grades</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">grade</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">grade</span></code>が90以上の場合は<code class="docutils literal notranslate"><span class="pre">above_90</span></code>に、80未満の場合は<code class="docutils literal notranslate"><span class="pre">below_80</span></code>に追加しています。
+最後に両方のリストの値を出力しています。</p>
+</details>
+</section>
+<section id="id40">
+<h2><span class="section-number">2.2.39. </span>39<a class="headerlink" href="#id40" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="n">vowels</span> <span class="o">=</span> <span class="s2">&quot;aeiou&quot;</span>
+<span class="n">consonants</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">char</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">vowels</span><span class="p">:</span>
+        <span class="n">consonants</span> <span class="o">+=</span> <span class="n">char</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">consonants</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、文字列の中から母音以外の文字（子音）だけを取り出して表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">text</span></code>に&quot;Python&quot;という文字列を代入しています。
+<code class="docutils literal notranslate"><span class="pre">vowels</span></code>に&quot;aeiou&quot;という文字列を代入しています。
+<code class="docutils literal notranslate"><span class="pre">consonants</span></code>に空の文字列を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">text</span></code>の要素を順番に取り出して、<code class="docutils literal notranslate"><span class="pre">char</span></code>に代入しています。
+<code class="docutils literal notranslate"><span class="pre">char</span></code>が<code class="docutils literal notranslate"><span class="pre">vowels</span></code>に含まれていない場合は<code class="docutils literal notranslate"><span class="pre">consonants</span></code>に<code class="docutils literal notranslate"><span class="pre">char</span></code>を追加しています。
+最後に<code class="docutils literal notranslate"><span class="pre">consonants</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id41">
+<h2><span class="section-number">2.2.40. </span>40<a class="headerlink" href="#id41" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)):</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの各要素に(インデックス+1)を掛けて合計して表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[1, 3, 5, 7, 9]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">total</span></code>に0を代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">i</span></code>に0,1,2,3,4を順番に代入しています。
+<code class="docutils literal notranslate"><span class="pre">total</span></code>に<code class="docutils literal notranslate"><span class="pre">numbers[i]</span></code>に<code class="docutils literal notranslate"><span class="pre">(i</span> <span class="pre">+</span> <span class="pre">1)</span></code>を掛けた値を足しています。
+最後に<code class="docutils literal notranslate"><span class="pre">total</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id42">
+<h2><span class="section-number">2.2.41. </span>41<a class="headerlink" href="#id42" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">differences</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">differences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">differences</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの隣り合う要素の差を計算した新しいリストを作成して表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[3, 7, 2, 9, 1, 5]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">differences</span></code>に空のリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">i</span></code>に0,1,2,3,4を順番に代入しています。
+<code class="docutils literal notranslate"><span class="pre">diff</span></code>に<code class="docutils literal notranslate"><span class="pre">numbers[i</span> <span class="pre">+</span> <span class="pre">1]</span></code>から<code class="docutils literal notranslate"><span class="pre">numbers[i]</span></code>を引いた値を代入しています。
+<code class="docutils literal notranslate"><span class="pre">differences</span></code>に<code class="docutils literal notranslate"><span class="pre">diff</span></code>を追加しています。
+最後に<code class="docutils literal notranslate"><span class="pre">differences</span></code>の値を出力しています。</p>
+</details>
+</section>
+<section id="id43">
+<h2><span class="section-number">2.2.42. </span>42<a class="headerlink" href="#id43" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">pairs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">numbers</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+            <span class="n">pairs</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">numbers</span><span class="p">[</span><span class="n">j</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pairs</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary> 回答例 </summary>
+<p>このプログラムは、リストの中から2つの数の和が10になるペアを見つけて表示しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>に[5, 3, 8, 1, 9, 2]というリストを代入しています。
+<code class="docutils literal notranslate"><span class="pre">pairs</span></code>に空のリストを代入しています。
+そのあと、<code class="docutils literal notranslate"><span class="pre">i</span></code>に0,1,2,3,4,5を順番に代入しています。
+<code class="docutils literal notranslate"><span class="pre">j</span></code>に<code class="docutils literal notranslate"><span class="pre">i</span></code>+1,2,3,4,5を順番に代入しています。
+<code class="docutils literal notranslate"><span class="pre">numbers[i]</span></code>と<code class="docutils literal notranslate"><span class="pre">numbers[j]</span></code>の和が10になる場合は<code class="docutils literal notranslate"><span class="pre">pairs</span></code>に<code class="docutils literal notranslate"><span class="pre">(numbers[i],</span> <span class="pre">numbers[j])</span></code>を追加しています。
+最後に<code class="docutils literal notranslate"><span class="pre">pairs</span></code>の値を出力しています。</p>
+</details></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapter02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="writing.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">前へ</p>
+        <p class="prev-next-title"><span class="section-number">2.1. </span>100の鍛</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../chapter03/intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">次へ</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>関数</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 目次
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.2.1. 01</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.2.2. 02</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2.3. 03</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.2.4. 04</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.2.5. 05</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.2.6. 06</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2.2.7. 07</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.2.8. 08</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.2.9. 09</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.2.10. 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">2.2.11. 11</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.2.12. 12</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">2.2.13. 13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2.2.14. 14</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2.2.15. 15</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">2.2.16. 16</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">2.2.17. 17</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">2.2.18. 18</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">2.2.19. 19</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">2.2.20. 20</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">2.2.21. 21</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">2.2.22. 22</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">2.2.23. 23</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">2.2.24. 24</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">2.2.25. 25</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">2.2.26. 26</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">2.2.27. 27</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">2.2.28. 28</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">2.2.29. 29</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">2.2.30. 30</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">2.2.31. 31</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">2.2.32. 32</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">2.2.33. 33</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">2.2.34. 34</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">2.2.35. 35</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">2.2.36. 36</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">2.2.37. 37</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">2.2.38. 38</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">2.2.39. 39</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">2.2.40. 40</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">2.2.41. 41</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">2.2.42. 42</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+著者 鳳凰院 龍聖
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, 鳳凰院 龍聖.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
