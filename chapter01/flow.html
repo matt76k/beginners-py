@@ -364,12 +364,13 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1><span class="section-number">1.2. </span>制御<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <p>逐次、分岐、反復の3つの制御について学びましょう。</p>
-<p>プログラムが上から下に実行されることを<strong>逐次</strong>と呼びました。
-データのところで書いたプログラムで確認はできると思います。
-ここでは確認のため、簡単な問題をやってみましょう。</p>
+<p>プログラムが上から順番に実行されることを<strong>逐次</strong>と呼びます。
+データのところで書いたプログラムで何度も見てきました。</p>
+<p>ここでは確認のため、簡単な問題をやってみましょう。</p>
 <p>空リストに<code class="docutils literal notranslate"><span class="pre">a</span></code>という変数名をつけ、
 3、８、２、10という値を<code class="docutils literal notranslate"><span class="pre">a</span></code>に追加し、
-2番目と3番目の値を足して、1番目の値を引いた結果を表示するプログラムを書いてみましょう。</p>
+2番目と3番目の値を足して、1番目の値を引いた結果を表示するプログラムを書いてみましょう。
+このプログラムが書ければ、順次は理解しています。</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -382,8 +383,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><p>このコードが書ければ、順次は理解しています。</p>
-<section id="id2">
+</details><section id="id2">
 <h2><span class="section-number">1.2.1. </span>分岐<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>分岐は、<strong>条件</strong>によって別々の命令を実行します。</p>
 <p>実際に書いてみましょう。</p>
@@ -405,18 +405,18 @@ n &lt; 0の結果を表示
 </pre></div>
 </div>
 <p>となります。
-nをいろいろ変えて試してみましょう。</p>
+nに色々な値を代入して、プログラムを実行してみましょう。</p>
 <p>Pythonのプログラムで分岐を書くときのポイントは3つです。</p>
 <ol class="arabic simple">
 <li><p>条件には<code class="docutils literal notranslate"><span class="pre">if</span></code>文を使う</p></li>
 <li><p>条件式の結果は<code class="docutils literal notranslate"><span class="pre">True</span></code>か<code class="docutils literal notranslate"><span class="pre">False</span></code>のどちらか</p></li>
 <li><p>条件ごとの処理は<strong>インデント</strong>する</p></li>
 </ol>
-<p>条件によって処理を分けたい時、Pythonでは<code class="docutils literal notranslate"><span class="pre">if</span></code>というキーワードを使って、条件式を書きます。
+<p>条件によって処理を分けたい時、Pythonでは<code class="docutils literal notranslate"><span class="pre">if</span></code>というキーワードを使います。
 <code class="docutils literal notranslate"><span class="pre">if</span></code>は特別な単語なので、<code class="docutils literal notranslate"><span class="pre">if</span></code>という名前の変数を作ることはできません。</p>
 <p><code class="docutils literal notranslate"><span class="pre">if</span></code>の後には、条件式を書きます。
 この条件式の結果は<code class="docutils literal notranslate"><span class="pre">True</span></code>か<code class="docutils literal notranslate"><span class="pre">False</span></code>のどちらかになります。
-この、<code class="docutils literal notranslate"><span class="pre">True</span></code>と<code class="docutils literal notranslate"><span class="pre">False</span></code>のデータの型はブール型と呼ばれます。</p>
+この、<code class="docutils literal notranslate"><span class="pre">True</span></code>と<code class="docutils literal notranslate"><span class="pre">False</span></code>しかないデータの型は、<strong>ブール型</strong>と呼ばれます。</p>
 <p><code class="docutils literal notranslate"><span class="pre">n</span></code>を色々変えてプログラムを実行してみると、最後の<code class="docutils literal notranslate"><span class="pre">print(n</span> <span class="pre">&lt;</span> <span class="pre">0)</span></code>の結果が<code class="docutils literal notranslate"><span class="pre">True</span></code>か<code class="docutils literal notranslate"><span class="pre">False</span></code>になっていることがわかります。</p>
 <p>条件が<code class="docutils literal notranslate"><span class="pre">True</span></code>の場合は、<code class="docutils literal notranslate"><span class="pre">if</span></code>の下の行が実行されます。
 この行のことを<strong>ブロック</strong>と呼び、インデント（ここではprintの前のスペース）が重要な意味を持ちます。
@@ -465,7 +465,8 @@ nをいろいろ変えて試してみましょう。</p>
 </pre></div>
 </div>
 <p>これは、「偶数です」と表示されます。
-なぜなら、条件文は順次に従って実行されるため、最初の<code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">0</span></code>の条件が<code class="docutils literal notranslate"><span class="pre">True</span></code>になり、<code class="docutils literal notranslate"><span class="pre">elif</span></code>の条件は実行されません。</p>
+なぜなら、条件式は順次に従って実行されるため、最初の<code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">0</span></code>の条件が<code class="docutils literal notranslate"><span class="pre">True</span></code>になり、<code class="docutils literal notranslate"><span class="pre">elif</span></code>の条件は実行されません。
+if文を書くときは、順次に従って条件式が実行されることを意識しましょう。</p>
 </section>
 <section id="id3">
 <h2><span class="section-number">1.2.2. </span>反復<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
@@ -488,7 +489,7 @@ nをいろいろ変えて試してみましょう。</p>
 <code class="docutils literal notranslate"><span class="pre">range</span></code>は、指定した数から1つずつ数を増やしながら、指定した数までの数列を作成します。
 0からはじまっているのは、リストのインデックスが0からはじまるのと一緒ですね。</p>
 <p>この形はしっかり覚えましょう！
-繰り返したいと思ったら、このプログラムが頭に思い浮かぶようになりましょう。</p>
+繰り返しで何かしたいと思ったら、このプログラムが瞬時に頭に思い浮かぶようになりましょう。</p>
 <p>では、このプログラムを変えて、1から10までの数字を表示するプログラムを書いてみましょう。</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -498,6 +499,12 @@ nをいろいろ変えて試してみましょう。</p>
 </pre></div>
 </div>
 <p class="sd-card-text">iは0から9までの数字が順番に代入されるので、<code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">+</span> <span class="pre">1</span></code>とすることで、1から10までの数字が表示されます。</p>
+<p class="sd-card-text">別解として、以下のように書くこともできます。
+<code class="docutils literal notranslate"><span class="pre">range</span></code>の引数を2つにすると、最初が初期値になります。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </details><p>繰り返しにはリストを使うこともできます。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
@@ -544,6 +551,22 @@ nをいろいろ変えて試してみましょう。</p>
 </pre></div>
 </div>
 <p>となります。</p>
+<p>繰り返しには<code class="docutils literal notranslate"><span class="pre">for</span></code>文以外に、<code class="docutils literal notranslate"><span class="pre">while</span></code>文を使うこともできます。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このプログラムをwhile文で書くと、</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>このようになります。</p>
+<p>while文では、条件式が<code class="docutils literal notranslate"><span class="pre">True</span></code>の間、繰り返しを実行します。
+while文を使うときは、繰り返しの中で、条件式がいつか<code class="docutils literal notranslate"><span class="pre">False</span></code>になるようにしないと、無限ループになってしまうことに注意しましょう。
+ここでは、<code class="docutils literal notranslate"><span class="pre">i</span></code>に1を足しているので、10回目には<code class="docutils literal notranslate"><span class="pre">i</span></code>が10になり、条件式が<code class="docutils literal notranslate"><span class="pre">False</span></code>になります。</p>
 </section>
 </section>
 

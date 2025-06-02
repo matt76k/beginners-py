@@ -327,7 +327,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -343,6 +345,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> 目次 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">本書の目的</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">プログラミングについて</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -354,28 +365,21 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>まえがき<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<p>プログラミングはコンピュータとの会話です。
-日本語でコンピュータと会話ができればいいのですが、
-日本語のような自然言語では曖昧性があるため、コンピュータに人間側の意図を正確に伝えることができません。</p>
-<p>例えば「牛乳を1つ買ってきて。卵があったら6つお願いします」という指示をコンピュータに与えたとします。
-しばらくすると、コンピュータが牛乳を6つ買ってきました。
-大抵の人は、牛乳1個と卵6つを買ってきて欲しかったのではないでしょうか？
-プログラムをかけるようになるとコンピュータの動作理由がわかるようになります。</p>
-<p>プログラムは言語です。ただし、日本語とは違います。
-そのため、プログラミングを学ぶということは、日本語からプログラムの変換を習得することになります。
-これは、読み書きで言うところの書き方を習得することになります。
-一方、読み方を学ぶ必要もあります。
-こちらはプログラムから日本語への変換になります。
-読み書き両方できるようになって、はじめてプログラミングができると言えるでしょう。</p>
-<p>言語の習得には長い時間がかかります。
-単語を覚え、構文を覚え、読み書きできるように繰り返し勉強していきます。</p>
-<p>プログラミング言語の学習も同様です。
-ただし、プログラミング言語の場合は英語ほど単語や構文が多くありません。
-多くの問題に触れながら取り組んでいけば、必ずできるようになります。</p>
-<p>本書を進める上で、プログラムが書いている箇所は必ず自分でプログラムを書いて実行することを強く勧めます。
-特に、「確認しましょう」「やってみましょう」と書いてあるところは、自分で書いて実行してみましょう。
-プログラミングは<strong>技術</strong>です。見ているだけでは身につきません。
-手を動かして体で覚えるようにしましょう。</p>
+<section id="id2">
+<h2>本書の目的<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>本書はプログラミングをはじめて学ぶ人向けに書かれた入門書です。プログラミングの基礎知識を身につけることを目指します。</p>
+<p>プログラミングを学ぶ言語としては、Pythonを使います。Pythonは最もよく使われる言語の1つで、幅広い分野で活用されています。</p>
+<p>プログラムの基礎を学んだ後は、<strong>アルゴリズム</strong>と<strong>データ構造</strong>を学びます。これらを学ぶことで、プログラミングの力が飛躍的に向上します。</p>
+</section>
+<section id="id3">
+<h2>プログラミングについて<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>コンピュータに指示を与えたいとき、日本語のような自然言語で会話できると良いのですが、自然言語には曖昧性があるため、コンピュータに人間の意図を正確に伝えることができません。</p>
+<p>例えば「牛乳を1つ買ってきて。卵があったら6つお願い」という指示をコンピュータに与えたとします。しばらくすると、コンピュータが牛乳を6つ買ってきました。多くの人は、牛乳1個と卵6つを買ってきてほしいという意図だったのではないでしょうか。</p>
+<p>プログラムは言語です。ただし、日本語とは異なります。そのため、プログラミングを学ぶということは、日本語からプログラムへの変換を習得することになります。これは、読み書きでいうところの「書き」にあたります。一方、「読み」を学ぶ必要もあります。こちらはプログラムから日本語への変換になります。読み書き両方ができるようになって、はじめてプログラミングができると言えるでしょう。</p>
+<p>言語の習得には長い時間がかかります。単語を覚え、構文を覚え、読み書きができるように繰り返し勉強していきます。</p>
+<p>プログラミング言語の学習も同様です。ただし、プログラミング言語の場合は英語ほど単語や構文が多くありません。多くの問題に触れながら取り組んでいけば、必ずできるようになります。</p>
+<p>本書を進める上で、プログラムが書かれている箇所は必ず自分でプログラムを書いて実行することを強く勧めます。特に、「確認しましょう」「やってみましょう」と書いてある箇所は、自分で書いて実行してみましょう。プログラミングは<strong>技術</strong>です。見ているだけでは身につきません。手を動かして体で覚えるようにしましょう。</p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -425,6 +429,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 目次
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">本書の目的</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">プログラミングについて</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

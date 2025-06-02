@@ -376,8 +376,9 @@ document.write(`
 <p>1000001というデータを、65という数値として扱うか、<code class="docutils literal notranslate"><span class="pre">A</span></code>という文字として扱うかは、プログラミングをする人が決めます。</p>
 <p>この文字や数値のことをプログラミングでは型と表現します。
 <strong>データには型がある</strong>というのは重要なので、覚えておきましょう。
-型がなければ、どのようなデータかわからないので、プログラムを書くことができません。</p>
-<p>Pythonでは、多くの型が存在しますが、ここでは代表的な2つの型とコンテナ型と呼ばれる値を保存する型を学びます。</p>
+型を意識しなければ、データをどのように扱っていいかコンピュータに正しく伝えられません。</p>
+<p>Pythonでは多くの型が存在しますが、ここでは代表的な2つの型と値自体を保存する<strong>コンテナ型</strong>と呼ばれる型を学びます。</p>
+<p>以下にここで学ぶ型を挙げておきます。</p>
 <ul class="simple">
 <li><p>文字列</p></li>
 <li><p>数値</p>
@@ -412,14 +413,25 @@ document.write(`
 </details><p>このように、データを表示するには、<code class="docutils literal notranslate"><span class="pre">print</span></code>を使います。
 printはpythonが用意している命令です。
 このような命令は<strong>関数</strong>といいます。
-関数は値を渡すことで、その関数の処理を行ってくれます。
-基本的な関数は何か処理をして、その結果を返してくれます。
-<code class="docutils literal notranslate"><span class="pre">print</span></code>は値を返さない関数なので、注意しましょう。</p>
+一般的に、関数は値を渡すことで、その値になにかしらの処理を行い、結果として何かの値を返します。
+渡す値を<strong>引数</strong>、返される値を<strong>返り値</strong>といいます。</p>
+<p>足し算を関数として考えてみましょう。
+足し算は2つの値を引数として受け取り、その結果である和を返り値として返します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>基本的な関数は何か処理をしてその結果を返してくれます。
+つまり、引数と返り値があります。
+<code class="docutils literal notranslate"><span class="pre">print</span></code>は与えた値を表示しますが、結果の値は返しません。
+つまり、引数はあるが返り値はない関数になります。</p>
 <section id="id3">
 <h3><span class="section-number">1.1.1.1. </span>数値<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>整数、有理数、無理数、虚数などの数値があることは今まで学んできたと思います。
 コンピュータでは、数値は整数と実数の2つの型で表現します。
-もちろん有理数なども表現できなくはないですが、特殊な扱いになるため、ここでは説明しません。</p>
+もちろん有理数なども表現できますが、特殊な扱いになるため、ここでは説明しません。</p>
 <p>先ほどの<code class="docutils literal notranslate"><span class="pre">print</span></code>を使って、整数を表示してみましょう。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -433,9 +445,12 @@ printはpythonが用意している命令です。
 </div>
 <p>最後の割り算では、<code class="docutils literal notranslate"><span class="pre">2.3333333333333335</span></code>という結果が出ました。
 これは、実数になっています。
-Pythonでは実数は、<code class="docutils literal notranslate"><span class="pre">1.0</span></code>というように、小数点を使って表現します。
+整数同士の四則演算で<code class="docutils literal notranslate"><span class="pre">/</span></code>は実数になります。
+整数同士の割り算で、結果が整数になる演算として<code class="docutils literal notranslate"><span class="pre">//</span></code>がpythonでは準備されています。
+確かめてみましょう。</p>
+<p>Pythonでは実数は、<code class="docutils literal notranslate"><span class="pre">1.0</span></code>というように、小数点を使って表現します。
 小数点がない場合は、整数として扱われます。</p>
-<p>Pythonでは、<code class="docutils literal notranslate"><span class="pre">+</span></code>を<strong>算術演算子</strong>といいます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">+</span></code>などの数値に対する演算を<strong>算術演算子</strong>といいます。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">1.0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -446,11 +461,12 @@ Pythonでは実数は、<code class="docutils literal notranslate"><span class="
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">1.0</span><span class="p">))</span>
 </pre></div>
 </div>
+<p>型を意識してプログラムを書くことは重要なので、気になったら<code class="docutils literal notranslate"><span class="pre">type</span></code>を使って型を確認しましょう。</p>
 </section>
 </section>
 <section id="id4">
 <h2><span class="section-number">1.1.2. </span>変数<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
-<p>データを扱う際に、その値に名前をつけた方がプログラムが見やすくなります。
+<p>データを扱うとき、その値に名前をつけた方がプログラムが見やすくなります。
 このような値ついた名前を<strong>変数</strong>といいます。</p>
 <p><strong>変数</strong>は、<strong>名札</strong>のようなものだと思ってください。
 名札なので、別の値につけ直すことができます。</p>
@@ -466,8 +482,8 @@ Pythonでは実数は、<code class="docutils literal notranslate"><span class="
 <p><code class="docutils literal notranslate"><span class="pre">print</span></code>は値だけでなく、変数の指している値も表示してくれます。</p>
 <p>変数名はプログラムを書く人が決めます。
 できるだけ分かりやすい名前を付けるように心がけましょう。
-変数名が<code class="docutils literal notranslate"><span class="pre">a</span></code>だけだと、それがどのような使われ方をするのか、ひと目で理解でわかりません。
-<code class="docutils literal notranslate"><span class="pre">name</span></code>という変数名であれば、なにかの名前を指しているんだとわかります。</p>
+変数名が<code class="docutils literal notranslate"><span class="pre">a</span></code>だけだと、それがどのような使われ方をするのか、ひと目でわかりません。
+<code class="docutils literal notranslate"><span class="pre">name</span></code>という変数名であれば、なにかの名前を意味しているのだとわかります。</p>
 <p>それでは、1と2にそれぞれ<code class="docutils literal notranslate"><span class="pre">a</span></code>と<code class="docutils literal notranslate"><span class="pre">b</span></code>という名前の変数をつけましょう。
 次に、その<code class="docutils literal notranslate"><span class="pre">a</span></code>と<code class="docutils literal notranslate"><span class="pre">b</span></code>を足した値を<code class="docutils literal notranslate"><span class="pre">c</span></code>という名前の変数につけましょう。</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -492,7 +508,7 @@ Pythonでは実数は、<code class="docutils literal notranslate"><span class="
 </div>
 </div>
 </details><p>このように同じ演算子<code class="docutils literal notranslate"><span class="pre">+</span></code>を使ってもデータの型によって結果が異なります。
-これはPythonが自動的にデータの型を判断してくれて、いい感じに処理してくれています。</p>
+これはPythonが自動的にデータの型を判断し、型にあった処理をしてくれます。</p>
 <p>では、Pythonに<code class="docutils literal notranslate"><span class="pre">a</span></code>という名前の変数をつけて、その型を確認してみましょう。</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -585,7 +601,21 @@ Pythonでは実数は、<code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 </div>
-</details></section>
+</details><p>リストの要素を削除するには、<code class="docutils literal notranslate"><span class="pre">pop</span></code>を使います。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">pop</span></code>は、リストの最後の要素を削除します。
+途中の要素を削除することもできます。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>このように、<code class="docutils literal notranslate"><span class="pre">pop</span></code>の引数にインデックスを指定することで、そのインデックスの要素を削除できます。</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

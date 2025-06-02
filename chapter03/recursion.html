@@ -386,6 +386,19 @@ document.write(`
 <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
+<p>順次で考えるとプログラムは上から下に実行されます。
+<code class="docutils literal notranslate"><span class="pre">def</span></code>のあとに書いたプログラムは、定義なのでなにも実行されず、その関数が呼ばれたときに実行されます。</p>
+<p>制御の流れをしっかり意識しましょう。
+プログラムは<code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">neko()</span></code>、<code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">koneko()</span></code>、<code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">main()</span></code>の順番に流れます。
+関数定義なので、定義はしますが、何か表示されるわけではありません。</p>
+<p>最後の行で<code class="docutils literal notranslate"><span class="pre">main</span></code>関数が実行されると、<code class="docutils literal notranslate"><span class="pre">main</span></code>関数の中身が実行されます。
+<code class="docutils literal notranslate"><span class="pre">main</span></code>関数の中身は、<code class="docutils literal notranslate"><span class="pre">neko</span></code>を2回呼び出して、<code class="docutils literal notranslate"><span class="pre">koneko</span></code>を1回呼び出しています。</p>
+<p><code class="docutils literal notranslate"><span class="pre">neko</span></code>の最初の呼び出しで「ネコ」を表示します。
+表示し終わったら、関数は呼び出したところに戻ってくるので、
+2番目の<code class="docutils literal notranslate"><span class="pre">neko</span></code>を呼び出します。
+これも同様に「ネコ」を表示します。
+また、呼び出したところに戻ってきて、<code class="docutils literal notranslate"><span class="pre">koneko</span></code>を呼び出します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">main</span></code>の中身の実行が終わると、<code class="docutils literal notranslate"><span class="pre">main</span></code>関数の呼び出したところ、つまりプログラムの最後に戻ってきて、プログラムは終了します。</p>
 <p>では、mainから<code class="docutils literal notranslate"><span class="pre">neko</span></code>だけを呼び出して、同じ出力を得るにはどうしたらよいでしょうか。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
     <span class="n">neko</span><span class="p">()</span> <span class="c1"># mainからは`neko`だけを呼び出す</span>
@@ -393,7 +406,9 @@ document.write(`
 <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>解答の1つを示します。</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">neko</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ネコ&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ネコ&#39;</span><span class="p">)</span>
@@ -405,9 +420,10 @@ document.write(`
 <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>これは1つの例であり、他にも様々な方法が考えつくでしょう。
+</div>
+</details><p>解答例は1つの例であり、他にも様々な方法が考えつくでしょう。
 ここで学びたいのは、関数から関数を呼べるということです。</p>
-<p>次に、1つの関数で同じような出力をする関数を作ります。</p>
+<p>次に、1つの関数で同じような出力をする関数を作りましょう。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">neko_or_koneko</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;コネコ&#39;</span><span class="p">)</span>
@@ -419,7 +435,7 @@ document.write(`
 <span class="n">neko_or_koneko</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>この関数は、0を渡したら'コネコ'を、0以外は'ネコ'を表示します。
+<p>この関数は、0を渡したら「コネコ」を、0以外は「ネコ」を表示します。
 このように与える引数で関数の動作を変えることができます。</p>
 <p>これを<code class="docutils literal notranslate"><span class="pre">for</span></code>文で書くとどうなるでしょうか？
 前のコードを見て、与えてる引数の値がカウントダウンされていることに気づきましたか？</p>
@@ -428,9 +444,9 @@ document.write(`
 </pre></div>
 </div>
 <p>前のプログラムがスッキリしましたね。
-0が終わりを意味しているわけです。
+0が終わりを意味しています。
 カウントダウンという考えではなくカウントアップにしてしまうと、
-どこで終わるかの数値を指定しないといけなくなるため、関数に余分な引数を与える必要が出てきてしまいます。</p>
+どこで終わるかの数値を指定しないといけなくなるため、関数に余分な引数を与える必要が出てきます。</p>
 <p>さらに<code class="docutils literal notranslate"><span class="pre">for</span></code>文まで無くしてみましょう。
 そのためには、<code class="docutils literal notranslate"><span class="pre">neko_or_koneko</span></code>の中で<code class="docutils literal notranslate"><span class="pre">neko_or_koneko</span></code>を呼び出すようにします。
 このように、関数の中で自分自身を呼び出すことを再帰呼び出しといい、そのような関数を<strong>再帰関数</strong>といいます。</p>
@@ -444,6 +460,7 @@ document.write(`
 <span class="n">neko_or_koneko</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>制御の流れを意識しましょう。紙に書いて、どのように実行されるかを確認すると良いでしょう。</p>
 <p>再帰関数の基本的な構造は、以下の通りです。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># 終了</span>
@@ -461,7 +478,14 @@ F_0 = 0 \\
 F_1 = 1 \\
 F_n = F_{n-1} + F_{n-2}
 \end{split}\]</div>
-<p>これをプログラムで書くと以下のようになるでしょう。</p>
+<p>まずは<code class="docutils literal notranslate"><span class="pre">for</span></code>文で書いてみましょう。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fib_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="n">fib_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fib_list</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">fib_list</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fib_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>これを再帰関数で書くと以下のようになります。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
@@ -474,6 +498,8 @@ F_n = F_{n-1} + F_{n-2}
 <span class="nb">print</span><span class="p">(</span><span class="n">fib_list</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>再帰関数で書いた方が元の定義に近いですね。
+このように、再帰関数は再帰的な定義の処理をそのまま書けるという利点があります。</p>
 <p>では、再帰関数に慣れるために、以下の問題をやってみましょう。</p>
 <section id="id2">
 <h2><span class="section-number">3.2.1. </span>階乗を計算する<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
