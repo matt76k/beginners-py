@@ -416,8 +416,11 @@ nに色々な値を代入して、プログラムを実行してみましょう�
 <code class="docutils literal notranslate"><span class="pre">if</span></code>は特別な単語なので、<code class="docutils literal notranslate"><span class="pre">if</span></code>という名前の変数を作ることはできません。</p>
 <p><code class="docutils literal notranslate"><span class="pre">if</span></code>の後には、条件式を書きます。
 この条件式の結果は<code class="docutils literal notranslate"><span class="pre">True</span></code>か<code class="docutils literal notranslate"><span class="pre">False</span></code>のどちらかになります。
-この、<code class="docutils literal notranslate"><span class="pre">True</span></code>と<code class="docutils literal notranslate"><span class="pre">False</span></code>しかないデータの型は、<strong>ブール型</strong>と呼ばれます。</p>
-<p><code class="docutils literal notranslate"><span class="pre">n</span></code>を色々変えてプログラムを実行してみると、最後の<code class="docutils literal notranslate"><span class="pre">print(n</span> <span class="pre">&lt;</span> <span class="pre">0)</span></code>の結果が<code class="docutils literal notranslate"><span class="pre">True</span></code>か<code class="docutils literal notranslate"><span class="pre">False</span></code>になっていることがわかります。</p>
+この、<code class="docutils literal notranslate"><span class="pre">True</span></code>と<code class="docutils literal notranslate"><span class="pre">False</span></code>しかないデータの型は、<strong>ブール型</strong>と呼ばれます。
+先ほどの例では、<code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>が条件式になります。
+<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>は<strong>比較演算子</strong>と呼ばれています。nの値によって、<code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>の式が<code class="docutils literal notranslate"><span class="pre">True</span></code>か<code class="docutils literal notranslate"><span class="pre">False</span></code>になります。</p>
+<p><code class="docutils literal notranslate"><span class="pre">n</span></code>を色々変えてプログラムを実行してみると、最後の<code class="docutils literal notranslate"><span class="pre">print(n</span> <span class="pre">&lt;</span> <span class="pre">0)</span></code>の結果が<code class="docutils literal notranslate"><span class="pre">True</span></code>か<code class="docutils literal notranslate"><span class="pre">False</span></code>になっていることがわかります。
+このように比較演算子の結果を出力として確認できます。</p>
 <p>条件が<code class="docutils literal notranslate"><span class="pre">True</span></code>の場合は、<code class="docutils literal notranslate"><span class="pre">if</span></code>の下の行が実行されます。
 この行のことを<strong>ブロック</strong>と呼び、インデント（ここではprintの前のスペース）が重要な意味を持ちます。
 インデントが同じ部分が、１つの塊（ブロック）として扱われるのです。
@@ -439,7 +442,8 @@ nに色々な値を代入して、プログラムを実行してみましょう�
   <span class="n">奇数と表示</span>
 </pre></div>
 </div>
-<p>となります。</p>
+<p>となります。
+ここで使われる<code class="docutils literal notranslate"><span class="pre">==</span></code>は<strong>等号</strong>と呼ばれる比較演算子です。<code class="docutils literal notranslate"><span class="pre">==</span></code>は、左右の値が等しいかどうかを判定し、<code class="docutils literal notranslate"><span class="pre">True</span></code>か<code class="docutils literal notranslate"><span class="pre">False</span></code>を返します。</p>
 <p>偶数奇数の判定プログラムに、<code class="docutils literal notranslate"><span class="pre">n</span></code>が42の場合は、「生命、宇宙、そして万物についての究極の疑問の答え」と表示するようにしてみましょう。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
 
