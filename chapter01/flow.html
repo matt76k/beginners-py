@@ -350,6 +350,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.2.1. 分岐</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1.2.2. 反復</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.2.3. 組み合わせ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">1.2.4. 変数スコープ</a></li>
 </ul>
             </nav>
         </div>
@@ -365,12 +366,12 @@ document.write(`
 <h1><span class="section-number">1.2. </span>制御<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <p>逐次、分岐、反復の3つの制御について学びましょう。</p>
 <p>プログラムが上から順番に実行されることを<strong>逐次</strong>と呼びます。
-データのところで書いたプログラムで何度も見てきました。</p>
+逐次については<a class="reference internal" href="data.html"><span class="std std-doc">データ</span></a>の章で何度も見てきました。</p>
 <p>ここでは確認のため、簡単な問題をやってみましょう。</p>
 <p>空リストに<code class="docutils literal notranslate"><span class="pre">a</span></code>という変数名をつけ、
 3、８、２、10という値を<code class="docutils literal notranslate"><span class="pre">a</span></code>に追加し、
 2番目と3番目の値を足して、1番目の値を引いた結果を表示するプログラムを書いてみましょう。
-このプログラムが書ければ、順次は理解しています。</p>
+このプログラムが書ければ、順次は理解しているといえるでしょう。</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -383,7 +384,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><section id="id2">
+</details><p>この章では、順次以外の<strong>分岐</strong>、<strong>反復</strong>ついて学習します。
+さらに、3つの制御を使った問題と<strong>変数スコープ</strong>について説明します。</p>
+<section id="id2">
 <h2><span class="section-number">1.2.1. </span>分岐<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>分岐は、<strong>条件</strong>によって別々の命令を実行します。</p>
 <p>実際に書いてみましょう。</p>
@@ -482,7 +485,8 @@ if文を書くときは、順次に従って条件式が実行されることを
 <p>このプログラムを実行すると、0から9までの数字が表示されます。
 繰り返しには<code class="docutils literal notranslate"><span class="pre">for</span></code>というキーワードを使います。
 <code class="docutils literal notranslate"><span class="pre">for</span></code>の後には、繰り返しの時に使われる変数名を書きます。
-<code class="docutils literal notranslate"><span class="pre">in</span></code>の後には、繰り返しの範囲を書きます。</p>
+<code class="docutils literal notranslate"><span class="pre">in</span></code>の後には、繰り返しの範囲を書きます。
+繰り返しの時に使われる変数のことを特別に<strong>ループ変数</strong>といいます。</p>
 <p>このプログラムを日本語で表現すると、</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0から9までの数字を順番にiに代入して、
   iの値を表示
@@ -572,6 +576,150 @@ if文を書くときは、順次に従って条件式が実行されることを
 while文を使うときは、繰り返しの中で、条件式がいつか<code class="docutils literal notranslate"><span class="pre">False</span></code>になるようにしないと、無限ループになってしまうことに注意しましょう。
 ここでは、<code class="docutils literal notranslate"><span class="pre">i</span></code>に1を足しているので、10回目には<code class="docutils literal notranslate"><span class="pre">i</span></code>が10になり、条件式が<code class="docutils literal notranslate"><span class="pre">False</span></code>になります。</p>
 </section>
+<section id="id5">
+<h2><span class="section-number">1.2.4. </span>変数スコープ<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>プログラムを書く上では、変数がどこで使えるかという<strong>変数スコープ</strong>についての理解が重要になります。</p>
+<p>変数スコープとは、変数が有効である範囲のことです。
+Pythonでは、変数がどこで定義されたかによって、その変数がアクセスできる範囲が決まります。</p>
+<p>多くのプログラミング言語では、
+forループの中で定義された変数はループ内でしか使えません。
+しかし、Pythonではforループを抜けた後も使えます。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ループ中のi: </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ループ後のi: </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ループ中のi: 0
+ループ中のi: 1
+ループ中のi: 2
+ループ後のi: 2
+</pre></div>
+</div>
+</div>
+</div>
+<p>また、Pythonではforループの中で定義した変数もforループを抜けた後も使えます。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">num</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> × 2 = </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;最後のnum: </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>      <span class="c1"># 30</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;最後のresult: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># 60</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10 × 2 = 20
+20 × 2 = 40
+30 × 2 = 60
+最後のnum: 30
+最後のresult: 60
+</pre></div>
+</div>
+</div>
+</div>
+<p>以上のことから、forループを使う時は、注意が必要です。
+特に、forループで既存の変数と同じ名前を使うと、元の値が上書きされてしまいます。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;元の値&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ループ前: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ループ中: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ループ後: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ループ前: 元の値
+ループ中: A
+ループ中: B
+ループ中: C
+ループ後: C
+</pre></div>
+</div>
+</div>
+</div>
+<p>これを避けるため、異なる変数名を使うか、元の値を別の変数に保存する必要があります。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">original_x</span> <span class="o">=</span> <span class="s2">&quot;元の値&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ループ前: </span><span class="si">{</span><span class="n">original_x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ループ中: </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ループ後: </span><span class="si">{</span><span class="n">original_x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ループ前: 元の値
+ループ中: A
+ループ中: B
+ループ中: C
+ループ後: 元の値
+</pre></div>
+</div>
+</div>
+</div>
+<p>for文の中にfor文（二重ループ）を書くときも、ループ変数の名前が被らないように気をつけましょう。</p>
+<p>例えば、xy平面上で、xが0から1、yが0から2までの格子点を出力するコードは以下のように書けます。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0, 0)
+(0, 1)
+(0, 2)
+(1, 0)
+(1, 1)
+(1, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<p>これは意図した通りの結果です。
+xが0のときにyが0, 1, 2と変化し、次にxが1のときにyが再び0, 1, 2と変化しています。</p>
+<p>しかし、以下のように同じ変数名iを使ってしまうとどうなるでしょうか。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0, 0)
+(1, 1)
+(2, 2)
+(0, 0)
+(1, 1)
+(2, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<p>これは意図した結果ではありません。
+内側のループでiの値が上書きされてしまい、x座標とy座標が常に同じ値になってしまいます。
+また、外側のループの制御も正しく動作しなくなります。</p>
+<p>このように、二重ループでは必ず異なる変数名を使うと良いでしょう。
+変数名が被ると、プログラムが予期しない動作をしてしまい、バグの原因となります。</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -641,6 +789,7 @@ while文を使うときは、繰り返しの中で、条件式がいつか<code 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.2.1. 分岐</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1.2.2. 反復</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.2.3. 組み合わせ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">1.2.4. 変数スコープ</a></li>
 </ul>
   </nav></div>
 
