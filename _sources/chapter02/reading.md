@@ -15,19 +15,19 @@ kernelspec:
 ======
 以下の問題について
 
-- プログラムが何をしてるか
+- プログラムが何をしてるか言葉で説明
 - 出力は何になるか
 
 を考えましょう。
 
-## 01
-
+````{exercise}
 ```python
 x = 5
 y = 10
 z = x + y * 2
 print(z)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -37,14 +37,14 @@ print(z)
 
 ````
 
-## 02
-
+````{exercise}
 ```python
 a = 10
 b = 3
 print(a // b)
 print(a % b)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -55,28 +55,28 @@ print(a % b)
 
 ````
 
-## 03
-
+````{exercise}
 ```python
 name = "Python"
 age = 18
 print(f"私は{age}歳で、{name}を学んでいます。")
 ```
+````
 
 ````{dropdown} 解答例
 
 `name`に"Python"を、`age`に18を代入しています。
 そのあと、**f文字列**を使って変数の値を文字列に埋め込んで出力しています。
 
-```
+````
 
-## 04
-
+````{exercise}
 ```python
 numbers = [10, 5, 8, 3, 7]
 print(numbers[0])
 print(numbers[-1])
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -87,13 +87,13 @@ print(numbers[-1])
 
 ````
 
-## 05
-
+````{exercise}
 ```python
 numbers = [10, 20, 30, 40, 50]
 numbers[2] = 99
 print(numbers)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -105,13 +105,13 @@ print(numbers)
 
 ````
 
-## 06
-
+````{exercise}
 ```python
 numbers = [1, 2, 3, 4, 5]
 print(len(numbers))
 print(sum(numbers))
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -122,13 +122,13 @@ print(sum(numbers))
 
 ````
 
-## 07
-
+````{exercise}
 ```python
 numbers = [5, 2, 8, 1, 9]
 print(min(numbers))
 print(max(numbers))
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -139,13 +139,13 @@ print(max(numbers))
 
 ````
 
-## 08
-
+````{exercise}
 ```python
 numbers = [3, 1, 4, 1, 5]
 print(3 in numbers)
 print(2 in numbers)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -157,8 +157,7 @@ print(2 in numbers)
 
 ````
 
-## 09
-
+````{exercise}
 ```python
 temperature = 25
 if temperature > 30:
@@ -169,6 +168,7 @@ else:
     message = "寒いです"
 print(message)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -180,8 +180,7 @@ print(message)
 
 ````
 
-## 10
-
+````{exercise}
 ```python
 score = 85
 if score >= 90:
@@ -194,6 +193,7 @@ else:
     grade = "D"
 print(grade)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -206,14 +206,14 @@ print(grade)
 
 ````
 
-## 11
-
+````{exercise}
 ```python
 x = 15
 y = 4
 print(x > 10 and y < 5)
 print(x > 20 or y < 5)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -225,13 +225,13 @@ print(x > 20 or y < 5)
 
 ````
 
-## 12
-
+````{exercise}
 ```python
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(numbers[2:5])
 print(numbers[5:])
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -242,13 +242,13 @@ print(numbers[5:])
 
 ````
 
-## 13
-
+````{exercise}
 ```python
 data = [10, 20, 30, 40, 50]
 print(data[1:4])
 print(data[::2])
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -260,14 +260,14 @@ print(data[::2])
 
 ````
 
-## 14
-
+````{exercise}
 ```python
 original = [1, 2, 3]
 multiplied = original * 3
 print(multiplied)
 print(len(multiplied))
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -279,8 +279,7 @@ print(len(multiplied))
 
 ````
 
-## 15
-
+````{exercise}
 ```python
 numbers = [2, 4, 6, 8]
 total = 0
@@ -288,6 +287,7 @@ for num in numbers:
     total += num
 print(total)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -297,8 +297,7 @@ print(total)
 
 ````
 
-## 16
-
+````{exercise}
 ```python
 count = 0
 for i in range(1, 11):
@@ -306,6 +305,7 @@ for i in range(1, 11):
         count += 1
 print(count)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -318,8 +318,7 @@ print(count)
 
 ````
 
-## 17
-
+````{exercise}
 ```python
 text = "apple"
 count = 0
@@ -328,6 +327,7 @@ for char in text:
         count += 1
 print(count)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -341,8 +341,7 @@ print(count)
 
 ````
 
-## 18
-
+````{exercise}
 ```python
 text = "programming"
 vowels = "aeiou"
@@ -352,6 +351,7 @@ for char in text:
         count += 1
 print(count)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -365,8 +365,7 @@ print(count)
 
 ````
 
-## 19
-
+````{exercise}
 ```python
 data = [1, 5, 3, 9, 2, 8]
 count = 0
@@ -375,6 +374,7 @@ for num in data:
         count += 1
 print(count)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -388,8 +388,7 @@ print(count)
 
 ````
 
-## 20
-
+````{exercise}
 ```python
 numbers = [10, 5, 15, 3, 12]
 count = 0
@@ -398,6 +397,7 @@ for num in numbers:
         count += 1
 print(count)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -411,14 +411,14 @@ print(count)
 
 ````
 
-## 21
-
+````{exercise}
 ```python
 result = ""
 for i in range(5):
     result += str(i)
 print(result)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -431,14 +431,14 @@ print(result)
 
 ````
 
-## 22
-
+````{exercise}
 ```python
 total = 0
 for i in range(1, 6):
     total += i * i
 print(total)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -451,8 +451,7 @@ print(total)
 
 ````
 
-## 23
-
+````{exercise}
 ```python
 numbers = [1, 2, 3, 4, 5]
 even_numbers = []
@@ -461,6 +460,7 @@ for num in numbers:
         even_numbers.append(num)
 print(even_numbers)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -474,8 +474,7 @@ print(even_numbers)
 
 ````
 
-## 24
-
+````{exercise}
 ```python
 numbers = [1, 2, 3]
 doubled = []
@@ -483,6 +482,7 @@ for num in numbers:
     doubled.append(num * 2)
 print(doubled)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -496,8 +496,7 @@ print(doubled)
 
 ````
 
-## 25
-
+````{exercise}
 ```python
 numbers = [5, 2, 8, 1, 9]
 max_num = numbers[0]
@@ -506,6 +505,7 @@ for num in numbers:
         max_num = num
 print(max_num)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -519,8 +519,7 @@ print(max_num)
 
 ````
 
-## 26
-
+````{exercise}
 ```python
 base = 2
 exponent = 4
@@ -529,6 +528,7 @@ for i in range(exponent):
     result *= base
 print(result)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -542,8 +542,7 @@ print(result)
 
 ````
 
-## 27
-
+````{exercise}
 ```python
 numbers = [2, 4, 6, 8, 10]
 product = 1
@@ -551,6 +550,7 @@ for num in numbers:
     product *= num
 print(product)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -564,8 +564,7 @@ print(product)
 
 ````
 
-## 28
-
+````{exercise}
 ```python
 words = ["cat", "elephant", "dog", "tiger"]
 longest = words[0]
@@ -574,6 +573,7 @@ for word in words:
         longest = word
 print(longest)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -587,8 +587,7 @@ print(longest)
 
 ````
 
-## 29
-
+````{exercise}
 ```python
 numbers = [1, 2, 2, 3, 3, 3, 4]
 unique = []
@@ -597,6 +596,7 @@ for num in numbers:
         unique.append(num)
 print(unique)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -610,8 +610,7 @@ print(unique)
 
 ````
 
-## 30
-
+````{exercise}
 ```python
 numbers = [15, 25, 35, 45, 55]
 target = 35
@@ -622,6 +621,7 @@ for i in range(len(numbers)):
         break
 print(index)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -636,13 +636,13 @@ print(index)
 
 ````
 
-## 31
-
+````{exercise}
 ```python
 data = [1, 2, 3, 4, 5]
 result = [x * 2 for x in data if x % 2 == 1]
 print(result)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -655,13 +655,13 @@ print(result)
 
 ````
 
-## 32
-
+````{exercise}
 ```python
 for i in range(3):
     for j in range(2):
         print(f"{i}-{j}")
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -675,13 +675,13 @@ for i in range(3):
 
 ````
 
-## 33
-
+````{exercise}
 ```python
 matrix = [[1, 2], [3, 4], [5, 6]]
 for row in matrix:
     print(row[1])
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -693,8 +693,7 @@ for row in matrix:
 
 ````
 
-## 34
-
+````{exercise}
 ```python
 matrix = [[1, 2, 3], [4, 5, 6]]
 for row in matrix:
@@ -702,6 +701,7 @@ for row in matrix:
         print(element, end=" ")
     print()
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -714,8 +714,7 @@ for row in matrix:
 
 ````
 
-## 35
-
+````{exercise}
 ```python
 matrix = [[2, 4], [6, 8], [10, 12]]
 column_sum = 0
@@ -723,6 +722,7 @@ for row in matrix:
     column_sum += row[0]
 print(column_sum)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -736,13 +736,13 @@ print(column_sum)
 
 ````
 
-## 36
-
+````{exercise}
 ```python
 words = ["apple", "banana", "cherry"]
 for i, word in enumerate(words):
     print(f"{i}: {word}")
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -756,8 +756,7 @@ for i, word in enumerate(words):
 
 ````
 
-## 37
-
+````{exercise}
 ```python
 numbers = [1, 2, 3, 4, 5]
 sum_odd = 0
@@ -770,6 +769,7 @@ for num in numbers:
 print(sum_odd)
 print(sum_even)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -783,8 +783,7 @@ print(sum_even)
 
 ````
 
-## 38
-
+````{exercise}
 ```python
 grades = [85, 92, 78, 96, 88]
 above_90 = []
@@ -797,6 +796,7 @@ for grade in grades:
 print(above_90)
 print(below_80)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -810,8 +810,7 @@ print(below_80)
 
 ````
 
-## 39
-
+````{exercise}
 ```python
 text = "Python"
 vowels = "aeiou"
@@ -821,6 +820,7 @@ for char in text.lower():
         consonants += char
 print(consonants)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -835,8 +835,7 @@ print(consonants)
 
 ````
 
-## 40
-
+````{exercise}
 ```python
 numbers = [1, 3, 5, 7, 9]
 total = 0
@@ -844,6 +843,7 @@ for i in range(len(numbers)):
     total += numbers[i] * (i + 1)
 print(total)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -857,8 +857,7 @@ print(total)
 
 ````
 
-## 41
-
+````{exercise}
 ```python
 numbers = [3, 7, 2, 9, 1, 5]
 differences = []
@@ -867,6 +866,7 @@ for i in range(len(numbers) - 1):
     differences.append(diff)
 print(differences)
 ```
+````
 
 ````{dropdown} 解答例
 
@@ -881,8 +881,7 @@ print(differences)
 
 ````
 
-## 42
-
+````{exercise}
 ```python
 numbers = [5, 3, 8, 1, 9, 2]
 pairs = []
@@ -892,6 +891,7 @@ for i in range(len(numbers)):
             pairs.append((numbers[i], numbers[j]))
 print(pairs)
 ```
+````
 
 ````{dropdown} 解答例
 
