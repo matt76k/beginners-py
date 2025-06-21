@@ -8,6 +8,7 @@ authors = [
 dependencies = [
     "jupyter-book>=1.0.4.post1",
     "sphinx-proof>=0.2.1",
+    "sphinx-exercise>=1.0.1",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"

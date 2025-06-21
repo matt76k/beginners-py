@@ -11,6 +11,7 @@ chapters:
   sections:
   - file: chapter02/writing.md
   - file: chapter02/reading.md
+  - file: chapter02/question.md
 - file: chapter03/intro
   sections:
   - file: chapter03/func.md

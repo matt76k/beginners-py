@@ -189,6 +189,7 @@ sphinx==7.4.7
     # via sphinx-comments
     # via sphinx-copybutton
     # via sphinx-design
+    # via sphinx-exercise
     # via sphinx-external-toc
     # via sphinx-jupyterbook-latex
     # via sphinx-multitoc-numbering
@@ -198,6 +199,7 @@ sphinx==7.4.7
     # via sphinxcontrib-bibtex
 sphinx-book-theme==1.1.4
     # via jupyter-book
+    # via sphinx-exercise
     # via sphinx-proof
 sphinx-comments==0.0.3
     # via jupyter-book
@@ -205,6 +207,8 @@ sphinx-copybutton==0.5.2
     # via jupyter-book
 sphinx-design==0.6.1
     # via jupyter-book
+sphinx-exercise==1.0.1
+    # via beginners-py
 sphinx-external-toc==1.0.1
     # via jupyter-book
 sphinx-jupyterbook-latex==1.0.0

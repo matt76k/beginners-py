@@ -39,4 +39,4 @@ sphinx:
     # imgmath_image_format: 'svg'
   extra_extensions:
     - sphinx_proof
-    # - sphinx.ext.imgmath
+    - sphinx_exercise
