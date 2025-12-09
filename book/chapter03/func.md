@@ -141,8 +141,8 @@ print(max_value([8, 5, 10, 3]))
 def is_even(number):
     return number % 2 == 0
 
-print(even_or_odd(4))
-print(even_or_odd(7))
+print(is_even(4))
+print(is_even(7))
 ```
 
 ````

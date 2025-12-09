@@ -1,5 +1,6 @@
 title: Pythonを極めて無双した件
 author: 鳳凰院 龍聖
+version: "1.0"
 logo: cover.png
 copyright: "2025, 鳳凰院 龍聖"
 
@@ -36,6 +37,9 @@ sphinx:
     language: ja
     epub_basename: "BeginnersPy"
     epub_cover: ["cover.png", ""]
+    suppress_warnings:
+      - "myst.directive_unknown"
+      - "epub.unknown_project_files"
     # imgmath_image_format: 'svg'
   extra_extensions:
     - sphinx_proof

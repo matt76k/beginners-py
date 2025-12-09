@@ -5,12 +5,14 @@ build/
 dist/
 wheels/
 *.egg-info
+CLAUDE.md
+uv.lock
 
 # venv
 .venv
 
 # build file
-book/_build/
+_build/
 book/notebooks/.ipynb_checkpoints
 
 # macOS

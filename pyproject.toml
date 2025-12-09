@@ -6,20 +6,16 @@ authors = [
     { name = "matt", email = "matt76k@gmail.com" }
 ]
 dependencies = [
-    "jupyter-book>=1.0.4.post1",
+    "jupyter-book>=1.0.4.post1,<2.0",
     "sphinx-proof>=0.2.1",
     "sphinx-exercise>=1.0.1",
 ]
 readme = "README.md"
-requires-python = ">= 3.8"
+requires-python = ">= 3.9"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
-
-[tool.rye]
-managed = true
-dev-dependencies = []
 
 [tool.hatch.metadata]
 allow-direct-references = true
