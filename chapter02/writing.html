@@ -849,7 +849,98 @@ document.write(`
 
 <p class="admonition-title"><span class="caption-number">練習 2.28 </span></p>
 <section id="exercise-content">
+<p>九九の3の段（3×1から3×9まで）を表示しましょう。</p>
+<p>例：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
+<span class="mi">6</span>
+<span class="mi">9</span>
+<span class="o">...</span>
+<span class="mi">27</span>
+</pre></div>
+</div>
+</section>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="exercise admonition" id="chapter02/writing-exercise-28">
+
+<p class="admonition-title"><span class="caption-number">練習 2.29 </span></p>
+<section id="exercise-content">
+<p>リスト <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code> と <code class="docutils literal notranslate"><span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code> の全ての組み合わせの積を表示しましょう。</p>
+<p>例：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1 × 4 = 4
+1 × 5 = 5
+1 × 6 = 6
+2 × 4 = 8
+...
+</pre></div>
+</div>
+</section>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">list2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> × </span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sd-card-text">これは<strong>二重ループ</strong>と呼ばれる構造です。
+外側のループが1回実行されるごとに、内側のループが全て実行されます。</p>
+</div>
+</details><div class="exercise admonition" id="chapter02/writing-exercise-29">
+
+<p class="admonition-title"><span class="caption-number">練習 2.30 </span></p>
+<section id="exercise-content">
+<p>1から5までの数字で、各数字の2乗を表示しましょう。
+ただし、ループを使って「その数を何回掛けたか」を表現してください。</p>
+<p>例：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="n">の2乗</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="mi">2</span><span class="n">の2乗</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="mi">3</span><span class="n">の2乗</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</section>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>  <span class="c1"># 2回掛ける</span>
+        <span class="n">result</span> <span class="o">*=</span> <span class="n">i</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">の2乗 = </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><div class="exercise admonition" id="chapter02/writing-exercise-30">
+
+<p class="admonition-title"><span class="caption-number">練習 2.31 </span></p>
+<section id="exercise-content">
 <p>1から20までの数で、平方数（1, 4, 9, 16...）を表示しましょう。</p>
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+<p>平方数とは、ある整数を2乗した数です。
+1×1=1, 2×2=4, 3×3=9...</p>
+<p>各数について、それが誰かの2乗かどうかを調べます。</p>
+</details>
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+<p>1から20までの各数iについて：</p>
+<ul class="simple">
+<li><p>1からiまでの各数jについて</p></li>
+<li><p>もし j × j == i なら、iは平方数</p></li>
+</ul>
+</details>
 </section>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -863,9 +954,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-28">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-31">
 
-<p class="admonition-title"><span class="caption-number">練習 2.29 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.32 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">num</span></code>という変数に整数値を代入し、その値の階乗を計算して表示しましょう。
 例えば5の階乗は <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">120</span></code> です。</p>
@@ -883,9 +974,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-29">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-32">
 
-<p class="admonition-title"><span class="caption-number">練習 2.30 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.33 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">base</span> <span class="pre">=</span> <span class="pre">3,</span> <span class="pre">exponent</span> <span class="pre">=</span> <span class="pre">4</span></code> のとき、<span class="math notranslate nohighlight">\(3^4\)</span> を計算して表示しましょう。</p>
 </section>
@@ -902,9 +993,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-30">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-33">
 
-<p class="admonition-title"><span class="caption-number">練習 2.31 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.34 </span></p>
 <section id="exercise-content">
 <p>1から50までの数で、6または8で割り切れる数を表示しましょう。</p>
 </section>
@@ -918,9 +1009,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-31">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-34">
 
-<p class="admonition-title"><span class="caption-number">練習 2.32 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.35 </span></p>
 <section id="exercise-content">
 <p>底辺の長さを<code class="docutils literal notranslate"><span class="pre">base</span></code>という変数に代入し、三角形を表示しましょう。</p>
 <p>例えば、baseが3なら以下のような三角形を表示します。</p>
@@ -940,9 +1031,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-32">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-35">
 
-<p class="admonition-title"><span class="caption-number">練習 2.33 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.36 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">height</span></code>という変数に整数値を代入し、その高さのピラミッド（二等辺三角形）を表示しましょう。</p>
 <p><code class="docutils literal notranslate"><span class="pre">height</span></code>が3なら以下のように表示します。</p>
@@ -964,9 +1055,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-33">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-36">
 
-<p class="admonition-title"><span class="caption-number">練習 2.34 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.37 </span></p>
 <section id="exercise-content">
 <p>5×5の数字の正方形を表示しましょう。各位置に行番号×列番号の値を表示してください。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
@@ -988,12 +1079,42 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-34">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-37">
 
-<p class="admonition-title"><span class="caption-number">練習 2.35 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.38 </span></p>
 <section id="exercise-content">
 <p>1から20までの数で、完全数を見つけて表示しましょう。
 完全数とは、自分自身を除く約数の和が自分自身と等しい数です。</p>
+<p>例：6は完全数です。6の約数は1, 2, 3で、1+2+3=6となります。</p>
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+<p>各数について：</p>
+<ol class="arabic simple">
+<li><p>自分自身を除く約数を全て見つける</p></li>
+<li><p>約数の合計を計算する</p></li>
+<li><p>合計が元の数と等しいか確認する</p></li>
+</ol>
+</details>
+<details>
+<summary>💡 ヒント2（約数の見つけ方）</summary>
+<p>ある数numの約数を見つけるには：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>  <span class="c1"># 1からnum-1まで</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>     <span class="c1"># 割り切れたら約数</span>
+        <span class="c1"># iは約数</span>
+</pre></div>
+</div>
+</details>
+<details>
+<summary>💡 ヒント3（構造）</summary>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">):</span>
+    <span class="n">divisor_sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># ここで約数を見つけて合計する</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
+        <span class="c1"># 約数かどうか判定して加算</span>
+    <span class="c1"># 合計が元の数と等しいか確認</span>
+</pre></div>
+</div>
+</details>
 </section>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1009,9 +1130,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-35">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-38">
 
-<p class="admonition-title"><span class="caption-number">練習 2.36 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.39 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code> の最初の要素と最後の要素を表示しましょう。</p>
 </section>
@@ -1025,9 +1146,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-36">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-39">
 
-<p class="admonition-title"><span class="caption-number">練習 2.37 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.40 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code> のすべての要素を表示しましょう。</p>
 </section>
@@ -1041,9 +1162,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-37">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-40">
 
-<p class="admonition-title"><span class="caption-number">練習 2.38 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.41 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code> の要素数を表示しましょう。</p>
 </section>
@@ -1056,9 +1177,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-38">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-41">
 
-<p class="admonition-title"><span class="caption-number">練習 2.39 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.42 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[10,</span> <span class="pre">25,</span> <span class="pre">3,</span> <span class="pre">17,</span> <span class="pre">8]</span></code> の中で15より大きい要素を表示しましょう。</p>
 </section>
@@ -1073,9 +1194,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-39">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-42">
 
-<p class="admonition-title"><span class="caption-number">練習 2.40 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.43 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code> の各要素にそのインデックス番号を付けて表示しましょう。</p>
 </section>
@@ -1089,9 +1210,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-40">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-43">
 
-<p class="admonition-title"><span class="caption-number">練習 2.41 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.44 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[2,</span> <span class="pre">4,</span> <span class="pre">6,</span> <span class="pre">8,</span> <span class="pre">10]</span></code> のすべての要素の合計を計算して表示しましょう。</p>
 </section>
@@ -1107,9 +1228,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-41">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-44">
 
-<p class="admonition-title"><span class="caption-number">練習 2.42 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.45 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[5,</span> <span class="pre">2,</span> <span class="pre">8,</span> <span class="pre">1,</span> <span class="pre">9]</span></code> というリストの最大値を、ループで見つけて表示しましょう。</p>
 </section>
@@ -1126,9 +1247,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-42">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-45">
 
-<p class="admonition-title"><span class="caption-number">練習 2.43 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.46 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[5,</span> <span class="pre">2,</span> <span class="pre">8,</span> <span class="pre">1,</span> <span class="pre">9]</span></code> というリストの最小値を、ループで見つけて表示しましょう。</p>
 </section>
@@ -1145,9 +1266,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-43">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-46">
 
-<p class="admonition-title"><span class="caption-number">練習 2.44 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.47 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[3,</span> <span class="pre">7,</span> <span class="pre">2,</span> <span class="pre">9,</span> <span class="pre">1]</span></code> の中で5より小さい要素の個数を数えましょう。</p>
 </section>
@@ -1164,9 +1285,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-44">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-47">
 
-<p class="admonition-title"><span class="caption-number">練習 2.45 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.48 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30,</span> <span class="pre">40,</span> <span class="pre">50]</span></code> というリストがあります。
 変数<code class="docutils literal notranslate"><span class="pre">target</span></code>に値を代入し、その値がこのリストに含まれているかどうかを判定し、含まれていればそのインデックスを、含まれていなければ-1を表示しましょう。</p>
@@ -1186,9 +1307,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-45">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-48">
 
-<p class="admonition-title"><span class="caption-number">練習 2.46 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.49 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">grades</span> <span class="pre">=</span> <span class="pre">[85,</span> <span class="pre">92,</span> <span class="pre">78,</span> <span class="pre">96,</span> <span class="pre">73]</span></code> の中で80点以上の成績の個数を数えましょう。</p>
 </section>
@@ -1205,9 +1326,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-46">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-49">
 
-<p class="admonition-title"><span class="caption-number">練習 2.47 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.50 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[-2,</span> <span class="pre">0,</span> <span class="pre">5,</span> <span class="pre">-8,</span> <span class="pre">10]</span></code> があります。
 正の数だけを合計した値を表示しましょう。</p>
@@ -1225,9 +1346,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-47">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-50">
 
-<p class="admonition-title"><span class="caption-number">練習 2.48 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.51 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[12,</span> <span class="pre">7,</span> <span class="pre">23,</span> <span class="pre">8,</span> <span class="pre">15]</span></code> の平均値を計算して表示しましょう。</p>
 </section>
@@ -1244,9 +1365,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-48">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-51">
 
-<p class="admonition-title"><span class="caption-number">練習 2.49 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.52 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code> の要素を逆順にした新しいリスト <code class="docutils literal notranslate"><span class="pre">reversed_numbers</span></code> を作成して表示しましょう。</p>
 </section>
@@ -1262,9 +1383,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-49">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-52">
 
-<p class="admonition-title"><span class="caption-number">練習 2.50 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.53 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code> の各要素を2倍にした新しいリスト <code class="docutils literal notranslate"><span class="pre">doubled_numbers</span></code> を作成しましょう。</p>
 </section>
@@ -1280,9 +1401,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-50">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-53">
 
-<p class="admonition-title"><span class="caption-number">練習 2.51 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.54 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">10]</span></code> があります。
 奇数だけを取り出した新しいリストを作成しましょう。</p>
@@ -1300,9 +1421,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-51">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-54">
 
-<p class="admonition-title"><span class="caption-number">練習 2.52 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.55 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">scores</span> <span class="pre">=</span> <span class="pre">[75,</span> <span class="pre">82,</span> <span class="pre">90,</span> <span class="pre">67,</span> <span class="pre">85]</span></code> の中で80点以上の点数だけを新しいリストに入れて表示しましょう。</p>
 </section>
@@ -1319,9 +1440,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-52">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-55">
 
-<p class="admonition-title"><span class="caption-number">練習 2.53 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.56 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">[8,</span> <span class="pre">3,</span> <span class="pre">1,</span> <span class="pre">5,</span> <span class="pre">6]</span></code> の各要素に、そのインデックス番号を加えた新しいリストを作成しましょう。
 例えば、<code class="docutils literal notranslate"><span class="pre">[8,</span> <span class="pre">3,</span> <span class="pre">1,</span> <span class="pre">5,</span> <span class="pre">6]</span></code> というリストがあった場合、<code class="docutils literal notranslate"><span class="pre">[8,</span> <span class="pre">4,</span> <span class="pre">3,</span> <span class="pre">8,</span> <span class="pre">10]</span></code> という新しいリストを作成しましょう。</p>
@@ -1338,9 +1459,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-53">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-56">
 
-<p class="admonition-title"><span class="caption-number">練習 2.54 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.57 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">4,</span> <span class="pre">5]</span></code> というリストから重複する値を取り除いた新しいリストを作成して表示しましょう。</p>
 </section>
@@ -1357,9 +1478,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-54">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-57">
 
-<p class="admonition-title"><span class="caption-number">練習 2.55 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.58 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code> と <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code> を連結して、<code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code> という新しいリストを作成して表示しましょう。</p>
 </section>
@@ -1375,9 +1496,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-55">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-58">
 
-<p class="admonition-title"><span class="caption-number">練習 2.56 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.59 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[10,</span> <span class="pre">5,</span> <span class="pre">8,</span> <span class="pre">3,</span> <span class="pre">7]</span></code> の中で、隣接する要素の差が2以下のペアを見つけて表示しましょう。</p>
 </section>
@@ -1393,9 +1514,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-56">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-59">
 
-<p class="admonition-title"><span class="caption-number">練習 2.57 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.60 </span></p>
 <section id="exercise-content">
 <p>九九の表（1の段から9の段まで）をすべて表示しましょう。</p>
 <p>例えば、以下のような結果になります。</p>
@@ -1429,9 +1550,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-57">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-60">
 
-<p class="admonition-title"><span class="caption-number">練習 2.58 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.61 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[4,</span> <span class="pre">7,</span> <span class="pre">2,</span> <span class="pre">9,</span> <span class="pre">1]</span></code> の中で最大値と最小値の差を計算して表示しましょう。</p>
 </section>
@@ -1451,9 +1572,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-58">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-61">
 
-<p class="admonition-title"><span class="caption-number">練習 2.59 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.62 </span></p>
 <section id="exercise-content">
 <p>1から6までの整数値をランダムに生成し、その値を表示するには以下のプログラムを実行します。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
@@ -1474,9 +1595,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-59">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-62">
 
-<p class="admonition-title"><span class="caption-number">練習 2.60 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.63 </span></p>
 <section id="exercise-content">
 <p>1から10までの整数値を3つランダムに生成し、その値を表示しましょう。</p>
 <p>例えば、以下のような結果になります。</p>
@@ -1494,9 +1615,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-60">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-63">
 
-<p class="admonition-title"><span class="caption-number">練習 2.61 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.64 </span></p>
 <section id="exercise-content">
 <p>1から10までの整数値を3つランダムに生成し、すべての値が同じなら「当たり」と表示しましょう。</p>
 </section>
@@ -1511,9 +1632,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-61">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-64">
 
-<p class="admonition-title"><span class="caption-number">練習 2.62 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.65 </span></p>
 <section id="exercise-content">
 <p>1から10までの整数値を3つランダムに生成し、
 すべての値が同じになるまで繰り返し、同じになったら繰り返した回数とその値を表示しましょう。
@@ -1532,9 +1653,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-62">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-65">
 
-<p class="admonition-title"><span class="caption-number">練習 2.63 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.66 </span></p>
 <section id="exercise-content">
 <p>0から9までの数字がランダムな順序で入ったリストを作成しましょう。</p>
 </section>
@@ -1549,9 +1670,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-63">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-66">
 
-<p class="admonition-title"><span class="caption-number">練習 2.64 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.67 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">num</span></code>という変数に整数値を代入し、その数が素数かどうかを判定して表示しましょう。
 （素数：1とその数自身以外に約数を持たない正の整数）</p>
@@ -1578,9 +1699,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-64">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-67">
 
-<p class="admonition-title"><span class="caption-number">練習 2.65 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.68 </span></p>
 <section id="exercise-content">
 <p>フィボナッチ数列の最初の10項を表示するプログラムを作成しましょう。
 フィボナッチ数列は、<code class="docutils literal notranslate"><span class="pre">F(0)=0</span></code>, <code class="docutils literal notranslate"><span class="pre">F(1)=1</span></code>, <code class="docutils literal notranslate"><span class="pre">F(n)=F(n-1)+F(n-2)</span></code>で定義されます。</p>
@@ -1596,9 +1717,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-65">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-68">
 
-<p class="admonition-title"><span class="caption-number">練習 2.66 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.69 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">base2</span></code>というリストに0か1の値が入っています。
 これを2進数と考え、その値を10進数に変換して表示しましょう。</p>
@@ -1621,9 +1742,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-66">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-69">
 
-<p class="admonition-title"><span class="caption-number">練習 2.67 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.70 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">base10</span></code>という変数に10進数の値を代入し、それを2進数を表すリストに変換して表示しましょう。</p>
 <p>例えば、<code class="docutils literal notranslate"><span class="pre">base10</span> <span class="pre">=</span> <span class="pre">11</span></code>なら、<code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">1]</span></code>を表示します。</p>
@@ -1642,9 +1763,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-67">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-70">
 
-<p class="admonition-title"><span class="caption-number">練習 2.68 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.71 </span></p>
 <section id="exercise-content">
 <p>1から100までの整数のうち、偶数のみを要素とするリストを作成しましょう。
 リスト内包表記を使うと一行で書けます。</p>
@@ -1658,26 +1779,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-68">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-71">
 
-<p class="admonition-title"><span class="caption-number">練習 2.69 </span></p>
-<section id="exercise-content">
-<p><code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code> の各要素を2倍にした新しいリスト <code class="docutils literal notranslate"><span class="pre">doubled_numbers</span></code> を作成しましょう。
-リスト内包表記を使って書いてみましょう。</p>
-</section>
-</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">doubled_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">num</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">doubled_numbers</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-69">
-
-<p class="admonition-title"><span class="caption-number">練習 2.70 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.72 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">10]</span></code> があります。
 奇数だけを取り出した新しいリストをリスト内包表記で作成しましょう。</p>
@@ -1692,9 +1796,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-70">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-72">
 
-<p class="admonition-title"><span class="caption-number">練習 2.71 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.73 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code> と <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">[3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code> という2つのリストがあります。
 これらの積集合（intersection）を求めて表示しましょう。</p>
@@ -1715,36 +1819,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-71">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-73">
 
-<p class="admonition-title"><span class="caption-number">練習 2.72 </span></p>
-<section id="exercise-content">
-<p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code> と <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">[3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code> という2つのリストがあります。
-これらの和集合（union）を求めて表示しましょう。</p>
-</section>
-</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-<span class="n">union</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">union</span><span class="p">:</span>
-        <span class="n">union</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">union</span><span class="p">:</span>
-        <span class="n">union</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">union</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-72">
-
-<p class="admonition-title"><span class="caption-number">練習 2.73 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.74 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[3,</span> <span class="pre">1,</span> <span class="pre">4]</span></code> があります。
 インデックス<code class="docutils literal notranslate"><span class="pre">0</span></code>の要素とインデックス<code class="docutils literal notranslate"><span class="pre">1</span></code>の要素を交換して <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">3,</span> <span class="pre">4]</span></code> となるようにし、表示しましょう。</p>
@@ -1760,11 +1837,49 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-73">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-74">
 
-<p class="admonition-title"><span class="caption-number">練習 2.74 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.75 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">n</span></code>という変数に整数値を代入し、<code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">x</span> <span class="pre">n</span></code> の単位行列（対角成分が1で、他は0）を2次元リストで作成しましょう。</p>
+<details>
+<summary>💡 ヒント1（単位行列とは）</summary>
+<p>単位行列は、左上から右下への対角線上の要素が全て1で、それ以外が全て0の正方行列です。
+例えば、3×3の単位行列は以下のようになります：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+</pre></div>
+</div>
+</details>
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+<ol class="arabic simple">
+<li><p>まず、全ての要素が0の n×n の2次元リストを作成します</p></li>
+<li><p>次に、対角成分（<code class="docutils literal notranslate"><span class="pre">matrix[i][i]</span></code>）だけを1に変更します</p>
+<ul class="simple">
+<li><p>対角成分とは、行番号と列番号が同じ要素のことです</p></li>
+</ul>
+</li>
+</ol>
+<p>例：3×3の場合、<code class="docutils literal notranslate"><span class="pre">matrix[0][0]</span></code>, <code class="docutils literal notranslate"><span class="pre">matrix[1][1]</span></code>, <code class="docutils literal notranslate"><span class="pre">matrix[2][2]</span></code>を1にします</p>
+</details>
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>n = 5
+# ステップ1: 全て0の2次元リストを作成
+matrix = [[0 for _ in range(n)] for _ in range(n)]
+
+# ステップ2: 対角成分を1に変更
+for i in range(n):
+    matrix[?][?] = 1  # ?を埋めてください
+
+# 表示
+for row in matrix:
+    print(row)
+</pre></div>
+</div>
+</details>
 </section>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1780,9 +1895,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-74">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-75">
 
-<p class="admonition-title"><span class="caption-number">練習 2.75 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.76 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">matrix</span> <span class="pre">=</span> <span class="pre">[[1,</span> <span class="pre">2,</span> <span class="pre">3],</span> <span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">6],</span> <span class="pre">[7,</span> <span class="pre">8,</span> <span class="pre">9]]</span></code> という2次元リスト（行列）があります。
 この行列のすべての要素を表示しましょう。</p>
@@ -1799,9 +1914,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-75">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-76">
 
-<p class="admonition-title"><span class="caption-number">練習 2.76 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.77 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">matrix</span> <span class="pre">=</span> <span class="pre">[[1,</span> <span class="pre">2,</span> <span class="pre">3],</span> <span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">6],</span> <span class="pre">[7,</span> <span class="pre">8,</span> <span class="pre">9]]</span></code> という2次元リスト（行列）があります。
 この行列の対角成分（左上から右下への要素）を表示しましょう。</p>
@@ -1816,9 +1931,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-76">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-77">
 
-<p class="admonition-title"><span class="caption-number">練習 2.77 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.78 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">a</span></code>というリストに[1, 2, 3, 4, 5]が入っています。
 これを1つずつ右にずらして表示しましょう。
@@ -1831,6 +1946,43 @@ document.write(`
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+<p>右に1つずらすとは、リストの最後の要素を取り出して、それをリストの先頭に挿入することです。
+これをリストの要素数だけ繰り返します。</p>
+<p>例：<code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code></p>
+<ul class="simple">
+<li><p>1回目：5を取り出して先頭に → <code class="docutils literal notranslate"><span class="pre">[5,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code></p></li>
+<li><p>2回目：4を取り出して先頭に → <code class="docutils literal notranslate"><span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code></p></li>
+<li><p>3回目：3を取り出して先頭に → <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">1,</span> <span class="pre">2]</span></code>
+...</p></li>
+</ul>
+</details>
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. リストの長さ分だけループ
+2. 各反復で：
+   - リストの最後の要素を取り出す（pop メソッド）
+   - それをリストの先頭（インデックス0）に挿入（insert メソッド）
+   - リストを表示
+</pre></div>
+</div>
+<p>Pythonのリストメソッド：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pop()</span></code>: 最後の要素を取り出して返す</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert(0,</span> <span class="pre">value)</span></code>: インデックス0に要素を挿入
+これらを組み合わせて <code class="docutils literal notranslate"><span class="pre">insert(0,</span> <span class="pre">pop())</span></code> と書けます。</p></li>
+</ul>
+</details>
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>a = [1, 2, 3, 4, 5]
+for i in range(len(a)):
+    a.insert(?, a.?)  # ?を埋めてください
+    print(a)
+</pre></div>
+</div>
+</details>
 </section>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1843,9 +1995,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-77">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-78">
 
-<p class="admonition-title"><span class="caption-number">練習 2.78 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.79 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">my_list</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code> があります。
 <code class="docutils literal notranslate"><span class="pre">mylist2</span> <span class="pre">=</span> <span class="pre">mylist</span></code> という代入をして、mylist2の先頭の値を<code class="docutils literal notranslate"><span class="pre">99</span></code>にして、<code class="docutils literal notranslate"><span class="pre">mylist</span></code>を表示してみましょう。</p>
@@ -1862,9 +2014,9 @@ document.write(`
 </div>
 <p class="sd-card-text">このように、リストを代入すると、同じリストを参照していることになります。</p>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-78">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-79">
 
-<p class="admonition-title"><span class="caption-number">練習 2.79 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.80 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">my_list</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code> があります。
 リストのコピーを作成し、コピーしたリストの最初の要素を<code class="docutils literal notranslate"><span class="pre">99</span></code>に変更し、
@@ -1885,9 +2037,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-79">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-80">
 
-<p class="admonition-title"><span class="caption-number">練習 2.80 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.81 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">numbers</span></code>という変数にリストを代入し、このリストが昇順（小さい順）にソートされているかどうかを判定する真偽値を表示しましょう。
 例えば、 <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">10,</span> <span class="pre">5,</span> <span class="pre">8,</span> <span class="pre">2,</span> <span class="pre">9]</span></code> を代入した場合、<code class="docutils literal notranslate"><span class="pre">False</span></code>が表示されます。</p>
@@ -1906,12 +2058,55 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-80">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-81">
 
-<p class="admonition-title"><span class="caption-number">練習 2.81 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.82 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[5,</span> <span class="pre">2,</span> <span class="pre">8,</span> <span class="pre">1,</span> <span class="pre">9]</span></code> があります。
 このリストから<strong>最小値を見つけ</strong>、その値と<strong>リストの最初の要素を交換</strong>するプログラムを書きましょう。</p>
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+<p>この問題は2つのステップに分けて考えます：</p>
+<ol class="arabic simple">
+<li><p>リストの中から最小値を見つける（値とそのインデックスの両方が必要）</p></li>
+<li><p>最小値とリストの最初の要素を交換する</p></li>
+</ol>
+<p>最小値を見つけるには、リストの最初の要素を「現在の最小値」として保存し、
+残りの要素と比較していきます。</p>
+</details>
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. 最小値として、最初の要素 numbers[0] を保存
+2. 最小値のインデックスとして 0 を保存
+3. リストを1番目（インデックス1）から最後までループ：
+   - もし現在の要素が最小値より小さければ：
+     - 最小値を更新
+     - 最小値のインデックスを更新
+4. numbers[0]とnumbers[最小値のインデックス]を交換
+</pre></div>
+</div>
+<p>Pythonでは、<code class="docutils literal notranslate"><span class="pre">a,</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">b,</span> <span class="pre">a</span></code> という構文で簡単に2つの値を交換できます。</p>
+</details>
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>numbers = [5, 2, 8, 1, 9]
+
+# ステップ1: 最小値とそのインデックスを見つける
+min_val = numbers[0]
+min_idx = 0
+
+for i in range(1, len(numbers)):
+    if numbers[i] &lt; ?:  # ?を埋めてください
+        min_val = ?
+        min_idx = ?
+
+# ステップ2: 交換
+numbers[0], numbers[?] = numbers[?], numbers[0]
+
+print(numbers)
+</pre></div>
+</div>
+</details>
 </section>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1932,9 +2127,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-81">
+</details><div class="exercise admonition" id="chapter02/writing-exercise-82">
 
-<p class="admonition-title"><span class="caption-number">練習 2.82 </span></p>
+<p class="admonition-title"><span class="caption-number">練習 2.83 </span></p>
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[3,</span> <span class="pre">5,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">4]</span></code> があります。
 隣り合う要素を比較し、もし左が右より大きければ交換するという処理を、リストの先頭から末尾まで一度だけ行い、その結果を表示しましょう。</p>
@@ -1951,32 +2146,51 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details><div class="exercise admonition" id="chapter02/writing-exercise-82">
-
-<p class="admonition-title"><span class="caption-number">練習 2.83 </span></p>
-<section id="exercise-content">
-<p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[3,</span> <span class="pre">5,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">4]</span></code> があります。
-隣り合う要素を比較し、もし右が左より大きければ交換するという処理を、リストの先頭から末尾まで一度だけ行い、その結果を表示しましょう。</p>
-</section>
-</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">解答例</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
-        <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 </details><div class="exercise admonition" id="chapter02/writing-exercise-83">
 
 <p class="admonition-title"><span class="caption-number">練習 2.84 </span></p>
 <section id="exercise-content">
 <p><code class="docutils literal notranslate"><span class="pre">sorted_list</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">7]</span></code> と <code class="docutils literal notranslate"><span class="pre">new_value</span> <span class="pre">=</span> <span class="pre">4</span></code> があります。
 <code class="docutils literal notranslate"><span class="pre">sorted_list</span></code> のソートされた順序を保ったまま <code class="docutils literal notranslate"><span class="pre">new_value</span></code> を挿入し、結果を表示しましょう。</p>
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+<p>ソート済みリストに値を挿入するには、新しい値を入れるべき「正しい位置」を見つける必要があります。
+正しい位置とは、挿入後もリストが昇順のままになる位置です。</p>
+<p>例：<code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">7]</span></code> に <code class="docutils literal notranslate"><span class="pre">4</span></code> を挿入する場合、
+<code class="docutils literal notranslate"><span class="pre">4</span></code> は <code class="docutils literal notranslate"><span class="pre">3</span></code> より大きく <code class="docutils literal notranslate"><span class="pre">5</span></code> より小さいので、インデックス2の位置に挿入します。
+結果：<code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">7]</span></code></p>
+</details>
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. リストの先頭から順番に要素を見ていく
+2. もし new_value が現在の要素より小さければ：
+   - その位置に new_value を挿入（insert メソッドを使用）
+   - 処理を終了
+3. リストの最後まで見ても挿入されなければ：
+   - リストの最後に new_value を追加（append メソッドを使用）
+</pre></div>
+</div>
+<p>フラグ変数を使って、挿入が完了したかどうかを追跡すると便利です。</p>
+</details>
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sorted_list = [1, 3, 5, 7]
+new_value = 4
+
+inserted = False
+for i in range(len(sorted_list)):
+    if new_value &lt; sorted_list[i]:
+        sorted_list.insert(?, new_value)  # ?を埋めてください
+        inserted = True
+        break
+
+if not inserted:
+    sorted_list.?  # 最後に追加
+
+print(sorted_list)
+</pre></div>
+</div>
+</details>
 </section>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -2044,6 +2258,45 @@ document.write(`
 <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="n">回</span>
 </pre></div>
 </div>
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+<p>出現回数をカウントするには、辞書（dictionary）を使うのが効率的です。
+辞書のキーに数値を、値にその出現回数を格納します。</p>
+<p>例：<code class="docutils literal notranslate"><span class="pre">{4:</span> <span class="pre">1,</span> <span class="pre">2:</span> <span class="pre">2,</span> <span class="pre">8:</span> <span class="pre">1,</span> <span class="pre">3:</span> <span class="pre">2,</span> <span class="pre">1:</span> <span class="pre">1}</span></code></p>
+<p>リストの要素を1つずつ見ていき、辞書にその数値があれば回数を+1、
+なければ新しくキーを追加して回数を1にします。</p>
+</details>
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. 空の辞書 counts を作成
+2. リストの各要素について：
+   もし その数値が辞書にすでに存在するなら：
+     counts[数値] を +1
+   そうでなければ：
+     counts[数値] = 1
+3. 辞書の各キーと値のペアについて：
+   「数値: 回数回」と表示
+</pre></div>
+</div>
+<p>辞書に要素が存在するかは <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">num</span> <span class="pre">in</span> <span class="pre">counts:</span></code> で確認できます。
+辞書を走査するには <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">num,</span> <span class="pre">count</span> <span class="pre">in</span> <span class="pre">counts.items():</span></code> を使います。</p>
+</details>
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>numbers = [4, 2, 2, 8, 3, 3, 1]
+counts = {}
+
+for num in numbers:
+    if num in counts:
+        counts[num] = counts[num] + ?  # ?を埋めてください
+    else:
+        counts[num] = ?
+
+for num, count in counts.items():
+    print(f&quot;{num}: {count}回&quot;)
+</pre></div>
+</div>
+</details>
 </section>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -2069,6 +2322,54 @@ document.write(`
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">matrix</span> <span class="pre">=</span> <span class="pre">[[1,</span> <span class="pre">2,</span> <span class="pre">3],</span> <span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">6],</span> <span class="pre">[7,</span> <span class="pre">8,</span> <span class="pre">9]]</span></code> があります。
 この行列を転置（行と列を入れ替え）して表示しましょう。</p>
+<details>
+<summary>💡 ヒント1（転置とは）</summary>
+<p>行列の転置とは、行と列を入れ替える操作です。
+元の行列の i行j列の要素が、転置後は j行i列になります。</p>
+<p>例：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>元の行列:        転置後:
+[[1, 2, 3],     [[1, 4, 7],
+ [4, 5, 6],  →   [2, 5, 8],
+ [7, 8, 9]]      [3, 6, 9]]
+</pre></div>
+</div>
+<p>元の行列が3行×3列なら、転置後も3行×3列になります。</p>
+</details>
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. 転置後の行列を格納する新しい2次元リストを作成
+   - 元が rows行×cols列なら、転置後は cols行×rows列
+2. 元の行列の全要素をループで走査：
+   - 元の i行j列の要素を、転置後の j行i列にコピー
+</pre></div>
+</div>
+<p>ネストしたループを使います：</p>
+<ul class="simple">
+<li><p>外側のループで行（i）を走査</p></li>
+<li><p>内側のループで列（j）を走査</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transposed[j][i]</span> <span class="pre">=</span> <span class="pre">matrix[i][j]</span></code> で転置</p></li>
+</ul>
+</details>
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+rows = len(matrix)      # 行数
+cols = len(matrix[0])   # 列数
+
+# ステップ1: 転置後の行列を作成（全て0で初期化）
+transposed = [[0 for _ in range(rows)] for _ in range(cols)]
+
+# ステップ2: 要素をコピー
+for i in range(rows):
+    for j in range(cols):
+        transposed[?][?] = matrix[?][?]  # ?を埋めてください
+
+# 表示
+for row in transposed:
+    print(row)
+</pre></div>
+</div>
+</details>
 </section>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -2217,6 +2518,46 @@ document.write(`
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code> があります。
 このリストから3つの要素を選ぶすべての組み合わせを生成しましょう。</p>
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+<p>3つの要素の組み合わせを生成するには、3重のループが必要です。
+[1, 2, 3, 4] から3つ選ぶ組み合わせは：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>重要：組み合わせなので、[1, 2, 3]と[2, 1, 3]は同じとみなします。
+そのため、選ぶ要素のインデックスは常に増加する順序にします。</p>
+</details>
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. 最初のループ（i）：0 からリストの最後-2 まで
+   - 1つ目の要素を選ぶ
+2. 2番目のループ（j）：i+1 からリストの最後-1 まで
+   - 2つ目の要素を選ぶ（1つ目より後ろから）
+3. 3番目のループ（k）：j+1 からリストの最後 まで
+   - 3つ目の要素を選ぶ（2つ目より後ろから）
+</pre></div>
+</div>
+<p>各ループの範囲が重要です。後のループは常に前のループより大きいインデックスから始まります。</p>
+</details>
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>numbers = [1, 2, 3, 4]
+combinations = []
+
+for i in range(len(numbers)):
+    for j in range(?, len(numbers)):  # ?を埋めてください
+        for k in range(?, len(numbers)):  # ?を埋めてください
+            combinations.append([numbers[i], numbers[j], numbers[k]])
+
+for combo in combinations:
+    print(combo)
+</pre></div>
+</div>
+</details>
 </section>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -2241,6 +2582,55 @@ document.write(`
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[3,</span> <span class="pre">8,</span> <span class="pre">1,</span> <span class="pre">6,</span> <span class="pre">2]</span></code> があります。
 このリストの中で2番目に大きい値を見つけて表示しましょう。</p>
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+<p>2番目に大きい値を見つけるには、最大値と2番目の最大値の両方を追跡する必要があります。</p>
+<p>リストの要素を1つずつ見ていき：</p>
+<ol class="arabic simple">
+<li><p>現在の要素が最大値より大きい場合：</p>
+<ul class="simple">
+<li><p>今までの最大値を2番目に降格させる</p></li>
+<li><p>現在の要素を新しい最大値にする</p></li>
+</ul>
+</li>
+<li><p>現在の要素が2番目の最大値より大きい（かつ最大値ではない）場合：</p>
+<ul class="simple">
+<li><p>現在の要素を新しい2番目の最大値にする</p></li>
+</ul>
+</li>
+</ol>
+</details>
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. max_val と second_max を最初の要素で初期化
+2. リストの各要素について：
+   もし 要素 &gt; max_val なら：
+     second_max = max_val
+     max_val = 要素
+   そうでなくて、もし 要素 &gt; second_max かつ 要素 != max_val なら：
+     second_max = 要素
+3. second_max を表示
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">要素</span> <span class="pre">!=</span> <span class="pre">max_val</span></code> の条件が重要です。これがないと、最大値と同じ値が2番目になってしまいます。</p>
+</details>
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>numbers = [3, 8, 1, 6, 2]
+max_val = numbers[0]
+second_max = numbers[0]
+
+for num in numbers:
+    if num &gt; max_val:
+        second_max = ?  # ?を埋めてください
+        max_val = ?
+    elif num &gt; second_max and num != max_val:
+        second_max = ?
+
+print(second_max)
+</pre></div>
+</div>
+</details>
 </section>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -2302,6 +2692,44 @@ document.write(`
 <span class="mi">9</span><span class="n">は4番目に大きい</span>
 </pre></div>
 </div>
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+<p>各数値の順位は、その数値より大きい数値が何個あるかを数えることで求められます。</p>
+<p>例：数値12の順位を求める場合、</p>
+<ul class="simple">
+<li><p>12より大きい数値は23と15の2個</p></li>
+<li><p>よって12は3番目に大きい（2 + 1 = 3）</p></li>
+</ul>
+<p>各要素について、リスト全体を走査して「自分より大きい数値」を数えます。</p>
+</details>
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. リストの各要素について（外側のループ）：
+   a. その要素の順位を1で初期化
+   b. リストの全ての要素について（内側のループ）：
+      - もし比較対象の要素が現在の要素より大きければ：
+        - 順位を +1
+   c. 「要素は順位番目に大きい」と表示
+</pre></div>
+</div>
+<p>ネストしたループを使用します：</p>
+<ul class="simple">
+<li><p>外側：順位を求めたい要素</p></li>
+<li><p>内側：その要素と比較する全ての要素</p></li>
+</ul>
+</details>
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>numbers = [12, 7, 23, 8, 15, 9]
+for num in numbers:
+    rank = 1
+    for other_num in numbers:
+        if other_num &gt; ?:  # ?を埋めてください
+            rank += ?
+    print(f&quot;{num}は{rank}番目に大きい&quot;)
+</pre></div>
+</div>
+</details>
 </section>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -2354,6 +2782,56 @@ document.write(`
 <section id="exercise-content">
 <p>リスト <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[5,</span> <span class="pre">3,</span> <span class="pre">8,</span> <span class="pre">3,</span> <span class="pre">1,</span> <span class="pre">8,</span> <span class="pre">5]</span></code> があります。
 最も頻繁に出現する数値とその出現回数を表示しましょう。</p>
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+<p>この問題は2つのステップに分けられます：</p>
+<ol class="arabic simple">
+<li><p>各数値の出現回数を辞書でカウント（前の問題と同じ）</p></li>
+<li><p>辞書の中から最大の出現回数を持つ数値を見つける</p></li>
+</ol>
+<p>例：<code class="docutils literal notranslate"><span class="pre">[5,</span> <span class="pre">3,</span> <span class="pre">8,</span> <span class="pre">3,</span> <span class="pre">1,</span> <span class="pre">8,</span> <span class="pre">5]</span></code> の場合、
+カウント結果は <code class="docutils literal notranslate"><span class="pre">{5:</span> <span class="pre">2,</span> <span class="pre">3:</span> <span class="pre">2,</span> <span class="pre">8:</span> <span class="pre">2,</span> <span class="pre">1:</span> <span class="pre">1}</span></code> となり、
+最大出現回数は2回です（複数ある場合は最初に見つかったものを表示）。</p>
+</details>
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. 空の辞書 counts を作成
+2. リストの各要素について出現回数をカウント
+3. 最大出現回数と最頻出の数値を追跡する変数を用意：
+   - max_count = 0
+   - most_frequent = None
+4. 辞書の各キーと値について：
+   もし count &gt; max_count なら：
+     max_count = count
+     most_frequent = num
+5. 結果を表示
+</pre></div>
+</div>
+</details>
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>numbers = [5, 3, 8, 3, 1, 8, 5]
+counts = {}
+
+# ステップ1: 出現回数をカウント
+for num in numbers:
+    if num in counts:
+        counts[num] += 1
+    else:
+        counts[num] = 1
+
+# ステップ2: 最大を見つける
+max_count = 0
+most_frequent = None
+for num, count in counts.items():
+    if count &gt; ?:  # ?を埋めてください
+        max_count = ?
+        most_frequent = ?
+
+print(f&quot;最頻出の数値: {most_frequent}, 出現回数: {max_count}&quot;)
+</pre></div>
+</div>
+</details>
 </section>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
