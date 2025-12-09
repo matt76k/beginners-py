@@ -3,14 +3,10 @@
 # If you wish to continue using _config.yml, make edits to that file and
 # re-generate this one.
 ###############################################################################
-project = 'Pythonを極めて無双した件'
-version = '1.0'
-release = '1.0'
 author = '鳳凰院 龍聖'
 comments_config = {'hypothesis': False, 'utterances': False}
 copyright = '2025, 鳳凰院 龍聖'
 epub_basename = 'BeginnersPy'
-epub_cover = ('cover.png', '')
 exclude_patterns = ['**.ipynb_checkpoints', '.DS_Store', 'Thumbs.db', '_build']
 extensions = ['sphinx_togglebutton', 'sphinx_copybutton', 'myst_nb', 'jupyter_book', 'sphinx_thebe', 'sphinx_comments', 'sphinx_external_toc', 'sphinx.ext.intersphinx', 'sphinx_design', 'sphinx_book_theme', 'sphinx_proof', 'sphinx_exercise', 'sphinx_jupyterbook_latex', 'sphinx_multitoc_numbering']
 external_toc_exclude_missing = True
@@ -22,7 +18,7 @@ html_logo = 'cover.png'
 html_sourcelink_suffix = ''
 html_theme = 'sphinx_book_theme'
 html_theme_options = {'search_bar_text': 'Search this book...', 'launch_buttons': {'notebook_interface': 'jupyterlab', 'binderhub_url': '', 'jupyterhub_url': '', 'thebe': False, 'colab_url': '', 'deepnote_url': ''}, 'path_to_docs': '_sources', 'repository_url': 'https://github.com/matt76k/beginners-py', 'repository_branch': 'gh-pages', 'extra_footer': '', 'home_page_in_toc': True, 'announcement': '', 'analytics': {'google_analytics_id': '', 'plausible_analytics_domain': '', 'plausible_analytics_url': 'https://plausible.io/js/script.js'}, 'use_repository_button': False, 'use_edit_page_button': False, 'use_issues_button': False}
-html_title = 'Pythonを極めて無双した件'
+html_title = 'ぬこ様と学ぶPython入門'
 language = 'ja'
 latex_engine = 'pdflatex'
 myst_enable_extensions = ['colon_fence', 'dollarmath', 'linkify', 'substitution', 'tasklist']
@@ -36,6 +32,6 @@ nb_execution_timeout = 1000
 nb_output_stderr = 'show'
 numfig = True
 pygments_style = 'sphinx'
-suppress_warnings = ['myst.directive_unknown', 'epub.unknown_project_files']
+suppress_warnings = ['myst.directive_unknown', 'epub.unknown_project_files', 'config.config']
 use_jupyterbook_latex = True
 use_multitoc_numbering = True
