@@ -437,7 +437,99 @@ print(sum)
 ````
 
 ````{exercise}
+九九の3の段（3×1から3×9まで）を表示しましょう。
+
+例：
+```
+3
+6
+9
+...
+27
+```
+````
+
+````{dropdown} 解答例
+
+```python
+for i in range(1, 10):
+    print(3 * i)
+```
+
+````
+
+````{exercise}
+リスト `[1, 2, 3]` と `[4, 5, 6]` の全ての組み合わせの積を表示しましょう。
+
+例：
+```
+1 × 4 = 4
+1 × 5 = 5
+1 × 6 = 6
+2 × 4 = 8
+...
+```
+````
+
+````{dropdown} 解答例
+
+```python
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+for i in list1:
+    for j in list2:
+        print(f"{i} × {j} = {i * j}")
+```
+
+これは**二重ループ**と呼ばれる構造です。
+外側のループが1回実行されるごとに、内側のループが全て実行されます。
+
+````
+
+````{exercise}
+1から5までの数字で、各数字の2乗を表示しましょう。
+ただし、ループを使って「その数を何回掛けたか」を表現してください。
+
+例：
+```
+1の2乗 = 1
+2の2乗 = 4
+3の2乗 = 9
+...
+```
+````
+
+````{dropdown} 解答例
+
+```python
+for i in range(1, 6):
+    result = 1
+    for j in range(2):  # 2回掛ける
+        result *= i
+    print(f"{i}の2乗 = {result}")
+```
+
+````
+
+````{exercise}
 1から20までの数で、平方数（1, 4, 9, 16...）を表示しましょう。
+
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+
+平方数とは、ある整数を2乗した数です。
+1×1=1, 2×2=4, 3×3=9...
+
+各数について、それが誰かの2乗かどうかを調べます。
+</details>
+
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+
+1から20までの各数iについて：
+- 1からiまでの各数jについて
+- もし j × j == i なら、iは平方数
+</details>
 ````
 
 ````{dropdown} 解答例
@@ -570,6 +662,41 @@ for i in range(1, 6):
 ````{exercise}
 1から20までの数で、完全数を見つけて表示しましょう。
 完全数とは、自分自身を除く約数の和が自分自身と等しい数です。
+
+例：6は完全数です。6の約数は1, 2, 3で、1+2+3=6となります。
+
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+
+各数について：
+1. 自分自身を除く約数を全て見つける
+2. 約数の合計を計算する
+3. 合計が元の数と等しいか確認する
+</details>
+
+<details>
+<summary>💡 ヒント2（約数の見つけ方）</summary>
+
+ある数numの約数を見つけるには：
+```python
+for i in range(1, num):  # 1からnum-1まで
+    if num % i == 0:     # 割り切れたら約数
+        # iは約数
+```
+</details>
+
+<details>
+<summary>💡 ヒント3（構造）</summary>
+
+```python
+for num in range(1, 21):
+    divisor_sum = 0
+    # ここで約数を見つけて合計する
+    for i in range(1, num):
+        # 約数かどうか判定して加算
+    # 合計が元の数と等しいか確認
+```
+</details>
 ````
 
 ````{dropdown} 解答例
@@ -1167,21 +1294,6 @@ print(even_numbers)
 ````
 
 ````{exercise}
-`numbers = [1, 2, 3, 4, 5]` の各要素を2倍にした新しいリスト `doubled_numbers` を作成しましょう。
-リスト内包表記を使って書いてみましょう。
-````
-
-````{dropdown} 解答例
-
-```python
-numbers = [1, 2, 3, 4, 5]
-doubled_numbers = [num * 2 for num in numbers]
-print(doubled_numbers)
-```
-
-````
-
-````{exercise}
 `numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]` があります。
 奇数だけを取り出した新しいリストをリスト内包表記で作成しましょう。
 ````
@@ -1218,31 +1330,6 @@ print(intersection)
 ````
 
 ````{exercise}
-`a = [1, 2, 3, 4]` と `b = [3, 4, 5, 6]` という2つのリストがあります。
-これらの和集合（union）を求めて表示しましょう。
-````
-
-````{dropdown} 解答例
-
-```python
-a = [1, 2, 3, 4]
-b = [3, 4, 5, 6]
-union = []
-
-for i in a:
-    if i not in union:
-        union.append(i)
-
-for i in b:
-    if i not in union:
-        union.append(i)
-
-print(union)
-```
-
-````
-
-````{exercise}
 リスト `numbers = [3, 1, 4]` があります。
 インデックス`0`の要素とインデックス`1`の要素を交換して `[1, 3, 4]` となるようにし、表示しましょう。
 ````
@@ -1260,6 +1347,46 @@ print(f"交換後: {numbers}")
 
 ````{exercise}
 `n`という変数に整数値を代入し、`n x n` の単位行列（対角成分が1で、他は0）を2次元リストで作成しましょう。
+
+<details>
+<summary>💡 ヒント1（単位行列とは）</summary>
+
+単位行列は、左上から右下への対角線上の要素が全て1で、それ以外が全て0の正方行列です。
+例えば、3×3の単位行列は以下のようになります：
+```
+[[1, 0, 0],
+ [0, 1, 0],
+ [0, 0, 1]]
+```
+</details>
+
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+
+1. まず、全ての要素が0の n×n の2次元リストを作成します
+2. 次に、対角成分（`matrix[i][i]`）だけを1に変更します
+   - 対角成分とは、行番号と列番号が同じ要素のことです
+
+例：3×3の場合、`matrix[0][0]`, `matrix[1][1]`, `matrix[2][2]`を1にします
+</details>
+
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+
+```text
+n = 5
+# ステップ1: 全て0の2次元リストを作成
+matrix = [[0 for _ in range(n)] for _ in range(n)]
+
+# ステップ2: 対角成分を1に変更
+for i in range(n):
+    matrix[?][?] = 1  # ?を埋めてください
+
+# 表示
+for row in matrix:
+    print(row)
+```
+</details>
 ````
 
 ````{dropdown} 解答例
@@ -1321,6 +1448,47 @@ for i in range(len(matrix)):
 [2, 3, 4, 5, 1]
 [1, 2, 3, 4, 5]
 ```
+
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+
+右に1つずらすとは、リストの最後の要素を取り出して、それをリストの先頭に挿入することです。
+これをリストの要素数だけ繰り返します。
+
+例：`[1, 2, 3, 4, 5]`
+- 1回目：5を取り出して先頭に → `[5, 1, 2, 3, 4]`
+- 2回目：4を取り出して先頭に → `[4, 5, 1, 2, 3]`
+- 3回目：3を取り出して先頭に → `[3, 4, 5, 1, 2]`
+...
+</details>
+
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+
+```
+1. リストの長さ分だけループ
+2. 各反復で：
+   - リストの最後の要素を取り出す（pop メソッド）
+   - それをリストの先頭（インデックス0）に挿入（insert メソッド）
+   - リストを表示
+```
+
+Pythonのリストメソッド：
+- `pop()`: 最後の要素を取り出して返す
+- `insert(0, value)`: インデックス0に要素を挿入
+これらを組み合わせて `insert(0, pop())` と書けます。
+</details>
+
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+
+```text
+a = [1, 2, 3, 4, 5]
+for i in range(len(a)):
+    a.insert(?, a.?)  # ?を埋めてください
+    print(a)
+```
+</details>
 ````
 
 ````{dropdown} 解答例
@@ -1395,6 +1563,55 @@ print(is_sorted)
 ````{exercise}
 リスト `numbers = [5, 2, 8, 1, 9]` があります。
 このリストから**最小値を見つけ**、その値と**リストの最初の要素を交換**するプログラムを書きましょう。
+
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+
+この問題は2つのステップに分けて考えます：
+1. リストの中から最小値を見つける（値とそのインデックスの両方が必要）
+2. 最小値とリストの最初の要素を交換する
+
+最小値を見つけるには、リストの最初の要素を「現在の最小値」として保存し、
+残りの要素と比較していきます。
+</details>
+
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+
+```
+1. 最小値として、最初の要素 numbers[0] を保存
+2. 最小値のインデックスとして 0 を保存
+3. リストを1番目（インデックス1）から最後までループ：
+   - もし現在の要素が最小値より小さければ：
+     - 最小値を更新
+     - 最小値のインデックスを更新
+4. numbers[0]とnumbers[最小値のインデックス]を交換
+```
+
+Pythonでは、`a, b = b, a` という構文で簡単に2つの値を交換できます。
+</details>
+
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+
+```text
+numbers = [5, 2, 8, 1, 9]
+
+# ステップ1: 最小値とそのインデックスを見つける
+min_val = numbers[0]
+min_idx = 0
+
+for i in range(1, len(numbers)):
+    if numbers[i] < ?:  # ?を埋めてください
+        min_val = ?
+        min_idx = ?
+
+# ステップ2: 交換
+numbers[0], numbers[?] = numbers[?], numbers[0]
+
+print(numbers)
+```
+</details>
 ````
 
 ````{dropdown} 解答例
@@ -1434,26 +1651,55 @@ print(numbers)
 ````
 
 ````{exercise}
-リスト `numbers = [3, 5, 1, 2, 4]` があります。
-隣り合う要素を比較し、もし右が左より大きければ交換するという処理を、リストの先頭から末尾まで一度だけ行い、その結果を表示しましょう。
-````
-
-````{dropdown} 解答例
-
-```python
-numbers = [3, 5, 1, 2, 4]
-n = len(numbers)
-for i in range(len(numbers) - 1):
-    if numbers[i] < numbers[i+1]:
-        numbers[i], numbers[i+1] = numbers[i+1], numbers[i]
-print(numbers)
-```
-
-````
-
-````{exercise}
 `sorted_list = [1, 3, 5, 7]` と `new_value = 4` があります。
 `sorted_list` のソートされた順序を保ったまま `new_value` を挿入し、結果を表示しましょう。
+
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+
+ソート済みリストに値を挿入するには、新しい値を入れるべき「正しい位置」を見つける必要があります。
+正しい位置とは、挿入後もリストが昇順のままになる位置です。
+
+例：`[1, 3, 5, 7]` に `4` を挿入する場合、
+`4` は `3` より大きく `5` より小さいので、インデックス2の位置に挿入します。
+結果：`[1, 3, 4, 5, 7]`
+</details>
+
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+
+```
+1. リストの先頭から順番に要素を見ていく
+2. もし new_value が現在の要素より小さければ：
+   - その位置に new_value を挿入（insert メソッドを使用）
+   - 処理を終了
+3. リストの最後まで見ても挿入されなければ：
+   - リストの最後に new_value を追加（append メソッドを使用）
+```
+
+フラグ変数を使って、挿入が完了したかどうかを追跡すると便利です。
+</details>
+
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+
+```text
+sorted_list = [1, 3, 5, 7]
+new_value = 4
+
+inserted = False
+for i in range(len(sorted_list)):
+    if new_value < sorted_list[i]:
+        sorted_list.insert(?, new_value)  # ?を埋めてください
+        inserted = True
+        break
+
+if not inserted:
+    sorted_list.?  # 最後に追加
+
+print(sorted_list)
+```
+</details>
 ````
 
 ````{dropdown} 解答例
@@ -1518,6 +1764,54 @@ print(f"右半分の最小値: {right_min}")
 3: 2回
 1: 1回
 ```
+
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+
+出現回数をカウントするには、辞書（dictionary）を使うのが効率的です。
+辞書のキーに数値を、値にその出現回数を格納します。
+
+例：`{4: 1, 2: 2, 8: 1, 3: 2, 1: 1}`
+
+リストの要素を1つずつ見ていき、辞書にその数値があれば回数を+1、
+なければ新しくキーを追加して回数を1にします。
+</details>
+
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+
+```
+1. 空の辞書 counts を作成
+2. リストの各要素について：
+   もし その数値が辞書にすでに存在するなら：
+     counts[数値] を +1
+   そうでなければ：
+     counts[数値] = 1
+3. 辞書の各キーと値のペアについて：
+   「数値: 回数回」と表示
+```
+
+辞書に要素が存在するかは `if num in counts:` で確認できます。
+辞書を走査するには `for num, count in counts.items():` を使います。
+</details>
+
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+
+```text
+numbers = [4, 2, 2, 8, 3, 3, 1]
+counts = {}
+
+for num in numbers:
+    if num in counts:
+        counts[num] = counts[num] + ?  # ?を埋めてください
+    else:
+        counts[num] = ?
+
+for num, count in counts.items():
+    print(f"{num}: {count}回")
+```
+</details>
 ````
 
 ````{dropdown} 解答例
@@ -1541,6 +1835,61 @@ for num, count in counts.items():
 ````{exercise}
 リスト `matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]` があります。
 この行列を転置（行と列を入れ替え）して表示しましょう。
+
+<details>
+<summary>💡 ヒント1（転置とは）</summary>
+
+行列の転置とは、行と列を入れ替える操作です。
+元の行列の i行j列の要素が、転置後は j行i列になります。
+
+例：
+```
+元の行列:        転置後:
+[[1, 2, 3],     [[1, 4, 7],
+ [4, 5, 6],  →   [2, 5, 8],
+ [7, 8, 9]]      [3, 6, 9]]
+```
+
+元の行列が3行×3列なら、転置後も3行×3列になります。
+</details>
+
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+
+```
+1. 転置後の行列を格納する新しい2次元リストを作成
+   - 元が rows行×cols列なら、転置後は cols行×rows列
+2. 元の行列の全要素をループで走査：
+   - 元の i行j列の要素を、転置後の j行i列にコピー
+```
+
+ネストしたループを使います：
+- 外側のループで行（i）を走査
+- 内側のループで列（j）を走査
+- `transposed[j][i] = matrix[i][j]` で転置
+</details>
+
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+
+```text
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+rows = len(matrix)      # 行数
+cols = len(matrix[0])   # 列数
+
+# ステップ1: 転置後の行列を作成（全て0で初期化）
+transposed = [[0 for _ in range(rows)] for _ in range(cols)]
+
+# ステップ2: 要素をコピー
+for i in range(rows):
+    for j in range(cols):
+        transposed[?][?] = matrix[?][?]  # ?を埋めてください
+
+# 表示
+for row in transposed:
+    print(row)
+```
+</details>
 ````
 
 ````{dropdown} 解答例
@@ -1681,6 +2030,54 @@ if not found:
 ````{exercise}
 リスト `numbers = [1, 2, 3, 4]` があります。
 このリストから3つの要素を選ぶすべての組み合わせを生成しましょう。
+
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+
+3つの要素の組み合わせを生成するには、3重のループが必要です。
+[1, 2, 3, 4] から3つ選ぶ組み合わせは：
+```
+[1, 2, 3]
+[1, 2, 4]
+[1, 3, 4]
+[2, 3, 4]
+```
+
+重要：組み合わせなので、[1, 2, 3]と[2, 1, 3]は同じとみなします。
+そのため、選ぶ要素のインデックスは常に増加する順序にします。
+</details>
+
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+
+```
+1. 最初のループ（i）：0 からリストの最後-2 まで
+   - 1つ目の要素を選ぶ
+2. 2番目のループ（j）：i+1 からリストの最後-1 まで
+   - 2つ目の要素を選ぶ（1つ目より後ろから）
+3. 3番目のループ（k）：j+1 からリストの最後 まで
+   - 3つ目の要素を選ぶ（2つ目より後ろから）
+```
+
+各ループの範囲が重要です。後のループは常に前のループより大きいインデックスから始まります。
+</details>
+
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+
+```text
+numbers = [1, 2, 3, 4]
+combinations = []
+
+for i in range(len(numbers)):
+    for j in range(?, len(numbers)):  # ?を埋めてください
+        for k in range(?, len(numbers)):  # ?を埋めてください
+            combinations.append([numbers[i], numbers[j], numbers[k]])
+
+for combo in combinations:
+    print(combo)
+```
+</details>
 ````
 
 ````{dropdown} 解答例
@@ -1703,6 +2100,55 @@ for combo in combinations:
 ````{exercise}
 リスト `numbers = [3, 8, 1, 6, 2]` があります。
 このリストの中で2番目に大きい値を見つけて表示しましょう。
+
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+
+2番目に大きい値を見つけるには、最大値と2番目の最大値の両方を追跡する必要があります。
+
+リストの要素を1つずつ見ていき：
+1. 現在の要素が最大値より大きい場合：
+   - 今までの最大値を2番目に降格させる
+   - 現在の要素を新しい最大値にする
+2. 現在の要素が2番目の最大値より大きい（かつ最大値ではない）場合：
+   - 現在の要素を新しい2番目の最大値にする
+</details>
+
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+
+```
+1. max_val と second_max を最初の要素で初期化
+2. リストの各要素について：
+   もし 要素 > max_val なら：
+     second_max = max_val
+     max_val = 要素
+   そうでなくて、もし 要素 > second_max かつ 要素 != max_val なら：
+     second_max = 要素
+3. second_max を表示
+```
+
+`要素 != max_val` の条件が重要です。これがないと、最大値と同じ値が2番目になってしまいます。
+</details>
+
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+
+```text
+numbers = [3, 8, 1, 6, 2]
+max_val = numbers[0]
+second_max = numbers[0]
+
+for num in numbers:
+    if num > max_val:
+        second_max = ?  # ?を埋めてください
+        max_val = ?
+    elif num > second_max and num != max_val:
+        second_max = ?
+
+print(second_max)
+```
+</details>
 ````
 
 ````{dropdown} 解答例
@@ -1759,6 +2205,49 @@ print(f"最小差のペア: {best_pair[0]}と{best_pair[1]}, 差: {min_diff}")
 15は2番目に大きい
 9は4番目に大きい
 ```
+
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+
+各数値の順位は、その数値より大きい数値が何個あるかを数えることで求められます。
+
+例：数値12の順位を求める場合、
+- 12より大きい数値は23と15の2個
+- よって12は3番目に大きい（2 + 1 = 3）
+
+各要素について、リスト全体を走査して「自分より大きい数値」を数えます。
+</details>
+
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+
+```
+1. リストの各要素について（外側のループ）：
+   a. その要素の順位を1で初期化
+   b. リストの全ての要素について（内側のループ）：
+      - もし比較対象の要素が現在の要素より大きければ：
+        - 順位を +1
+   c. 「要素は順位番目に大きい」と表示
+```
+
+ネストしたループを使用します：
+- 外側：順位を求めたい要素
+- 内側：その要素と比較する全ての要素
+</details>
+
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+
+```text
+numbers = [12, 7, 23, 8, 15, 9]
+for num in numbers:
+    rank = 1
+    for other_num in numbers:
+        if other_num > ?:  # ?を埋めてください
+            rank += ?
+    print(f"{num}は{rank}番目に大きい")
+```
+</details>
 ````
 
 ````{dropdown} 解答例
@@ -1805,6 +2294,61 @@ for j in range(len(matrix[0])):
 ````{exercise}
 リスト `numbers = [5, 3, 8, 3, 1, 8, 5]` があります。
 最も頻繁に出現する数値とその出現回数を表示しましょう。
+
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+
+この問題は2つのステップに分けられます：
+1. 各数値の出現回数を辞書でカウント（前の問題と同じ）
+2. 辞書の中から最大の出現回数を持つ数値を見つける
+
+例：`[5, 3, 8, 3, 1, 8, 5]` の場合、
+カウント結果は `{5: 2, 3: 2, 8: 2, 1: 1}` となり、
+最大出現回数は2回です（複数ある場合は最初に見つかったものを表示）。
+</details>
+
+<details>
+<summary>💡 ヒント2（アルゴリズム）</summary>
+
+```
+1. 空の辞書 counts を作成
+2. リストの各要素について出現回数をカウント
+3. 最大出現回数と最頻出の数値を追跡する変数を用意：
+   - max_count = 0
+   - most_frequent = None
+4. 辞書の各キーと値について：
+   もし count > max_count なら：
+     max_count = count
+     most_frequent = num
+5. 結果を表示
+```
+</details>
+
+<details>
+<summary>💡 ヒント3（コード構造）</summary>
+
+```text
+numbers = [5, 3, 8, 3, 1, 8, 5]
+counts = {}
+
+# ステップ1: 出現回数をカウント
+for num in numbers:
+    if num in counts:
+        counts[num] += 1
+    else:
+        counts[num] = 1
+
+# ステップ2: 最大を見つける
+max_count = 0
+most_frequent = None
+for num, count in counts.items():
+    if count > ?:  # ?を埋めてください
+        max_count = ?
+        most_frequent = ?
+
+print(f"最頻出の数値: {most_frequent}, 出現回数: {max_count}")
+```
+</details>
 ````
 
 ````{dropdown} 解答例

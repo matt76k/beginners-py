@@ -36,10 +36,10 @@ sphinx:
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     language: ja
     epub_basename: "BeginnersPy"
-    epub_cover: ["cover.png", ""]
     suppress_warnings:
       - "myst.directive_unknown"
       - "epub.unknown_project_files"
+      - "config.config"
     # imgmath_image_format: 'svg'
   extra_extensions:
     - sphinx_proof
