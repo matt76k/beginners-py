@@ -218,7 +218,7 @@ else:
 
 ```python
 year = 2024
-if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
     print("うるう年")
 else:
     print("平年")
@@ -428,10 +428,10 @@ for i in range(9):
 
 ```python
 num = 10
-sum = 0
+total = 0
 for i in range(num):
-    sum += i + 1
-print(sum)
+    total += i + 1
+print(total)
 ```
 
 ````
@@ -487,26 +487,27 @@ for i in list1:
 ````
 
 ````{exercise}
-1から5までの数字で、各数字の2乗を表示しましょう。
-ただし、ループを使って「その数を何回掛けたか」を表現してください。
+`n`という変数に整数値を代入し、n行の三角形を`*`で表示しましょう。
+各行の`*`の間にはスペースを入れてください。
 
-例：
+`n = 4` なら以下のように表示します。
+
 ```
-1の2乗 = 1
-2の2乗 = 4
-3の2乗 = 9
-...
+*
+* *
+* * *
+* * * *
 ```
 ````
 
 ````{dropdown} 解答例
 
 ```python
-for i in range(1, 6):
-    result = 1
-    for j in range(2):  # 2回掛ける
-        result *= i
-    print(f"{i}の2乗 = {result}")
+n = 4
+for i in range(1, n + 1):
+    for j in range(i):
+        print("*", end=" ")
+    print()
 ```
 
 ````
@@ -660,55 +661,19 @@ for i in range(1, 6):
 ````
 
 ````{exercise}
-1から20までの数で、完全数を見つけて表示しましょう。
-完全数とは、自分自身を除く約数の和が自分自身と等しい数です。
-
-例：6は完全数です。6の約数は1, 2, 3で、1+2+3=6となります。
-
-<details>
-<summary>💡 ヒント1（考え方）</summary>
-
-各数について：
-1. 自分自身を除く約数を全て見つける
-2. 約数の合計を計算する
-3. 合計が元の数と等しいか確認する
-</details>
-
-<details>
-<summary>💡 ヒント2（約数の見つけ方）</summary>
-
-ある数numの約数を見つけるには：
-```python
-for i in range(1, num):  # 1からnum-1まで
-    if num % i == 0:     # 割り切れたら約数
-        # iは約数
-```
-</details>
-
-<details>
-<summary>💡 ヒント3（構造）</summary>
-
-```python
-for num in range(1, 21):
-    divisor_sum = 0
-    # ここで約数を見つけて合計する
-    for i in range(1, num):
-        # 約数かどうか判定して加算
-    # 合計が元の数と等しいか確認
-```
-</details>
+リスト `numbers = [5, 12, 3, 8, 15]` があります。
+このリストの中で10以上の数値だけを集めて新しいリストを作り、表示しましょう。
 ````
 
 ````{dropdown} 解答例
 
 ```python
-for num in range(1, 21):
-    divisor_sum = 0
-    for i in range(1, num):
-        if num % i == 0:
-            divisor_sum += i
-    if divisor_sum == num:
-        print(num)
+numbers = [5, 12, 3, 8, 15]
+big_numbers = []
+for num in numbers:
+    if num >= 10:
+        big_numbers.append(num)
+print(big_numbers)
 ```
 ````
 
@@ -1116,10 +1081,10 @@ print(random.randint(1, 6))
 
 ```python
 import random
-sum = 0
+total = 0
 for i in range(10):
-    sum += random.randint(1, 6)
-print(sum / 10)
+    total += random.randint(1, 6)
+print(total / 10)
 ```
 
 ````
@@ -1137,7 +1102,9 @@ print(sum / 10)
 
 ```python
 import random
-slots = [random.randint(1, 10) for _ in range(3)]
+slots = []
+for _ in range(3):
+    slots.append(random.randint(1, 10))
 print(slots)
 ```
 ````
@@ -1150,7 +1117,9 @@ print(slots)
 
 ```python
 import random
-slots = [random.randint(1, 10) for _ in range(3)]
+slots = []
+for _ in range(3):
+    slots.append(random.randint(1, 10))
 if slots[0] == slots[1] == slots[2]:
     print("当たり")
 ```
@@ -1167,7 +1136,9 @@ if slots[0] == slots[1] == slots[2]:
 ```python
 import random
 for i in range(10000):
-    slots = [random.randint(1, 10) for _ in range(3)]
+    slots = []
+    for _ in range(3):
+        slots.append(random.randint(1, 10))
     if slots[0] == slots[1] == slots[2]:
         print(f"{i + 1} {slots}")
         break
@@ -2375,19 +2346,55 @@ print(f"最頻出の数値: {most_frequent}, 出現回数: {max_count}")
 ````
 
 ````{exercise}
-リスト `numbers = [5, 12, 3, 8, 15]` があります。
-このリストの中で10以上の数値だけを集めて新しいリストを作り、表示しましょう。
+1から20までの数で、完全数を見つけて表示しましょう。
+完全数とは、自分自身を除く約数の和が自分自身と等しい数です。
+
+例：6は完全数です。6の約数は1, 2, 3で、1+2+3=6となります。
+
+<details>
+<summary>💡 ヒント1（考え方）</summary>
+
+各数について：
+1. 自分自身を除く約数を全て見つける
+2. 約数の合計を計算する
+3. 合計が元の数と等しいか確認する
+</details>
+
+<details>
+<summary>💡 ヒント2（約数の見つけ方）</summary>
+
+ある数numの約数を見つけるには：
+```python
+for i in range(1, num):  # 1からnum-1まで
+    if num % i == 0:     # 割り切れたら約数
+        # iは約数
+```
+</details>
+
+<details>
+<summary>💡 ヒント3（構造）</summary>
+
+```python
+for num in range(1, 21):
+    divisor_sum = 0
+    # ここで約数を見つけて合計する
+    for i in range(1, num):
+        # 約数かどうか判定して加算
+    # 合計が元の数と等しいか確認
+```
+</details>
 ````
 
 ````{dropdown} 解答例
 
 ```python
-numbers = [5, 12, 3, 8, 15]
-big_numbers = []
-for num in numbers:
-    if num >= 10:
-        big_numbers.append(num)
-print(big_numbers)
+for num in range(1, 21):
+    divisor_sum = 0
+    for i in range(1, num):
+        if num % i == 0:
+            divisor_sum += i
+    if divisor_sum == num:
+        print(num)
 ```
 ````
 
